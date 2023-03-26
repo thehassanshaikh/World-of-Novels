@@ -37,7 +37,7 @@ function BookRegistrationPage() {
               </div>
               <div className="grid grid-cols-2 gap-5 mt-5">
               <select className="block w-full py-2 mb-4 text-sm text-gray-600 border border-gray-400">
-              <option>Select Category</option>
+              <option>Select Book Category</option>
                     {options.map((option, index) => {
                         return <option key={index} >
                             {option}
@@ -45,7 +45,7 @@ function BookRegistrationPage() {
                     })}
               </select>
               <select className="block w-full py-2 mb-4 text-sm text-gray-600 border border-gray-400">
-                <option>Book Condition</option>
+                <option>Select Book Condition</option>
                 {
                   optionsCondition.map((option,index) => {
                     return <option key={index}>

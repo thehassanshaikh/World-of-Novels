@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Login from './pages/login/Login';
 import BookRegistrationPage from './pages/bookRegistrationPage/BookRegistrationPage';
@@ -6,8 +7,12 @@ import BookRegistrationPage from './pages/bookRegistrationPage/BookRegistrationP
 function App() {
   return (
     <div className="app">
-      <Login />
-      <BookRegistrationPage />
+      <BrowserRouter>
+      <Routes>
+        <Route path='/login' element={<Login />}></Route>
+        <Route path='/bookRegistrationPage' element={<BookRegistrationPage />}></Route>
+      </Routes>
+      </BrowserRouter>
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import login from './image2.avif'
 
 function Login() {
@@ -47,7 +48,7 @@ function Login() {
       </button>
 
       <div className="mt-5 text-xs border-b border-[#051222] py-4 text-[#051222]">
-        <a href="#">Forgot your password?</a>
+        <NavLink href="#">Forgot your password?</NavLink>
       </div>
 
       <div className="mt-3 text-xs flex justify-between items-center text-[#051222]">

@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import backgroundImage from './backgroundImage-2.jpg'
 
 function BookRegistrationPage() {
@@ -54,7 +55,7 @@ function BookRegistrationPage() {
               <div className="mt-5">
                 <input type="checkbox" className="border border-gray-400" />
                 <span>
-                  I accept the <a href="#" className="text-[#34495E] font-semibold">Terms of Use</a> &  <a href="#" className="text-[#34495E] font-semibold">Privacy Policy</a> 
+                  I accept the <NavLink href="#" className="text-[#34495E] font-semibold">Terms of Use</NavLink> &  <NavLink href="#" className="text-[#34495E] font-semibold">Privacy Policy</NavLink> 
                 </span>
               </div>
               <div className="mt-5">

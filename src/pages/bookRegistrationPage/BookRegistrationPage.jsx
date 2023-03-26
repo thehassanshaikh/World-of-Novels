@@ -1,8 +1,10 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
 import backgroundImage from './backgroundImage-2.jpg'
 
 function BookRegistrationPage() {
+  const options = ['Fiction', 'NonFiction'];
+  const optionsCondition = ['Best/New', 'Average', 'Good', 'Bad (Some Pages missing)']
+
   return (
     <>
     <div className="min-h-screen py-40 bg-gradient-to-r from-stone-700 via-gray-800 to-zinc-400" >
@@ -35,16 +37,22 @@ function BookRegistrationPage() {
               </div>
               <div className="grid grid-cols-2 gap-5 mt-5">
               <select className="block w-full py-2 mb-4 text-sm text-gray-600 border border-gray-400">
-              <option selected>Book Category</option>
-              <option value="Fiction">Fiction</option>
-              <option value="NonFiction">NonFiction</option>
+              <option>Select Book Category</option>
+                    {options.map((option, index) => {
+                        return <option key={index} >
+                            {option}
+                        </option>
+                    })}
               </select>
               <select className="block w-full py-2 mb-4 text-sm text-gray-600 border border-gray-400">
-              <option selected>Book Condition</option>
-              <option value="Best">Best/New</option>
-              <option value="Average">Average</option>
-              <option value="Good">Good</option>
-              <option value="Bad">Bad(Some Pages missing)</option>
+                <option>Select Book Condition</option>
+                {
+                  optionsCondition.map((option,index) => {
+                    return <option key={index}>
+                      {option}
+                    </option>
+                  })
+                }
               </select>
               </div>
               <div className='mt-5'> 
@@ -55,7 +63,7 @@ function BookRegistrationPage() {
               <div className="mt-5">
                 <input type="checkbox" className="border border-gray-400" />
                 <span>
-                  I accept the <NavLink href="#" className="text-[#34495E] font-semibold">Terms of Use</NavLink> &  <NavLink href="#" className="text-[#34495E] font-semibold">Privacy Policy</NavLink> 
+                  I accept the <a href="#" className="text-[#34495E] font-semibold">Terms of Use</a> &  <a href="#" className="text-[#34495E] font-semibold">Privacy Policy</a> 
                 </span>
               </div>
               <div className="mt-5">

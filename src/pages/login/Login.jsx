@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import login from './image12.jpg'
+
 import { UserAuth } from '../../Context/AuthContext'
 import { useNavigate } from 'react-router-dom'
+
 
 function Login() {
   const navigate=useNavigate();
@@ -30,9 +32,9 @@ function Login() {
   },[user])
   return (
     <div>
-      <section className='bg-[#93ade6] min-h-screen flex items-center justify-center'>
+      <section className='min-h-screen flex items-center justify-center' style={{ backgroundImage: `url(${mintbackground})` }}>
         {/* ------------------------------------------------------login container------------------------------------------------------- */}
-        <div className="bg-[#f0edf4] flex rounded-2xl  max-w-3xl p-3"> 
+        <div className="bg-[#f0edf4] flex rounded-2xl shadow-2xl  max-w-3xl p-3"> 
         
 
         {/* ----------------------------------------------------image---------------------------------------------------------------------- */}
@@ -41,9 +43,9 @@ function Login() {
         </div>
         
          {/* --------------------------------form---------------------------------------------------------------------*/}
-        <div className='sm:w-1/2 px-16 py-4 rounded-2xl bg-[#539f93]'>
-         <h2 className='font-bold text-2xl text-[#37173e]'>Login</h2>
-         <p className='text-sm mt-4 text-[#37173e]'>
+        <div className='sm:w-1/2 px-16 py-4 rounded-2xl bg-[#f0edf4]'>
+         <h2 className='font-bold text-2xl text-[#00372e]'>Login</h2>
+         <p className='text-sm mt-4 text-[#00372e]'>
           If you already a member,easily log in
          </p>
          <form className='flex flex-col gap-4' onSubmit={handleSubmit}>
@@ -55,14 +57,18 @@ function Login() {
             <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
             </svg>
           </div>
+
           <input type='submit' value='Login' className='bg-[#37173e] rounded-xl py-2 text-white'/>
+
          </form>
          <div className='w-full flex items-center justify-center relative py-6'>
-          <div className='w-full h-[1px] bg-[#37173e]'></div>
-          <p className='text-lg absolute text-[#37173e] bg-[#539f93] px-1'>or</p>
+          <div className='w-full h-[1px] bg-[#00372e]'></div>
+          <p className='text-lg absolute text[#00372e] bg-[#f0edf4] px-1'>or</p>
          </div>
 
+
          <button onClick={signin} className="bg-white border py-2 w-full rounded-xl mt-5 flex justify-center items-center text-sm hover:scale-105 duration-300 text-[#37173e]">
+
         <svg className="mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="25px">
           <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z" />
           <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z" />
@@ -72,11 +78,11 @@ function Login() {
         Login with Google
       </button>
 
-      <div className="mt-5 text-xs border-b border-[#37173e] py-4 text-[#37173e]">
+      <div className="mt-5 text-xs border-b border-[#00372e] py-4 text-[#00372e]">
         <NavLink href="#">Forgot your password?</NavLink>
       </div>
 
-      <div className="mt-3 text-xs flex justify-between items-center text-[#37173e]">
+      <div className="mt-3 text-xs flex justify-between items-center text-[#00372e]">
         <p>Don't have an account?</p>
         <button className="py-2 px-5 bg-white border rounded-xl hover:scale-110 duration-300">Register</button>
       </div>

@@ -16,7 +16,6 @@ function App() {
   return (
     <AuthContextProvider>
     <BrowserRouter>
-    <NavBar />
         <Routes>  
         <Route path="/" element={<Login />}></Route>
           <Route path="/main" element={<Layout />}></Route>

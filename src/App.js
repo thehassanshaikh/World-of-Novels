@@ -1,3 +1,4 @@
+
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
@@ -8,6 +9,8 @@ import StartingSearchPage from "./pages/startingSearchPage/StartingSearchPage";
 
 import { AuthContextProvider } from "./Context/AuthContext";
 import Layout from "./Components/Layout/Layout";
+
+
 
 function App() {
   return (

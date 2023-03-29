@@ -5,6 +5,7 @@ import { UserAuth } from '../../Context/AuthContext'
 import { useNavigate } from 'react-router-dom'
 import img1 from "../../images/img1.jpg"
 import img2 from "../../images/image2.jpg"
+// import mintbackground from './mintBackground.jpg'
 
 function Login() {
   const navigate=useNavigate();

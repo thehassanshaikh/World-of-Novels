@@ -15,10 +15,10 @@ import Layout from "./Components/Layout/Layout";
 function App() {
   return (
     <AuthContextProvider>
-      <BrowserRouter>
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<Login />}></Route>
+
+    <BrowserRouter>
+        <Routes>  
+        <Route path="/" element={<Login />}></Route>
           <Route path="/main" element={<Layout />}></Route>
           <Route
             path="/bookRegistrationPage"

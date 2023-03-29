@@ -15,7 +15,7 @@ const AuthContext = createContext();
 
 
 export const AuthContextProvider = ({ children }) => {
-  
+  const novelsList = []
   const [user,setUser] = useState({})
   const [state,setState] =useState({
     email:"",
@@ -31,6 +31,7 @@ export const AuthContextProvider = ({ children }) => {
     signInWithPopup(auth, provider)
     .then((result) => {
       console.log(result.user)
+      window.localStorage.setItem('novelsList',JSON.stringify(novelsList))
     }).catch((error) => {
       console.log(error);
     });
@@ -41,6 +42,7 @@ export const AuthContextProvider = ({ children }) => {
     signInWithEmailAndPassword(auth,state.email,state.password).then((userCredential) => {
       const newuser = userCredential.user;
       console.log(newuser)
+      window.localStorage.setItem('novelsList',JSON.stringify(novelsList))
     })
     .catch((error) => {
      console.log(error)

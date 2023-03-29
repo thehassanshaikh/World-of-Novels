@@ -1,7 +1,13 @@
-// import { createContext } from "react"
-import { useEffect, useState } from "react"
+import { createContext } from "react"
+import { useEffect, useState, useContext } from "react"
 
-export const ContextApi = () => {
+
+const BookData = createContext();
+export const useBooks = () => {
+    return useContext(BookData)
+}
+
+export const BooksList = ({children}) => {
     const [books, setBooks] = useState([]);
 
     const BOOKS_API_KEYS = "R9RzIuWAbOrLBX5GIoyFdvZ9nAAAOL1M";
@@ -16,10 +22,14 @@ export const ContextApi = () => {
         fetchBooks();
     }, [])
 
-    console.log(books);
+    // console.log(books);
+
+   
 
 
     return (
-        <h1>Context Api</h1>
+        <BookData.Provider value={books}>
+            {children}
+        </BookData.Provider>
     )
 }

@@ -102,7 +102,7 @@ export const nonFiction=[
 ]
 
 
-export const NovalsData = [{
+export const NovelsData = [{
     title: "Touching the Void",
     author: "Joe Simpson",
     price: 1112,

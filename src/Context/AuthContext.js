@@ -16,6 +16,7 @@ const AuthContext = createContext();
 
 export const AuthContextProvider = ({ children }) => {
   const novelsList = []
+  const [coins,setCoin]=useState(5);
   const [user,setUser] = useState({})
   const [state,setState] =useState({
     email:"",
@@ -43,6 +44,10 @@ export const AuthContextProvider = ({ children }) => {
       const newuser = userCredential.user;
       console.log(newuser)
       window.localStorage.setItem('novelsList',JSON.stringify(novelsList))
+      setUser({
+        ...user,
+        photoURL:'https://tse4.mm.bing.net/th?id=OIP.XKdZgJT9MaVBqYDg-5JlvgAAAA&pid=Api&P=0',
+      })
     })
     .catch((error) => {
      console.log(error)
@@ -69,7 +74,7 @@ export const AuthContextProvider = ({ children }) => {
   },[])
 
   return (
-    <AuthContext.Provider value={{ googleSignIn,logOut,user,setState,emailPasswordSignIn }}>
+    <AuthContext.Provider value={{ googleSignIn,logOut,user,setState,emailPasswordSignIn,coins,setCoin }}>
       {children}
     </AuthContext.Provider>
   );

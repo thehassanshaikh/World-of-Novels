@@ -15,6 +15,7 @@ import Layout from "./Components/Layout/Layout";
 function App() {
   return (
     <AuthContextProvider>
+
     <BrowserRouter>
         <Routes>  
         <Route path="/" element={<Login />}></Route>
@@ -24,7 +25,7 @@ function App() {
             element={<BookRegistrationPage />}
           ></Route>
         </Routes>
-    </BrowserRouter>
+      </BrowserRouter>
     </AuthContextProvider>
   );
 }

@@ -5,9 +5,11 @@ import { Home } from "../../pages/Home/Home";
 import { BooksList } from "../../Context/Context";
 import NavBar from "../NavBar/NavBar";
 
+
 function Layout() {
   return (
     <div>
+
       <BooksList />
       <NavBar />
       {/* <NovelsList /> */}

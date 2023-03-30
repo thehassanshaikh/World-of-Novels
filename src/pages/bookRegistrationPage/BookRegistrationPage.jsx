@@ -2,45 +2,79 @@ import React, { useState } from "react";
 import img3 from "../../images/img3.jpg";
 import { fiction } from "../../data";
 import { nonFiction } from "../../data";
+import { NovelsData } from "../../data";
+import { useNavigate } from "react-router";
+import { UserAuth } from "../../Context/AuthContext";
+import Swal from 'sweetalert2'
 
+
+const initialState = {
+  title: "",
+  author: "",
+  price: "",
+  category: "",
+  condition: "",
+  image: "",
+  subcategory: [],
+  coin: 0,
+};
 
 function BookRegistrationPage() {
-  const [novel, setNovel] = useState({
-    title: "",
-    author: "",
-    price: "",
-    category: "",
-    condition: "",
-    image: "",
-    subcategory: [],
-    star: 0,
-  });
-
+  const [novel, setNovel] = useState(initialState);
+  const navigate = useNavigate();
+  const { setCoin } = UserAuth();
   const options = ["Fiction", "NonFiction"];
   const optionsCondition = ["Good", "Average", "Bad/Some Pages missing"];
-  const [subCategory,setSubcategory]=useState({
-    defaultValue: 'Select a color',
-    currentValues: []
-  })
   const uploadNovel = (e) => {
-  
     e.preventDefault();
-    console.log(novel);
-    console.log(novel.price, novel.condition);
-    let star = parseInt(novel.price) / 10;
+    let coin = parseInt(novel.price) / 10;
     if (novel.condition == 1) {
-      star = (star * 2) / 3;
+      coin = (coin * 2) / 3;
     } else if (novel.condition == 2) {
-      star = star / 3;
+      coin = coin / 3;
     }
     setNovel({
       ...novel,
-      star: parseInt(star),
+      coin: parseInt(coin),
     });
-    let novelsList = JSON.parse(window.localStorage.getItem("novelsList"));
-    novelsList.push(novel);
-    window.localStorage.setItem("novelsList", JSON.stringify(novelsList));
-    e.target.reset();
+
+    //Setting the data to Local Storage
+    // let novelsList = JSON.parse(window.localStorage.getItem("novelsList"));
+    // novelsList.push(novel);
+    // window.localStorage.setItem("novelsList", JSON.stringify(novelsList));
+
+    if (
+      novel.author !== "" &&
+      novel.category !== "" &&
+      novel.condition !== "" &&
+      novel.image !== "" &&
+      novel.price !== "" &&
+      novel.title !== ""
+    ) {
+      NovelsData.unshift({
+        ...novel,
+        coin: parseInt(coin),
+      });
+      e.target.reset();
+      console.log("data set");
+    
+      setCoin((prevValue) => prevValue + parseInt(coin));
+      navigate("/main");
+      Swal.fire({
+        title: "Congratulations!!!",
+        text: `You earned ${parseInt(coin)} coins`,
+        icon: "success"
+      })
+      setNovel(initialState);
+     
+    } else {
+      Swal.fire({
+        title: "Some fields are empty",
+        text: `Please fill it first`,
+        icon: "error"
+      })
+    }
+    console.log(NovelsData);
   };
 
   return (
@@ -133,7 +167,6 @@ function BookRegistrationPage() {
                     })}
                   </select>
 
-                
                   <select
                     onChange={(e) => {
                       setNovel({

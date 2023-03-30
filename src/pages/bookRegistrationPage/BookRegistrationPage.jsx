@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import img3 from "../../images/img3.jpg";
+import { fiction } from "../../data";
+import { nonFiction } from "../../data";
+
 
 function BookRegistrationPage() {
   const [novel, setNovel] = useState({
@@ -10,20 +13,34 @@ function BookRegistrationPage() {
     condition: "",
     image: "",
     subcategory: [],
-    star: "",
+    star: 0,
   });
 
   const options = ["Fiction", "NonFiction"];
   const optionsCondition = ["Good", "Average", "Bad/Some Pages missing"];
-
+  const [subCategory,setSubcategory]=useState({
+    defaultValue: 'Select a color',
+    currentValues: []
+  })
   const uploadNovel = (e) => {
+  
     e.preventDefault();
     console.log(novel);
-
+    console.log(novel.price, novel.condition);
+    let star = parseInt(novel.price) / 10;
+    if (novel.condition == 1) {
+      star = (star * 2) / 3;
+    } else if (novel.condition == 2) {
+      star = star / 3;
+    }
+    setNovel({
+      ...novel,
+      star: parseInt(star),
+    });
     let novelsList = JSON.parse(window.localStorage.getItem("novelsList"));
-    ///  console.log(novelsList)
     novelsList.push(novel);
     window.localStorage.setItem("novelsList", JSON.stringify(novelsList));
+    e.target.reset();
   };
 
   return (
@@ -56,7 +73,7 @@ function BookRegistrationPage() {
               <p className="mb-4 text-[#0B1354]">
                 Register your Novel. It’s free and only take a minute
               </p>
-              <form action="#">
+              <form action="#" onSubmit={uploadNovel}>
                 <div className="mt-5">
                   <input
                     type="text"
@@ -115,6 +132,8 @@ function BookRegistrationPage() {
                       );
                     })}
                   </select>
+
+                
                   <select
                     onChange={(e) => {
                       setNovel({
@@ -127,7 +146,7 @@ function BookRegistrationPage() {
                     <option>Select Book Condition</option>
                     {optionsCondition.map((option, index) => {
                       return (
-                        <option key={index} value={option}>
+                        <option key={index} value={index}>
                           {option}
                         </option>
                       );
@@ -169,10 +188,7 @@ function BookRegistrationPage() {
                   </span>
                 </div>
                 <div className="mt-5">
-                  <button
-                    className="w-full bg-[#0B1354] py-3 text-center text-white"
-                    onClick={uploadNovel}
-                  >
+                  <button className="w-full bg-[#0B1354] py-3 text-center text-white">
                     Register Now
                   </button>
                 </div>

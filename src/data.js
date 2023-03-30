@@ -185,6 +185,3 @@ export const NovalsData = [{
 ]  
 
 
-0 - Good
-1- Average 
-2 - bad

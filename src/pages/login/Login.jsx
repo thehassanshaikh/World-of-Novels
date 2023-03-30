@@ -1,8 +1,4 @@
 import React, { useEffect, useState } from 'react'
-
-import login from './image12.jpg'
-
-
 import { UserAuth } from '../../Context/AuthContext'
 import { useNavigate } from 'react-router-dom'
 import img1 from "../../images/img1.jpg"

@@ -79,7 +79,7 @@ h4.book-title {
 
 }
 
-.author {
+.author , .condition{
     text-overflow: ellipsis;
     white-space: inherit;
     overflow: hidden;
@@ -94,6 +94,27 @@ h4.book-title {
     font-weight: 500;
 }
 
+.coin-condition-con {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+p.condition {
+    text-align: end;
+    font-size: 14px;
+}
+
+/*============ Boook condition CSS ================*/
+.good{
+    color: rgb(5, 156, 5);
+}
+.averge{
+    color: yellow;
+}
+.bad{
+    color: red;
+}
 
 button.coin-btn {
     background: orange;

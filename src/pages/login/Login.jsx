@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-import login from './image12.jpg'
+// import login from './image12.jpg'
 
 
 import { UserAuth } from '../../Context/AuthContext'

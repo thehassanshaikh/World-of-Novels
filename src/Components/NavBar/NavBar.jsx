@@ -1,16 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import logo1 from "./pic/logo1.png";
 import searchicon from "./pic/searchicon.svg";
 import coin from "./pic/coins.png";
 import usericon from "./pic/usericon.svg";
 import cart from "./pic/cart.svg";
 import { useNavigate } from "react-router";
+import { UserAuth } from "../../Context/AuthContext";
+
 
 function NavBar() {
   const options = [];
+  const {logOut,user,coins} = UserAuth();
   const navigate =useNavigate();
+  const [url,setUrl]=useState(usericon)
+
   const uploadBooks = () =>{
     navigate('/bookRegistrationPage')
+  }
+
+  useEffect(()=>{
+    if(user)
+    {
+      setUrl(user.photoURL)
+    }
+  },[user])
+
+  const handleLogin = () =>{
+    console.log("hii")
+    logOut()
+    navigate('/')
   }
   return (
     <div className="navBar flex justify-between items-center bg-[#fcc1bd] shadow-lg p-4">
@@ -30,7 +48,7 @@ function NavBar() {
           <img className="w-48" src={logo1} alt=""></img>
         </div>
         <div className="sell w-fit md:w-auto md:px-8 md:m-3 md:p-0.5 text-white md:font-bold md:text-xl md:border absolute md:items-center md:bg-[#0b1354] md:rounded-xl hover:scale-105  md:static bg-[#0b1354] inset-0 md:flex md:mx-4 md:space-x-2 -translate-x-96 md:translate-x-0 cursor-pointer">
-          <button className="SItem " onClick={uploadBooks}>Sell+</button>
+          <button className="SItem " onClick={uploadBooks}>Upload +</button>
         </div>
       </div>
       <div className="w-fit mt-4 md:order-2 hidden md:block">
@@ -64,23 +82,19 @@ function NavBar() {
         </div>
       </div>
       <div className="cart text-center md:order-3 flex inset-12">
-        <select className=" bg-[#0b1354] text-white hidden md:block mr-4 focus:outline-double px-3 rounded-xl py-1 cursor-pointer">
-          <option>Choose Location</option>
-          {options.map((option, index) => {
-            return <option key={index}>{option}</option>;
-          })}
-        </select>
-        <img className="w-6 h-6 mr-4 cursor-pointer" src={coin} alt=""></img>
+        
+        <img className="w-6 h-6 mr-1 cursor-pointer" src={coin} alt=""></img><p className="text-teal-500">{coins}</p>
         <img
-          className="w-6 h-6 mr-4 cursor-pointer text-white"
+          className="w-6 h-6 ml-4 mr-4 cursor-pointer text-white"
           src={cart}
           alt=""
         ></img>
         <img
-          className="w-6 h-6 mr-4 cursor-pointer text-white"
-          src={usericon}
+          className="w-7 h-7 mr-4 cursor-pointer text-white  object-cover rounded-full"
+          src={url} 
           alt=""
         ></img>
+        <button onClick={handleLogin} className='text-blue-500 underline'>Logout</button>
       </div>
     </div>
   );

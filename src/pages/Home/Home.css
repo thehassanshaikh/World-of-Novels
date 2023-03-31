@@ -26,7 +26,7 @@
 .card {
     box-shadow: -1px 1px 9px 3px #888888;
     margin: 1%;
-    width: 20%;
+    width: 23%;
     border-radius: 5px;
 }
 
@@ -127,3 +127,32 @@ button.coin-btn {
     width: 100%;
     border-radius: 5px;
 }
+
+
+@media (min-width: 427px) and (max-width: 768px) {
+
+    .card {
+        width: 30%;
+    }
+}
+
+@media (max-width: 375px) {
+    
+
+}
+
+@media (max-width: 426px) {
+    .card {
+        width: 45%;
+    }
+
+    .sidebar-container {
+        display: none;
+    }
+
+    .books-container {
+        width: 100%;
+    }
+}
+
+

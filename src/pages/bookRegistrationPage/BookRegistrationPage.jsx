@@ -6,7 +6,7 @@ import { NovelsData } from "../../data";
 import { useNavigate } from "react-router";
 import { UserAuth } from "../../Context/AuthContext";
 import Swal from 'sweetalert2'
-
+import Select from "react-select";
 
 const initialState = {
   title: "",
@@ -77,6 +77,31 @@ function BookRegistrationPage() {
     console.log(NovelsData);
   };
 
+
+  const FictionSubCategory = [
+    { value: 1, label: "" },
+    { value: 2, label: "" },
+    { value: 3, label: "" },
+    { value: 4, label: "" },
+    { value: 5, label: "" },
+  ];
+  const NonFictionSubCategory = [
+    { value: 1, label: "" },
+    { value: 2, label: "" },
+    { value: 3, label: "" },
+    { value: 4, label: "" },
+    { value: 5, label: "" },
+  ]
+  const [selectedOptions, setSelectedOptions] = useState(null);
+
+  const setHandle = (e) => {
+    setSelectedOptions(Array.isArray(e) ? e.map((item) => item.label) : []);
+  };
+
+
+
+
+
   return (
     <>
       <div className="min-h-screen bg-gradient-to-r from-red-200 via-emerald-200 to-teal-200">
@@ -146,7 +171,27 @@ function BookRegistrationPage() {
                     }}
                     className="border border-[#0B1354] py-1 px-2"
                   />
+                  <select
+                    onChange={(e) => {
+                      setNovel({
+                        ...novel,
+                        condition: e.target.value,
+                      });
+                    }}
+                    className="block w-full py-1 px-2 text-sm text-[#0B1354] border border-[#0B1354]"
+                  >
+                    <option>Select Book Condition</option>
+                    {optionsCondition.map((option, index) => {
+                      return (
+                        <option key={index} value={index}>
+                          {option}
+                        </option>
+                      );
+                    })}
+                  </select>
                 </div>
+
+
                 <div className="grid grid-cols-2 gap-5 mt-5">
                   <select
                     className="block w-full py-2 mb-4 text-sm text-[#00372e] border border-[#0B1354]"
@@ -167,25 +212,23 @@ function BookRegistrationPage() {
                     })}
                   </select>
 
-                  <select
-                    onChange={(e) => {
-                      setNovel({
-                        ...novel,
-                        condition: e.target.value,
-                      });
-                    }}
-                    className="block w-full py-2 mb-4 text-sm text-[#0B1354] border border-[#0B1354]"
-                  >
-                    <option>Select Book Condition</option>
-                    {optionsCondition.map((option, index) => {
-                      return (
-                        <option key={index} value={index}>
-                          {option}
-                        </option>
-                      );
-                    })}
-                  </select>
+                   
+                 <Select options={FictionSubCategory} onChange={setHandle} isMulti className="block  text-sm text-[#00372e]"></Select>  
                 </div>
+                
+
+                
+                <textarea  rows="2" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Short Description(optional)"></textarea>
+
+                <textarea  rows="4" className="block p-2.5 mt-5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Description (Minimum 100 words)"></textarea>
+
+
+
+
+
+
+
+
                 <div className="mt-5">
                   <label
                     className="block mb-2 text-sm font-medium text-[#00372e] dark:text-white"

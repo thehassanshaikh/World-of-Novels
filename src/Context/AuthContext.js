@@ -10,6 +10,7 @@ import {
   signInWithEmailAndPassword
 } from "firebase/auth";
 import { auth } from "../firebase";
+import { NovelsData } from "../data";
 
 const AuthContext = createContext();
 
@@ -22,6 +23,7 @@ export const AuthContextProvider = ({ children }) => {
     email:"",
     password:"",
   });
+  const [novelsData,setNovelData] = useState(NovelsData)
   
   useEffect(()=>{
   console.log(state)
@@ -74,7 +76,7 @@ export const AuthContextProvider = ({ children }) => {
   },[])
 
   return (
-    <AuthContext.Provider value={{ googleSignIn,logOut,user,setState,emailPasswordSignIn,coins,setCoin }}>
+    <AuthContext.Provider value={{ googleSignIn,logOut,user,setState,emailPasswordSignIn,coins,setCoin,setNovelData,novelsData }}>
       {children}
     </AuthContext.Provider>
   );

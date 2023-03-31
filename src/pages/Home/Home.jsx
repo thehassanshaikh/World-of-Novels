@@ -7,7 +7,7 @@ import { SideBar } from "../../Components/SideBar/SideBar";
 export const Home = () => {
 
     const [getNovels, setNovels] = useState(NovelsData);
-
+ 
     return (
 
         <section className="home-section">

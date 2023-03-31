@@ -12,7 +12,6 @@ function NavBar() {
   const options = [];
   const {logOut,user,coins,setNovelData} = UserAuth();
   const [q, setQ] = useState("");
-  //const [searchParam] = useState(["capital", "name"]);
   const navigate =useNavigate();
   const [url,setUrl]=useState(usericon)
 

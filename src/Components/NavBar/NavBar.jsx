@@ -27,12 +27,12 @@ function NavBar() {
     }
   },[user])
 
-  useEffect(()=>{
+ const searchFilter = () =>{
     const searchResult=NovelsData.filter(novel=>(
       novel.title.toLowerCase().includes(q.toLowerCase())
       ||  novel.author.toLowerCase().includes(q.toLowerCase())))
    setNovelData(searchResult)
-  },[q])
+  }
 
   const handleLogin = () =>{
     logOut()
@@ -77,6 +77,7 @@ function NavBar() {
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
+                onClick={searchFilter}
                 viewBox="0 0 20 20"
                 fill="currentColor"
                 className="h-5 w-5"

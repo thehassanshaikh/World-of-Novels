@@ -9,6 +9,7 @@ import StartingSearchPage from "./pages/startingSearchPage/StartingSearchPage";
 import { AuthContextProvider } from "./Context/AuthContext";
 import Layout from "./Components/Layout/Layout";
 
+
 function App() {
   return (
     <AuthContextProvider>

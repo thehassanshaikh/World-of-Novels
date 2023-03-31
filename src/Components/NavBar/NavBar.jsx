@@ -6,11 +6,13 @@ import usericon from "./pic/usericon.svg";
 import cart from "./pic/cart.svg";
 import { useNavigate } from "react-router";
 import { UserAuth } from "../../Context/AuthContext";
-
+import { NovelsData } from "../../data";
 
 function NavBar() {
   const options = [];
-  const {logOut,user,coins} = UserAuth();
+  const {logOut,user,coins,setNovelData} = UserAuth();
+  const [q, setQ] = useState("");
+  //const [searchParam] = useState(["capital", "name"]);
   const navigate =useNavigate();
   const [url,setUrl]=useState(usericon)
 
@@ -25,8 +27,14 @@ function NavBar() {
     }
   },[user])
 
+  useEffect(()=>{
+    const searchResult=NovelsData.filter(novel=>(
+      novel.title.toLowerCase().includes(q.toLowerCase())
+      ||  novel.author.toLowerCase().includes(q.toLowerCase())))
+   setNovelData(searchResult)
+  },[q])
+
   const handleLogin = () =>{
-    console.log("hii")
     logOut()
     navigate('/')
   }
@@ -59,6 +67,8 @@ function NavBar() {
               className="relative m-0 block w-[2%] min-w-0 flex-auto rounded border border-solid border-white bg-[#0b1354] bg-clip-padding px-3 py-1.5 text-base font-normal text-white outline-none transition duration-300 ease-in-out focus:border-primary-600 focus:text-white focus:shadow-te-primary focus:outline-none"
               placeholder="Search"
               aria-label="Search"
+              value={q}
+              onChange={(e) => setQ(e.target.value)}
               aria-describedby="button-addon2"
             />
             <span

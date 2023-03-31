@@ -104,7 +104,7 @@ function BookRegistrationPage() {
   const [selectedOptions, setSelectedOptions] = useState(null);
 
   const setHandle = (e) => {
-    setSelectedOptions(Array.isArray(e) ? e.map((item) => item.label) : []);
+    setSelectedOptions(Array.isArray(e) ? e.map((item) => item.subcategory) : []);
   };
 
   return (
@@ -250,12 +250,15 @@ function BookRegistrationPage() {
                     ""
                   )}
 
+
                   <Select
                     options={categoryselect}
                     onChange={setHandle}
                     isMulti
-                    className="block  text-sm text-black"
+                    className="block  text-sm text-[#00372e]"
                   ></Select>
+                </div>
+
                 </div>
 
                 <textarea

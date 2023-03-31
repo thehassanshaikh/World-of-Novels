@@ -1,8 +1,9 @@
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { useState } from "react";
 import { NovelsData } from "../../data";
-
 import "./Home.css"
+import { SideBar } from "../../Components/SideBar/SideBar";
+
 export const Home = () => {
 
     const [getNovels, setNovels] = useState(NovelsData);
@@ -10,9 +11,7 @@ export const Home = () => {
     return (
 
         <section className="home-section">
-            <div className="sidebar-container">
-                <h1>Sidebar</h1>
-            </div>
+           <SideBar />
             <div className="books-container">
                 {getNovels.map((book, index) => (
                     <div className="card" key={index}>

@@ -5,8 +5,7 @@ import { nonFiction } from "../../data";
 import { NovelsData } from "../../data";
 import { useNavigate } from "react-router";
 import { UserAuth } from "../../Context/AuthContext";
-import Swal from 'sweetalert2'
-
+import Swal from "sweetalert2";
 
 const initialState = {
   title: "",
@@ -25,8 +24,31 @@ function BookRegistrationPage() {
   const { setCoin } = UserAuth();
   const options = ["Fiction", "NonFiction"];
   const optionsCondition = ["Good", "Average", "Bad/Some Pages missing"];
+  const [error, setError] = useState({
+    title: "",
+    author: "",
+    price: "",
+    category: "",
+    condition: "",
+    image: "",
+  });
+
+  const validateInput = (formObject) => {
+    const errors = {};
+    Object.keys(formObject).forEach((val) => {
+      if (formObject[val] === "") {
+        errors[val] = "Please fill this field";
+      }
+    });
+    if (formObject.price < 0) {
+      errors.price = "Price cannot be negative";
+    }
+    return errors;
+  };
+
   const uploadNovel = (e) => {
     e.preventDefault();
+    setError({});
     let coin = parseInt(novel.price) / 10;
     if (novel.condition == 1) {
       coin = (coin * 2) / 3;
@@ -38,43 +60,37 @@ function BookRegistrationPage() {
       coin: parseInt(coin),
     });
 
-    //Setting the data to Local Storage
-    // let novelsList = JSON.parse(window.localStorage.getItem("novelsList"));
-    // novelsList.push(novel);
-    // window.localStorage.setItem("novelsList", JSON.stringify(novelsList));
-
-    if (
-      novel.author !== "" &&
-      novel.category !== "" &&
-      novel.condition !== "" &&
-      novel.image !== "" &&
-      novel.price !== "" &&
-      novel.title !== ""
-    ) {
+    const errors = validateInput(novel);
+    if (Object.keys(errors).length > 0) {
+      setError(errors);
+      Swal.fire({
+        title: "Some fields are empty",
+        text: `Please fill it first`,
+        icon: "error",
+      });
+    } else {
       NovelsData.unshift({
         ...novel,
         coin: parseInt(coin),
       });
       e.target.reset();
-      console.log("data set");
-    
+
       setCoin((prevValue) => prevValue + parseInt(coin));
       navigate("/main");
       Swal.fire({
         title: "Congratulations!!!",
         text: `You earned ${parseInt(coin)} coins`,
-        icon: "success"
-      })
+        icon: "success",
+      });
       setNovel(initialState);
-     
-    } else {
-      Swal.fire({
-        title: "Some fields are empty",
-        text: `Please fill it first`,
-        icon: "error"
-      })
     }
-    console.log(NovelsData);
+
+    //Setting the data to Local Storage
+    // let novelsList = JSON.parse(window.localStorage.getItem("novelsList"));
+    // novelsList.push(novel);
+    // window.localStorage.setItem("novelsList", JSON.stringify(novelsList));
+
+    //console.log(NovelsData);
   };
 
   return (
@@ -120,6 +136,11 @@ function BookRegistrationPage() {
                     }}
                     className="border border-[#0B1354] py-1 px-2 w-full"
                   />
+                  {error.title ? (
+                    <p className="text-xs text-red-600">{error.title}</p>
+                  ) : (
+                    ""
+                  )}
                 </div>
                 <div className="mt-5">
                   <input
@@ -133,6 +154,11 @@ function BookRegistrationPage() {
                     }}
                     className="border border-[#0B1354] py-1 px-2 w-full"
                   />
+                  {error.author ? (
+                    <p className="text-xs text-red-600">{error.author}</p>
+                  ) : (
+                    ""
+                  )}
                 </div>
                 <div className="grid grid-cols-2 gap-5 mt-5">
                   <input
@@ -146,6 +172,11 @@ function BookRegistrationPage() {
                     }}
                     className="border border-[#0B1354] py-1 px-2"
                   />
+                  {error.price ? (
+                    <p className="text-xs text-red-600">{error.price}</p>
+                  ) : (
+                    ""
+                  )}
                 </div>
                 <div className="grid grid-cols-2 gap-5 mt-5">
                   <select
@@ -166,6 +197,11 @@ function BookRegistrationPage() {
                       );
                     })}
                   </select>
+                  {error.category ? (
+                    <p className="text-xs text-red-600">{error.category}</p>
+                  ) : (
+                    ""
+                  )}
 
                   <select
                     onChange={(e) => {
@@ -185,6 +221,11 @@ function BookRegistrationPage() {
                       );
                     })}
                   </select>
+                  {error.condition ? (
+                    <p className="text-xs text-red-600">{error.condition}</p>
+                  ) : (
+                    ""
+                  )}
                 </div>
                 <div className="mt-5">
                   <label
@@ -205,6 +246,11 @@ function BookRegistrationPage() {
                       });
                     }}
                   />
+                  {error.image ? (
+                    <p className="text-xs text-red-700">{error.image}</p>
+                  ) : (
+                    ""
+                  )}
                 </div>
 
                 <div className="mt-5">

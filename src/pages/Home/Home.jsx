@@ -3,17 +3,21 @@ import { useState } from "react";
 import { NovelsData, fiction} from "../../data";
 import "./Home.css"
 import { SideBar } from "../../Components/SideBar/SideBar";
+import { UserAuth } from "../../Context/AuthContext";
 
 export const Home = () => {
 
-    const [getNovels, setNovels] = useState(NovelsData);
+
+   // const [getNovels, setNovels] = useState(NovelsData);
+    const {novelsData}= UserAuth();
+ 
 
     return (
 
         <section className="home-section">
            <SideBar />
             <div className="books-container">
-                {getNovels.map((book, index) => (
+                {novelsData.map((book, index) => (
                     <div className="card" key={index}>
                         <div className="img-con">
                             <img className="book-img" src={book.image} alt={book.title} />

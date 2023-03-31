@@ -1,108 +1,108 @@
 export const fiction = [
     {
         id: 1,
-        subcategory: 'Adventure stories',
+        subcategory : 'Adventure stories',
     },
     {
         id: 2,
-        subcategory: 'Classics',
+        subcategory : 'Classics',
     },
     {
         id: 3,
-        subcategory: 'Crime',
+        subcategory : 'Crime',
     },
     {
         id: 4,
-        subcategory: 'Fairy tales',
+        subcategory : 'Fairy tales',
     },
     {
         id: 5,
-        subcategory: 'Fantasy',
+        subcategory : 'Fantasy',
     },
     {
         id: 6,
-        subcategory: 'Historical fiction',
+        subcategory : 'Historical fiction',
     },
     {
         id: 7,
-        subcategory: 'Horror',
+        subcategory : 'Horror',
     },
     {
         id: 8,
-        subcategory: 'Humour and satire',
+        subcategory : 'Humour and satire',
     },
     {
         id: 9,
-        subcategory: 'Literary fiction',
+        subcategory : 'Literary fiction',
     },
     {
         id: 7,
-        subcategory: 'Mystery',
+        subcategory : 'Mystery',
     },
     {
         id: 8,
-        subcategory: 'Poetry',
+        subcategory : 'Poetry',
     },
     {
         id: 9,
-        subcategory: 'Plays',
+        subcategory : 'Plays',
     },
     {
         id: 10,
-        subcategory: 'Romance',
+        subcategory : 'Romance',
     },
     {
         id: 11,
-        subcategory: 'Science fiction',
+        subcategory : 'Science fiction',
     },
     {
         id: 12,
-        subcategory: 'Short stories',
+        subcategory : 'Short stories',
     },
     {
         id: 13,
-        subcategory: 'Thrillers',
+        subcategory : 'Thrillers',
     },
     {
         id: 14,
-        subcategory: 'War',
+        subcategory : 'War',
     },
     {
         id: 15,
-        subcategory: 'Women’s fiction',
+        subcategory : 'Women’s fiction',
     },
     {
         id: 16,
-        subcategory: 'Young adult',
+        subcategory : 'Young adult',
     },
 ]
 
 
-export const nonFiction = [
+export const nonFiction=[
     {
         id: 1,
-        subcategory: 'Autobiography and memoir',
+        subcategory : 'Autobiography and memoir',
     },
     {
         id: 2,
-        subcategory: 'Biography',
+        subcategory : 'Biography',
     },
     {
         id: 3,
-        subcategory: 'Essays',
+        subcategory : 'Essays',
     },
     {
         id: 4,
-        subcategory: 'Non-fiction novel',
+        subcategory : 'Non-fiction novel',
     },
     {
         id: 5,
-        subcategory: 'Self-help',
+        subcategory : 'Self-help',
     },
 ]
 
 
-export const NovelsData = [{
+export const NovalsData = [{
     title: "Touching the Void",
     author: "Joe Simpson",
     price: 1112,
@@ -110,10 +110,10 @@ export const NovelsData = [{
     condition: "0",
     description: "A thrilling and emotional true story of survival in the treacherous Peruvian Andes. When climbing partners Joe and Simon reach the summit of Siula Grande, they have no idea what horrors await them on the descent. After an unthinkable tragedy, Simon is forced to make a gut-wrenching decision that tests their friendship to the limit. Touching the Void is a gripping and heart-wrenching tale of human endurance and the power of friendship.",
     image: "https://img.readthistwice.com/unsafe/240x360/books/fd507387-2bf3-4f28-afe6-8dc73e647fac.jpg",
-    subcategory: ["Thrillers", "War", "Adventure stories"],
+    subcategory: ["Thrillers","War","Adventure stories"],
     coin: 111,
-},
-{
+  },
+  {
     title: "The Long Walk",
     author: "Slavomir Rawicz",
     price: 1422,
@@ -122,10 +122,10 @@ export const NovelsData = [{
     description: "Escape from a Soviet labor camp sets the stage for an epic journey through Siberia, China, the Gobi Desert, Tibet, and the Himalayas in this harrowing tale of survival and freedom. Written with haunting detail and heart, The Long Walk is a testament to human resilience and the fight for liberty. With a new afterword by the author and inspiring foreword to the Polish edition, this updated paperback is sure to leave a lasting impression on readers. Don't miss the upcoming film adaptation directed by Peter Weir in 2011.",
     shortDescription: "The True Story Of A Trek To Freedom",
     image: "https://img.readthistwice.com/unsafe/240x360/books/1eccc2bd-7502-4f1e-8c10-aaa5d05af528.jpg",
-    subcategory: ["Historical fiction", "Adventure stories"],
+    subcategory: ["Historical fiction","Adventure stories"],
     coin: 94,
-},
-{
+  },
+  {
     title: "Jane Eyre",
     author: "Charlotte Brontë",
     price: 185,
@@ -134,10 +134,10 @@ export const NovelsData = [{
     description: "This classic tale tells the story of an orphaned young woman named Jane who struggles with feeling like an outcast. When she is hired to care for a young ward at Thornfield Hall, she falls in love with the brooding and mysterious owner, Edward Rochester. However, there is a terrifying secret lurking within the halls of Thornfield, and Jane must face difficult decisions about her future. Will she be left heartbroken and exiled once again?",
     shortDescription: "",
     image: "https://img.readthistwice.com/unsafe/240x360/books/cfa08a1f-4931-4ca3-a38c-2cffbb1c915c.jpg",
-    subcategory: ["Classics", "Romance"],
+    subcategory: ["Classics","Romance"],
     coin: 61,
-},
-{
+  },
+  {
     title: "Little Women",
     author: "Louisa May Alcott",
     price: 1021,
@@ -145,10 +145,10 @@ export const NovelsData = [{
     condition: "0",
     description: "Four unique sisters rely on each other during their father's absence in this heartwarming story. From putting on plays to forming secret societies, they face life's ups and downs with the one question always on their minds: will Father make it home safely from war?",
     image: "https://img.readthistwice.com/unsafe/240x360/books/50f4a1a2-7c9c-4a3e-af00-80d73bd39ad5.jpg",
-    subcategory: ["Classics", "Women’s fiction"],
+    subcategory: ["Classics","Women’s fiction"],
     coin: 102,
-},
-{
+  },
+  {
     title: "Helter Skelter",
     author: "Vincent Bugliosi",
     price: 863,
@@ -156,10 +156,10 @@ export const NovelsData = [{
     condition: "1",
     description: "Explore the shocking and disturbing case of Charles Manson and his followers in a book written by the prosecuting attorney of the trial. Discover what motivated Manson's cold-blooded selection of victims and his terrifying hold over his followers, particularly the young women who carried out his orders. This harrowing true crime story is accompanied by 50 pages of black and white photographs.",
     image: "https://img.readthistwice.com/unsafe/240x360/books/50f4a1a2-7c9c-4a3e-af00-80d73bd39ad5.jpg",
-    subcategory: ["Crime", "Historical fiction", "Mystery", "Thrillers"],
+    subcategory: ["Crime","Historical fiction","Mystery","Thrillers"],
     coin: 57,
-},
-{
+  },
+  {
     title: "Say Nothing",
     author: "Patrick Radden Keefe",
     price: 395,
@@ -168,10 +168,10 @@ export const NovelsData = [{
     description: "Discover the devastating consequences of a notorious killing in Northern Ireland during The Troubles. Follow award-winning writer Patrick Radden Keefe's intricate narrative, starting with the abduction of Jean McConville, a mother of ten, and delve into the violent guerrilla war that plagued Northern Ireland. From IRA terrorists and their brutal violence to dirty schemes of the British Army, Say Nothing is a tale of passion, betrayal, and anguish that lingers long after the last page.",
     shortDescription: "A True Story of Murder and Memory in Northern Ireland",
     image: "https://img.readthistwice.com/unsafe/240x360/books/50f4a1a2-7c9c-4a3e-af00-80d73bd39ad5.jpg",
-    subcategory: ["Crime", "Historical fiction", "Thrillers"],
+    subcategory: ["Crime","Historical fiction","Thrillers"],
     coin: 30,
-},
-{
+  },
+  {
     title: "Harry Potter And The Sorcerer's Stone",
     author: "J. K. Rowling",
     price: 1844,
@@ -179,14 +179,129 @@ export const NovelsData = [{
     condition: "0",
     description: "The story of a young boy named Harry, who has endured a miserable life with his cruel relatives. All he knows is poverty, bullying, and the feeling of not belonging. But a letter arrives, inviting him to a magical place filled with friends, sports, and endless wonder. With destiny calling, Harry must navigate a dangerous path if he hopes to survive.",
     image: "https://img.readthistwice.com/unsafe/240x360/books/0882fdb1-1ea3-42e2-9b38-9d18b66d8cf2.jpg",
-    subcategory: ["Fairy tales", "Plays", "Adventure stories"],
-    coin: 184,
-},
-]
-
-
-
-// 0 - Good
-// 1- Average 
-// 2 - bad
-
+    subcategory: ["Fairy tales","Plays","Adventure stories"],
+    coin:184,
+  },
+  {
+    title: "Goodnight Moon",
+    author: "Margaret Wise Brown",
+    price: 595,
+    category: "Fiction",
+    condition: "1",
+    description: "Say goodnight to everything in the cozy, softly lit room with the little bunny tucked away in bed. This classic children's book is a perfect lullaby for the end of the day. With its quiet poetry and soothing illustrations, it's no wonder Goodnight Moon is a beloved favorite for generations of readers and a must-have for every bookshelf. Perfect for baby showers and other special events!",
+    image: "https://img.readthistwice.com/unsafe/240x360/books/a5c2f26b-d66e-473a-8e4b-b899aa5149b5.jpg",
+    subcategory: ["Fairy tales","Fantacy","Literary fiction"],
+    coin:39,
+  },
+  {
+    title: "A Game of Thrones",
+    author: "George R. R. Martin",
+    price: 699,
+    category: "Fiction",
+    condition: "0",
+    description: "A world of magic, mystery, intrigue, romance, and adventure awaits in this modern fantasy masterpiece. The first volume of an epic series, this tale of lords, ladies, soldiers, and sorcerers features the harsh Starks of Winterfell at its center, surrounded by supernatural forces massing beyond the protective Wall. As winter looms and conflict brews, characters traverse a land of extremes and undertake dangerous journeys, all for the ultimate prize: the game of thrones.",
+    image: "https://img.readthistwice.com/unsafe/240x360/books/a5c2f26b-d66e-473a-8e4b-b899aa5149b5.jpg",
+    subcategory: ["Fantacy","Literary fiction","War","Crime","Adventure stories","Humour and satire"],
+    coin:69,
+  },
+  {
+    title: "The Way of Kings",
+    author: "Brandon Sanderson",
+    price: 1399,
+    category: "Fiction",
+    condition: "2",
+    description: "This epic fantasy tale transports readers to a world torn apart by war and storms. Once living in Heaven, mankind was forced to take root on Roshar after the Voidbringers captured their previous home. The Almighty gifted humans with powerful Shardblades to defend themselves against the Voidbringers, and led by ten orders of knights known as Radiants, they appear to have won the war. But centuries later, the world is still at war with itself, each king vying for more Shardblades to unite all of mankind under one throne. Join a young spearman in his journey to fight a war against an unknown enemy and uncover the forgotten secrets of this mysterious world.",
+    image: "https://img.readthistwice.com/unsafe/240x360/books/a5c2f26b-d66e-473a-8e4b-b899aa5149b5.jpg",
+    subcategory: ["Fantacy","Literary fiction","War","Crime","Adventure stories"],
+    coin:46,
+  },
+  {
+    title: "Sapiens",
+    author: "Yuval Noah Harari",
+    price: 599,
+    category: "Fiction",
+    condition: "0",
+    description: "Discover the story of human history, from the first humans to walk the earth to today's modern society. Explore how we came to believe in gods, nations, and human rights, and how our societies were shaped by the Cognitive, Agricultural, and Scientific Revolutions. Sapiens covers it all, using insights from biology, anthropology, paleontology, and economics to challenge our beliefs about what it means to be human. Are we happier now than we were before? Can we change our behavior and influence the future? Dr. Yuval Noah Harari's provocative and wide-ranging book will challenge the way you think about our species and our place in the world.",
+    shortDescription:"A Brief History of Humankind",
+    image: "https://img.readthistwice.com/unsafe/240x360/books/8dc7c453-5af7-433c-ad73-2e7817d26d36.jpg",
+    subcategory: ["Historical fiction","Science fiction"],
+    coin:59,
+  },
+  {
+    title: "1491",
+    author: "Charles C. Mann",
+    price: 999,
+    category: "Fiction",
+    condition: "1",
+    description: "Explore a fascinating and surprising world with this groundbreaking work of science, history, and archaeology. Charles C. Mann challenges the widely-held belief that pre-Columbian Americans lived sparsely in a wilderness. Instead, he reveals that they molded and influenced the land around them in incredible ways, from creating advanced cities to engineering corn in a specialized process. Enrich your understanding of the Americas before 1492 with this transformative read.",
+    image: "https://img.readthistwice.com/unsafe/240x360/books/8dc7c453-5af7-433c-ad73-2e7817d26d36.jpg",
+    subcategory: ["Historical fiction","War","Crime"],
+    coin:66,
+  },
+  {
+    title: "The Exorcist",
+    author: "William Peter Blatty",
+    price: 550,
+    category: "Fiction",
+    condition: "1",
+    description: "A mother and two priests fight to save a little girl's soul from a supernatural evil entity in this iconic horror masterpiece. William Peter Blatty's The Exorcist is a timeless tale of desperation, faith, and pure terror.",
+    image: "https://img.readthistwice.com/unsafe/240x360/books/a0c3dcd8-332b-4603-b0ee-347863edcc5d.jpg",
+    subcategory: ["Horror","Mystery","Thrillers"],
+    coin:36,
+  },
+  {
+    title: "It",
+    author: "Stephen King",
+    price: 699,
+    category: "Fiction",
+    condition: "1",
+    description: "This creepy novel takes place in a small town called Derry, where the haunting is all too real. A group of teenagers stumbled upon a horror that has drawn them back as adults, forcing them to face an evil without a name. Be prepared for a thrilling and chilling read.",
+    image: "https://img.readthistwice.com/unsafe/240x360/books/fba1751d-86cc-4c1a-9d0f-2db7a4e3509a.jpg",
+    subcategory: ["Horror","Mystery","Thrillers","Crime"],
+    coin:69,
+  },
+  {
+    title: "Poesie e Satire",
+    author: "Alda. Merini",
+    price: 646,
+    category: "Fiction",
+    condition: "2",
+    description: "his privately published book from 1981, titled Poesie e Satire includes a mix of previously released and new poetry from the author, Alda Merini. While it was intended for a specific audience, the book is a unique and personal collection put together by the author herself. An additional collection of previously unreleased poetry titled Le Satire is also included in this edition. The publication gives readers an intimate look into Merini's creative process and inner circle, adding to the larger collection of her work. The book also features short prose pieces that depict Merini's hometown and the characters that filled her world.",
+    image: "https://img.readthistwice.com/unsafe/240x360/books/51ef1b29-1a16-4f5f-af71-f0a984c5a551.jpg",
+    subcategory: ["Humour and satire","Mystery"],
+    coin:21,
+  },
+  {
+    title: "Out of My Mind",
+    author: "Sharon M. Draper",
+    price: 450,
+    category: "Fiction",
+    condition: "1",
+    description: "A brilliant mind trapped in a body that won't cooperate. Melody, with cerebral palsy, cannot walk or talk, but has a photographic memory. Her classmates label her as mentally challenged, but Melody refuses to be defined by her disability. Follow her story as she proves them all wrong in a breakthrough novel that will change your view on disabilities forever.",
+    image: "https://img.readthistwice.com/unsafe/240x360/books/9a0951d1-4cab-44c7-b365-f4289539b4b6.jpg",
+    subcategory: ["Literary fiction","Humour and satire"],
+    coin:30,
+  },
+  {
+    title: "Big Little Lies",
+    author: "Liane Moriarty",
+    price: 499,
+    category: "Fiction",
+    condition: "0",
+    description: "A gripping tale about the dangerous lies people tell themselves just to survive. Three women, Madeline, Celeste, and Jane, all at different crossroads in their lives, are brought together by a tragic incident. This novel explores the complexities of motherhood, marriage, and the little lies we tell that can lead to deadly consequences. A must-read for anyone who loves a good thriller with a strong focus on character development.",
+    image: "https://img.readthistwice.com/unsafe/240x360/books/885c4810-7d8c-4212-9727-731d34c13d4b.jpg",
+    subcategory: ["Mystery","Crime","Thrillers"],
+    coin:49,
+  },
+  {
+    title: "Rebecca",
+    author: "Daphne du Maurier",
+    price: 499,
+    category: "Fiction",
+    condition: "1",
+    description: "An orphaned lady's maid is swept off her feet by a dashing widower's proposal of marriage. But upon arrival to his country estate, she realizes his late wife's shadow looms large, threatening to destroy their relationship from beyond the grave.",
+    image: "https://img.readthistwice.com/unsafe/240x360/books/e1af0e4f-2298-45f6-aa61-245e05cf96d0.jpg",
+    subcategory: ["Mystery","Crime"],
+    coin:33,
+  },
+]  

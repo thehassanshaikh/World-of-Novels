@@ -1,102 +1,127 @@
 export const fiction = [
   {
     id: 1,
-    subcategory: "Adventure stories",
+    value: 1,
+    label: "Adventure stories",
   },
   {
     id: 2,
-    subcategory: "Classics",
+    value: 2,
+    label: "Classics",
   },
   {
     id: 3,
-    subcategory: "Crime",
+    value: 3,
+    label: "Crime",
   },
   {
     id: 4,
-    subcategory: "Fairy tales",
+    value: 4,
+    label: "Fairy tales",
   },
   {
     id: 5,
-    subcategory: "Fantasy",
+    value: 5,
+    label: "Fantasy",
   },
   {
     id: 6,
-    subcategory: "Historical fiction",
+    value: 6,
+    label: "Historical fiction",
   },
   {
     id: 7,
-    subcategory: "Horror",
+    value: 7,
+    label: "Horror",
   },
   {
     id: 8,
-    subcategory: "Humour and satire",
+    value: 8,
+    label: "Humour and satire",
   },
   {
     id: 9,
-    subcategory: "Literary fiction",
+    value: 9,
+    label: "Literary fiction",
   },
-  {
-    id: 7,
-    subcategory: "Mystery",
-  },
-  {
-    id: 8,
-    subcategory: "Poetry",
-  },
-  {
-    id: 9,
-    subcategory: "Plays",
-  },
+ 
   {
     id: 10,
-    subcategory: "Romance",
+    value: 10,
+    label: "Romance",
   },
   {
     id: 11,
-    subcategory: "Science fiction",
+    value: 11,
+    label: "Science fiction",
   },
   {
     id: 12,
-    subcategory: "Short stories",
+    value: 12,
+    label: "Short stories",
   },
   {
     id: 13,
-    subcategory: "Thrillers",
+    value: 13,
+    label: "Thrillers",
   },
   {
     id: 14,
-    subcategory: "War",
+    value: 14,
+    label: "War",
   },
   {
     id: 15,
-    subcategory: "Women’s fiction",
+    value: 15,
+    label: "Women’s fiction",
   },
   {
     id: 16,
-    subcategory: "Young adult",
+    value: 16,
+    label: "Young adult",
+  },
+  {
+    id: 17,
+    value: 17,
+    label: "Mystery",
+  },
+  {
+    id: 18,
+    value: 18,
+    label: "Poetry",
+  },
+  {
+    id: 19,
+    value: 20,
+    label: "Plays",
   },
 ];
 
 export const nonFiction = [
   {
     id: 1,
-    subcategory: "Autobiography and memoir",
+    value: 1,
+    label: "Autobiography and memoir",
   },
   {
     id: 2,
-    subcategory: "Biography",
+    value: 2,
+    label: "Biography",
   },
   {
     id: 3,
-    subcategory: "Essays",
+    value: 3,
+    label: "Essays",
   },
   {
     id: 4,
-    subcategory: "Non-fiction novel",
+    value: 4,
+    label: "Non-fiction novel",
   },
   {
     id: 5,
-    subcategory: "Self-help",
+    value: 5,
+    label: "Self-help",
   },
 ];
 

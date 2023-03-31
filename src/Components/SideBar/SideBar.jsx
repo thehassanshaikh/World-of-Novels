@@ -28,13 +28,13 @@ export const SideBar = ()=>{
             <h2 className="Category-lable">Fictions</h2>
             <ul className="category-con">
               {fiction.map((item,index)=>(
-                <li key={index}><input type="checkbox" name={item.subcategory}className="inpt-box" onChange={filterNovels}/>{item.subcategory}</li>
+                <li key={index}><input type="checkbox" name={item.label}className="inpt-box" onChange={filterNovels}/>{item.label}</li>
               ))}
             </ul>
             <h2 className="Category-lable">Non - Fictions</h2>
             <ul className="category-con">
             {nonFiction.map((item,index)=>(
-                <li key={index}><input type="checkbox" name={item.subcategory} className="inpt-box" />{item.subcategory}</li>
+                <li key={index}><input type="checkbox" name={item.label} className="inpt-box" />{item.label}</li>
               ))}
             </ul>
           </div>

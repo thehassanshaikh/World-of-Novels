@@ -1,13 +1,13 @@
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { useState } from "react";
-import { NovelsData } from "../../data";
+import { NovelsData, fiction} from "../../data";
 import "./Home.css"
 import { SideBar } from "../../Components/SideBar/SideBar";
 
 export const Home = () => {
 
     const [getNovels, setNovels] = useState(NovelsData);
- 
+
     return (
 
         <section className="home-section">

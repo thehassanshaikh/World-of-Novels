@@ -113,7 +113,7 @@ function BookRegistrationPage() {
   const [selectedOptions, setSelectedOptions] = useState(null);
 
   const setHandle = (e) => {
-    setSelectedOptions(Array.isArray(e) ? e.map((item) => item.label) : []);
+    setSelectedOptions(Array.isArray(e) ? e.map((item) => item.subcategory) : []);
   };
 
 
@@ -199,7 +199,7 @@ function BookRegistrationPage() {
                     }}
                     className="border border-[#0B1354] py-1 px-2"
                   />
-//<<<<<<< main
+
                   {error.price ? (
                     <p className="text-xs text-red-600">{error.price}</p>
                   ) : (
@@ -264,15 +264,15 @@ function BookRegistrationPage() {
                   )}
 
 
-                   
-                 <Select options={FictionSubCategory} onChange={setHandle} isMulti className="block  text-sm text-[#00372e]"></Select>  
+
+                  <Select options={fiction} onChange={setHandle} isMulti className="block  text-sm text-[#00372e]"></Select>
 
                 </div>
-                
-                
-                <textarea  rows="2" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Short Description(optional)"></textarea>
 
-                <textarea  rows="4" className="block p-2.5 mt-5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Description (Minimum 100 words)"></textarea>
+
+                <textarea rows="2" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Short Description(optional)"></textarea>
+
+                <textarea rows="4" className="block p-2.5 mt-5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Description (Minimum 100 words)"></textarea>
 
 
                 <div className="mt-5">

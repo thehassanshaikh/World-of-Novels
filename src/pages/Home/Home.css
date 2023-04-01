@@ -54,12 +54,18 @@ ul.book-ratings {
 .coins {
     background-color: orange;
     width: 35%;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
     padding: 2px 4px;
     text-align: center;
     border-radius: 5px;
     margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.coins svg {
+    font-size: 24px;
 }
 
 h4.book-title {

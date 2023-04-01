@@ -1,6 +1,6 @@
-import "./Sidebar.css";
+import "./Sidebar.css"
 import { useState, useEffect } from "react";
-import { fiction, nonFiction, NovelsData } from "../../data";
+import { fiction, nonFiction, bookCondition, NovelsData } from "../../data";
 import { UserAuth } from "../../Context/AuthContext";
 
 export const SideBar = () => {
@@ -61,6 +61,12 @@ export const SideBar = () => {
               />
               {item.label}
             </li>
+          ))}
+        </ul>
+        <h2 className="Category-lable">Book Condition</h2>
+        <ul className="category-con">
+          {bookCondition.map((item, index) => (
+            <li key={index}><input type="checkbox" name={item.condition} className="inpt-box" />{item.condition}</li>
           ))}
         </ul>
       </div>

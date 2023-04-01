@@ -189,7 +189,7 @@ export const NovelsData = [
     description:
       "Explore the shocking and disturbing case of Charles Manson and his followers in a book written by the prosecuting attorney of the trial. Discover what motivated Manson's cold-blooded selection of victims and his terrifying hold over his followers, particularly the young women who carried out his orders. This harrowing true crime story is accompanied by 50 pages of black and white photographs.",
     image:
-      "https://img.readthistwice.com/unsafe/240x360/books/50f4a1a2-7c9c-4a3e-af00-80d73bd39ad5.jpg",
+      "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/51-eKrWQPjL.jpg",
     subcategory: ["Crime", "Historical fiction", "Mystery", "Thrillers"],
     coin: 57,
   },
@@ -203,7 +203,7 @@ export const NovelsData = [
       "Discover the devastating consequences of a notorious killing in Northern Ireland during The Troubles. Follow award-winning writer Patrick Radden Keefe's intricate narrative, starting with the abduction of Jean McConville, a mother of ten, and delve into the violent guerrilla war that plagued Northern Ireland. From IRA terrorists and their brutal violence to dirty schemes of the British Army, Say Nothing is a tale of passion, betrayal, and anguish that lingers long after the last page.",
     shortDescription: "A True Story of Murder and Memory in Northern Ireland",
     image:
-      "https://img.readthistwice.com/unsafe/240x360/books/50f4a1a2-7c9c-4a3e-af00-80d73bd39ad5.jpg",
+      "https://img1.od-cdn.com/ImageType-400/0292-1/B78/C09/AF/%7BB78C09AF-AAB5-4503-9F36-677DD1CACDCE%7DImg400.jpg",
     subcategory: ["Crime", "Historical fiction", "Thrillers"],
     coin: 30,
   },
@@ -242,7 +242,7 @@ export const NovelsData = [
     description:
       "A world of magic, mystery, intrigue, romance, and adventure awaits in this modern fantasy masterpiece. The first volume of an epic series, this tale of lords, ladies, soldiers, and sorcerers features the harsh Starks of Winterfell at its center, surrounded by supernatural forces massing beyond the protective Wall. As winter looms and conflict brews, characters traverse a land of extremes and undertake dangerous journeys, all for the ultimate prize: the game of thrones.",
     image:
-      "https://img.readthistwice.com/unsafe/240x360/books/a5c2f26b-d66e-473a-8e4b-b899aa5149b5.jpg",
+      "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/A12tbaSby+L.jpg",
     subcategory: [
       "Fantacy",
       "Literary fiction",
@@ -262,7 +262,7 @@ export const NovelsData = [
     description:
       "This epic fantasy tale transports readers to a world torn apart by war and storms. Once living in Heaven, mankind was forced to take root on Roshar after the Voidbringers captured their previous home. The Almighty gifted humans with powerful Shardblades to defend themselves against the Voidbringers, and led by ten orders of knights known as Radiants, they appear to have won the war. But centuries later, the world is still at war with itself, each king vying for more Shardblades to unite all of mankind under one throne. Join a young spearman in his journey to fight a war against an unknown enemy and uncover the forgotten secrets of this mysterious world.",
     image:
-      "https://img.readthistwice.com/unsafe/240x360/books/a5c2f26b-d66e-473a-8e4b-b899aa5149b5.jpg",
+      "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1659905828i/7235533.jpg",
     subcategory: [
       "Fantacy",
       "Literary fiction",
@@ -295,7 +295,7 @@ export const NovelsData = [
     description:
       "Explore a fascinating and surprising world with this groundbreaking work of science, history, and archaeology. Charles C. Mann challenges the widely-held belief that pre-Columbian Americans lived sparsely in a wilderness. Instead, he reveals that they molded and influenced the land around them in incredible ways, from creating advanced cities to engineering corn in a specialized process. Enrich your understanding of the Americas before 1492 with this transformative read.",
     image:
-      "https://img.readthistwice.com/unsafe/240x360/books/8dc7c453-5af7-433c-ad73-2e7817d26d36.jpg",
+      "https://images.gr-assets.com/books/1428598740l/23952750.jpg",
     subcategory: ["Historical fiction", "War", "Crime"],
     coin: 66,
   },
@@ -334,7 +334,7 @@ export const NovelsData = [
     description:
       "his privately published book from 1981, titled Poesie e Satire includes a mix of previously released and new poetry from the author, Alda Merini. While it was intended for a specific audience, the book is a unique and personal collection put together by the author herself. An additional collection of previously unreleased poetry titled Le Satire is also included in this edition. The publication gives readers an intimate look into Merini's creative process and inner circle, adding to the larger collection of her work. The book also features short prose pieces that depict Merini's hometown and the characters that filled her world.",
     image:
-      "https://img.readthistwice.com/unsafe/240x360/books/51ef1b29-1a16-4f5f-af71-f0a984c5a551.jpg",
+      "https://rukminim1.flixcart.com/image/416/416/kk4c13k0/book/u/x/x/satire-epigrammi-epitaffi-e-poesie-latine-di-angiolo-d-elci-original-imafzgxhqbqchzm6.jpeg?q=70",
     subcategory: ["Humour and satire", "Mystery"],
     coin: 21,
   },
@@ -417,7 +417,7 @@ export const NovelsData = [
       "As World War II rages on, young French resistance fighter Isabelle falls in love with American soldier John. But when John is captured by the enemy, Isabelle must risk everything to save him and help the Allied forces defeat the Nazis.",
     shortDescription:
       "Isabelle falls in love with an American soldier and risks everything to save him during World War II.",
-    image: "https://fakeimageurl.com/image.jpg",
+    image: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1662670558i/62337293.jpg",
     subcategory: ["War", "Historical fiction", "Romance"],
     coin: 65,
   },
@@ -476,7 +476,7 @@ export const NovelsData = [
       "Join the intrepid team of explorers as they search for the legendary Lost Treasure of Atlantis! Along the way, they'll encounter dangerous obstacles, uncover ancient secrets, and ultimately face off against their greatest foe yet in a thrilling climax you won't want to miss!",
     shortDescription:
       "Join the search for the Lost Treasure of Atlantis in this exciting adventure novel!",
-    image: "https://fakeimageurl.com/image.jpg",
+    image: "https://m.media-amazon.com/images/M/MV5BZDQ5OGU0MzUtOWE3Yi00MGEzLWE5NTYtNDcwMDYxYzFlYmU5XkEyXkFqcGdeQXVyNjExODE1MDc@._V1_.jpg",
     subcategory: ["Adventure Stories"],
     coin: 35,
   },

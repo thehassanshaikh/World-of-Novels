@@ -18,6 +18,10 @@
     margin: 1%;
 }
 
+.single-img img {
+    width: 250px;
+}
+
 .single-details {
     width: 75%;
     background-color: white;
@@ -27,12 +31,17 @@
 }
 
 h2.single-book-title {
-    font-size: 24px;
+    font-size: 32px;
     font-weight: 600;
 }
 
 .h4.single-author {
     padding: 1% 0;
+}
+
+span.single-grey {
+    color: grey;
+    font-weight: 500;
 }
 
 .single-short-decription {
@@ -60,4 +69,34 @@ button.single-add-btn {
 
 .single-description h4 {
     font-weight: 600;
+}
+
+
+/* util */
+.single-author,
+.single-grey,
+.single-short-decription,
+.single-coin {
+    margin: 5px 0;
+}
+
+
+/* media query */
+
+@media (max-width:425px) {
+    .img-and-details-con {
+        flex-direction: column;
+    }
+
+    .single-img {
+        width: 100%;
+    }
+
+    .single-img img {
+        width: 150px;
+    }
+
+    .single-details {
+        width: 100%;
+    }
 }

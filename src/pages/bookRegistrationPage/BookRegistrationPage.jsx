@@ -199,7 +199,6 @@ function BookRegistrationPage() {
                     }}
                     className="border border-[#0B1354] py-1 px-2"
                   />
-//<<<<<<< main
                   {error.price ? (
                     <p className="text-xs text-red-600">{error.price}</p>
                   ) : (

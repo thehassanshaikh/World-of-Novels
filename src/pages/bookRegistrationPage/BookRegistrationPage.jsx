@@ -250,16 +250,16 @@ function BookRegistrationPage() {
                     ""
                   )}
 
-
+                  
                   <Select
                     options={categoryselect}
                     onChange={setHandle}
                     isMulti
                     className="block  text-sm text-[#00372e]"
                   ></Select>
-                </div>
-
-                </div>
+               
+               </div>
+             
 
                 <textarea
                   rows="1"

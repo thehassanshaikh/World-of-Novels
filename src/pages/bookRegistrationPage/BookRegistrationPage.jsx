@@ -112,9 +112,9 @@ function BookRegistrationPage() {
 
   return (
     <>
-      <div className="min-h-screen bg-gradient-to-r from-red-200 via-emerald-200 to-teal-200">
+      <div className="min-h-screen bg-gradient-to-r from-slate-200 via-orange-100 to-red-100">
         <div className="container p-10">
-          <div className="flex flex-col lg:flex-row w-10/12 lg:w-8/12 bg-[#d1fbed] rounded-2xl mx-auto shadow-lg overflow-hidden">
+          <div className="flex flex-col lg:flex-row w-10/12 lg:w-8/12 bg-[#ffdea1] rounded-2xl mx-auto shadow-lg overflow-hidden">
             <div
               className="w-full lg:w-1/2 flex flex-col items-center justify-center p-12 bg-no-repeat bg-cover bg-center"
               style={{

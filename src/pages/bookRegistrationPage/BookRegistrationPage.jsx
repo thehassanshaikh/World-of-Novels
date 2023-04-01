@@ -259,7 +259,7 @@ function BookRegistrationPage() {
                   ></Select>
                 </div>
 
-                </div>
+            
 
                 <textarea
                   rows="1"

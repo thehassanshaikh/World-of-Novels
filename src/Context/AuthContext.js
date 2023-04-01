@@ -29,6 +29,12 @@ export const AuthContextProvider = ({ children }) => {
   console.log(state)
   },[state])
 
+  useEffect(()=>{
+    if(novelsData.length===0){
+      setNovelData(NovelsData)
+    }
+  },[novelsData])
+
   const googleSignIn = () => {
     const provider = new GoogleAuthProvider();
     signInWithPopup(auth, provider)

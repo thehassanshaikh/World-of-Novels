@@ -24,10 +24,6 @@ export const AuthContextProvider = ({ children }) => {
     password:"",
   });
   const [novelsData,setNovelData] = useState(NovelsData)
-  
-  useEffect(()=>{
-  console.log(state)
-  },[state])
 
   useEffect(()=>{
     if(novelsData.length===0){
@@ -48,6 +44,7 @@ export const AuthContextProvider = ({ children }) => {
   };
 
   const emailPasswordSignIn=()=>{
+    console.log(state)
     signInWithEmailAndPassword(auth,state.email,state.password).then((userCredential) => {
       const newuser = userCredential.user;
       console.log(newuser)
@@ -82,7 +79,7 @@ export const AuthContextProvider = ({ children }) => {
   },[])
 
   return (
-    <AuthContext.Provider value={{ googleSignIn,logOut,user,setState,emailPasswordSignIn,coins,setCoin,setNovelData,novelsData }}>
+    <AuthContext.Provider value={{ googleSignIn,logOut,user,setState,emailPasswordSignIn,coins,setCoin,setNovelData,novelsData,state }}>
       {children}
     </AuthContext.Provider>
   );

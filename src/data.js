@@ -674,7 +674,7 @@ export const NovelsData = [
       "A collection of short stories that explores themes of identity, cultural displacement, and the immigrant experience.",
     image:
       "https://tse4.mm.bing.net/th?id=OIP.If23xjD64CmT_Vebv88AwgHaLU&pid=Api&P=0",
-    subcategory: ["Literary fiction", "Short Stories"],
+    subcategory: ["Literary fiction", "Short stories"],
     coin: 85,
   },
 
@@ -690,7 +690,7 @@ export const NovelsData = [
       "A collection of interconnected short stories that depict the experiences of soldiers during the Vietnam War.",
     image:
       "https://tse2.mm.bing.net/th?id=OIP.YkLX8a4sbJjhgvfgDzNbrQHaLw&pid=Api&P=0",
-    subcategory: ["Literary fiction", "Short Stories"],
+    subcategory: ["Literary fiction", "Short stories"],
     coin: 46,
   },
   {
@@ -798,7 +798,7 @@ export const NovelsData = [
       "A non-fiction book that provides a sweeping history of human evolution from the emergence of Homo sapiens to the present day.",
     image:
       "https://tse4.mm.bing.net/th?id=OIP.ePZgFISI6cil9jxJXAXAKAHaJ4&pid=Api&P=0",
-    subcategory: ["Non-Fiction Novel"],
+    subcategory: ["Non-fiction novel"],
     coin: 36,
   },
 
@@ -814,7 +814,7 @@ export const NovelsData = [
       "A non-fiction book that explores the mass incarceration of black Americans and its impact on communities of color.",
     image:
       "https://tse3.mm.bing.net/th?id=OIP.NBs9uhNxVVD-bSHZW2S2JQHaLW&pid=Api&P=0",
-    subcategory: ["Non-Fiction Novel"],
+    subcategory: ["Non-fiction novel"],
     coin: 49,
   },
   {

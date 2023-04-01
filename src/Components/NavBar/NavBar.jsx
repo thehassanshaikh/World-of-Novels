@@ -38,7 +38,7 @@ function NavBar() {
     navigate('/')
   }
   return (
-    <div className="navBar flex justify-between items-center bg-[#fcc1bd] shadow-lg p-4">
+    <div className="navBar flex justify-between items-center bg-[#FACF39] shadow-lg px-4">
       <div className="flex justify-center items-center md:order-2">
         <div className="hamburger inline-block p-4 cursor-pointer md:hidden">
           <div className="line h-0.5 w-6 my-1 bg-white "></div>
@@ -54,7 +54,7 @@ function NavBar() {
         <div className="cursor-pointer">
           <img className="w-48" src={logo1} alt=""></img>
         </div>
-        <div className="sell w-fit md:w-auto md:px-8 md:m-3 md:p-0.5 text-white md:font-bold md:text-xl md:border absolute md:items-center md:bg-[#0b1354] md:rounded-xl hover:scale-105  md:static bg-[#0b1354] inset-0 md:flex md:mx-4 md:space-x-2 -translate-x-96 md:translate-x-0 cursor-pointer">
+        <div className="sell w-fit md:w-auto md:px-8 md:m-3 md:p-0.5 text-black md:font-bold md:text-xl md:border absolute md:items-center md:bg-[#F5793B] md:rounded-xl hover:scale-105  md:static bg-[#0b1354] inset-0 md:flex md:mx-4 md:space-x-2 -translate-x-96 md:translate-x-0 cursor-pointer">
           <button className="SItem " onClick={uploadBooks}>Upload +</button>
         </div>
       </div>
@@ -63,7 +63,7 @@ function NavBar() {
           <div className="relative mb-4 flex w-full flex-wrap items-stretch">
             <input
               type="search"
-              className="relative m-0 block w-[2%] min-w-0 flex-auto rounded border border-solid border-white bg-[#0b1354] bg-clip-padding px-3 py-1.5 text-base font-normal text-white outline-none transition duration-300 ease-in-out focus:border-primary-600 focus:text-white focus:shadow-te-primary focus:outline-none"
+              className="relative m-0 block w-[2%] min-w-0 flex-auto rounded border border-solid border-white bg-[#f59160] bg-clip-padding px-3 py-1.5 text-base font-normal text-white outline-none transition duration-300 ease-in-out focus:border-primary-600 focus:text-white focus:shadow-te-primary focus:outline-none"
               placeholder="Search"
               aria-label="Search"
               value={q}
@@ -71,7 +71,7 @@ function NavBar() {
               aria-describedby="button-addon2"
             />
             <span
-              className="input-group-text flex items-center whitespace-nowrap rounded px-3 py-1.5 text-center text-base font-normal bg-[#0b1354] text-white cursor-pointer"
+              className="input-group-text flex items-center whitespace-nowrap rounded px-3 py-1.5 text-center text-base font-normal bg-[#f59160] text-white cursor-pointer"
               id="basic-addon2"
             >
               <svg
@@ -91,9 +91,9 @@ function NavBar() {
           </div>
         </div>
       </div>
-      <div className="cart text-center md:order-3 flex inset-12">
+      <div className="cart text-center md:order-3 flex inset-14">
         
-        <img className="w-6 h-6 mr-1 cursor-pointer" src={coin} alt=""></img><p className="text-teal-500">{coins}</p>
+        <img className="w-6 h-6 mr-1 cursor-pointer" src={coin} alt=""></img><p className="text-black">{coins}</p>
         <img
           className="w-6 h-6 ml-4 mr-4 cursor-pointer text-white"
           src={cart}
@@ -104,7 +104,7 @@ function NavBar() {
           src={url} 
           alt=""
         ></img>
-        <button onClick={handleLogin} className='text-blue-500 underline'>Logout</button>
+        <button onClick={handleLogin} className='text-black underline'>Logout</button>
       </div>
     </div>
   );

@@ -134,12 +134,15 @@ button.coin-btn {
     .card {
         width: 30%;
     }
+
+    p.condition {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
-@media (max-width: 375px) {
-    
-
-}
+@media (max-width: 375px) {}
 
 @media (max-width: 426px) {
     .card {
@@ -153,6 +156,10 @@ button.coin-btn {
     .books-container {
         width: 100%;
     }
+
+    p.condition {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
-
-

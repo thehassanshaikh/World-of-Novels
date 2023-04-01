@@ -258,8 +258,12 @@ function BookRegistrationPage() {
                     className="block  text-sm text-[#00372e]"
                   ></Select>
                
-               </div>
+          
              
+
+                </div>
+
+            
 
                 <textarea
                   rows="1"

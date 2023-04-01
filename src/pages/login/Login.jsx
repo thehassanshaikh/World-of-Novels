@@ -7,23 +7,27 @@ import img2 from "../../images/image2.jpg"
 
 function Login() {
   const navigate=useNavigate();
-  const {googleSignIn,user,setState,emailPasswordSignIn} = UserAuth();
+  const {googleSignIn,user,setState,emailPasswordSignIn,state} = UserAuth();
   const [email,setEmail] =useState('');
   const [password,setPassword]=useState('');
 
-  const handleSubmit = (e) =>{
+  const handleSubmit = async(e) =>{
     e.preventDefault()
     setState({
       email:email,
       password:password,
     })
-    emailPasswordSignIn();
+    //emailPasswordSignIn();
   }
+  useEffect(()=>{
+    if(state.email!=='' && state.password!=='')
+    emailPasswordSignIn();
+  },[state])
   
-
   const signin = async()=>{
     await googleSignIn();
   }
+
   useEffect(()=>{
     if(user){
       navigate('/main')

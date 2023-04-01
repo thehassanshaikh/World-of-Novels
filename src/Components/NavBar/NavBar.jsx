@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useMemo } from "react";
-import logo1 from "./pic/logo1.png";
+import logo1 from "./pic/logo1.jpeg";
 import searchicon from "./pic/searchicon.svg";
 import coin from "./pic/coins.png";
 import usericon from "./pic/usericon.svg";

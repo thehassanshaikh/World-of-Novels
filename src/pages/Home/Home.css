@@ -128,24 +128,7 @@ button.coin-btn {
     border-radius: 5px;
 }
 
-
-@media (min-width: 427px) and (max-width: 768px) {
-
-    .card {
-        width: 30%;
-    }
-}
-
-@media (max-width: 375px) {
-    
-
-}
-
-@media (max-width: 426px) {
-    .card {
-        width: 45%;
-    }
-
+@media screen and (max-width: 768px) {
     .sidebar-container {
         display: none;
     }
@@ -153,6 +136,25 @@ button.coin-btn {
     .books-container {
         width: 100%;
     }
+
+    .card {
+        width: 45%;
+        margin: 2%;
+    }
 }
 
+@media screen and (min-width: 768px) {
+    .sidebar-container {
+        display: block;
+    }
 
+    .books-container {
+        width: 85%;
+    }
+
+    .card {
+        width: 23%;
+        margin: 1%;
+
+    }
+}

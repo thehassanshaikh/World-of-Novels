@@ -100,6 +100,21 @@ export const nonFiction = [
   },
 ];
 
+export const bookCondition = [
+  {
+    id: 0,
+    condition: "Good",
+  },
+  {
+    id: 1,
+    condition: "Average",
+  },
+  {
+    id: 2,
+    condition: "Bad",
+  },
+];
+
 export const NovelsData = [
   {
     title: "Touching the Void",

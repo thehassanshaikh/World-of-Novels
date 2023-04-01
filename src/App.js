@@ -8,6 +8,7 @@ import StartingSearchPage from "./pages/startingSearchPage/StartingSearchPage";
 
 import { AuthContextProvider } from "./Context/AuthContext";
 import Layout from "./Components/Layout/Layout";
+import SingleBook from "./pages/SingleBook/SingleBook"
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             path="/bookRegistrationPage"
             element={<BookRegistrationPage />}
           ></Route>
+          <Route path="/singleBook" element={<SingleBook />}></Route>
         </Routes>
       </BrowserRouter>
     </AuthContextProvider>

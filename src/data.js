@@ -1,102 +1,127 @@
 export const fiction = [
   {
     id: 1,
-    subcategory: "Adventure stories",
+    value: 1,
+    label: "Adventure stories",
   },
   {
     id: 2,
-    subcategory: "Classics",
+    value: 2,
+    label: "Classics",
   },
   {
     id: 3,
-    subcategory: "Crime",
+    value: 3,
+    label: "Crime",
   },
   {
     id: 4,
-    subcategory: "Fairy tales",
+    value: 4,
+    label: "Fairy tales",
   },
   {
     id: 5,
-    subcategory: "Fantasy",
+    value: 5,
+    label: "Fantasy",
   },
   {
     id: 6,
-    subcategory: "Historical fiction",
+    value: 6,
+    label: "Historical fiction",
   },
   {
     id: 7,
-    subcategory: "Horror",
+    value: 7,
+    label: "Horror",
   },
   {
     id: 8,
-    subcategory: "Humour and satire",
+    value: 8,
+    label: "Humour and satire",
   },
   {
     id: 9,
-    subcategory: "Literary fiction",
+    value: 9,
+    label: "Literary fiction",
   },
-  {
-    id: 7,
-    subcategory: "Mystery",
-  },
-  {
-    id: 8,
-    subcategory: "Poetry",
-  },
-  {
-    id: 9,
-    subcategory: "Plays",
-  },
+ 
   {
     id: 10,
-    subcategory: "Romance",
+    value: 10,
+    label: "Romance",
   },
   {
     id: 11,
-    subcategory: "Science fiction",
+    value: 11,
+    label: "Science fiction",
   },
   {
     id: 12,
-    subcategory: "Short stories",
+    value: 12,
+    label: "Short stories",
   },
   {
     id: 13,
-    subcategory: "Thrillers",
+    value: 13,
+    label: "Thrillers",
   },
   {
     id: 14,
-    subcategory: "War",
+    value: 14,
+    label: "War",
   },
   {
     id: 15,
-    subcategory: "Women’s fiction",
+    value: 15,
+    label: "Women’s fiction",
   },
   {
     id: 16,
-    subcategory: "Young adult",
+    value: 16,
+    label: "Young adult",
+  },
+  {
+    id: 17,
+    value: 17,
+    label: "Mystery",
+  },
+  {
+    id: 18,
+    value: 18,
+    label: "Poetry",
+  },
+  {
+    id: 19,
+    value: 20,
+    label: "Plays",
   },
 ];
 
 export const nonFiction = [
   {
     id: 1,
-    subcategory: "Autobiography and memoir",
+    value: 1,
+    label: "Autobiography and memoir",
   },
   {
     id: 2,
-    subcategory: "Biography",
+    value: 2,
+    label: "Biography",
   },
   {
     id: 3,
-    subcategory: "Essays",
+    value: 3,
+    label: "Essays",
   },
   {
     id: 4,
-    subcategory: "Non-fiction novel",
+    value: 4,
+    label: "Non-fiction novel",
   },
   {
     id: 5,
-    subcategory: "Self-help",
+    value: 5,
+    label: "Self-help",
   },
 ];
 
@@ -649,7 +674,7 @@ export const NovelsData = [
       "A collection of short stories that explores themes of identity, cultural displacement, and the immigrant experience.",
     image:
       "https://tse4.mm.bing.net/th?id=OIP.If23xjD64CmT_Vebv88AwgHaLU&pid=Api&P=0",
-    subcategory: ["Literary fiction", "Short Stories"],
+    subcategory: ["Literary fiction", "Short stories"],
     coin: 85,
   },
 
@@ -665,7 +690,7 @@ export const NovelsData = [
       "A collection of interconnected short stories that depict the experiences of soldiers during the Vietnam War.",
     image:
       "https://tse2.mm.bing.net/th?id=OIP.YkLX8a4sbJjhgvfgDzNbrQHaLw&pid=Api&P=0",
-    subcategory: ["Literary fiction", "Short Stories"],
+    subcategory: ["Literary fiction", "Short stories"],
     coin: 46,
   },
   {
@@ -773,7 +798,7 @@ export const NovelsData = [
       "A non-fiction book that provides a sweeping history of human evolution from the emergence of Homo sapiens to the present day.",
     image:
       "https://tse4.mm.bing.net/th?id=OIP.ePZgFISI6cil9jxJXAXAKAHaJ4&pid=Api&P=0",
-    subcategory: ["Non-Fiction Novel"],
+    subcategory: ["Non-fiction novel"],
     coin: 36,
   },
 
@@ -789,7 +814,7 @@ export const NovelsData = [
       "A non-fiction book that explores the mass incarceration of black Americans and its impact on communities of color.",
     image:
       "https://tse3.mm.bing.net/th?id=OIP.NBs9uhNxVVD-bSHZW2S2JQHaLW&pid=Api&P=0",
-    subcategory: ["Non-Fiction Novel"],
+    subcategory: ["Non-fiction novel"],
     coin: 49,
   },
   {

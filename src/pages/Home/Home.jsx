@@ -17,7 +17,7 @@ export const Home = () => {
         <section className="home-section">
            <SideBar />
             <div className="books-container">
-                {novelsData.map((book, index) => (
+                {novelsData?.map((book, index) => (
                     <div className="card" key={index}>
                         <div className="img-con">
                             <img className="book-img" src={book.image} alt={book.title} />

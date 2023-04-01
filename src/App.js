@@ -9,6 +9,7 @@ import StartingSearchPage from "./pages/startingSearchPage/StartingSearchPage";
 import { AuthContextProvider } from "./Context/AuthContext";
 import Layout from "./Components/Layout/Layout";
 import SingleBook from "./pages/SingleBook/SingleBook"
+import Cart from "./pages/Cart/Cart"
 
 
 function App() {
@@ -23,6 +24,8 @@ function App() {
             element={<BookRegistrationPage />}
           ></Route>
           <Route path="/singleBook" element={<SingleBook />}></Route>
+          <Route path="/cart" element={<Cart />}></Route>
+
         </Routes>
       </BrowserRouter>
     </AuthContextProvider>

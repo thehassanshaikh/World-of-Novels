@@ -7,19 +7,27 @@ export const SideBar = ()=>{
   const [q, setQ] = useState("");
   const {setNovelData}=UserAuth();
   const [search,setSearch]=useState([]);
+  const [checkedCategory,setCheckedCategory]=useState([])
   const filterNovels = (e) =>{
-   
     if(e.target.checked){
-      const searchResult=(NovelsData.filter(novel=>(
-        novel.subcategory.includes(e.target.name))))
-      //  search = search.concat(searchResult); 
-      setSearch((prevval)=>prevval.concat(searchResult))
-      console.log(search)
-     setNovelData(search)
+      setCheckedCategory([...checkedCategory,e.target.name])
     }
-   
+    else{
+      checkedCategory.splice(checkedCategory.indexOf(e.target.name), 1)
+      setCheckedCategory(checkedCategory)
+    }
+
   }
-  //useEffect(()=>{console.log("hello")},[filterNovels])
+  
+  useEffect(()=>{
+    const searchResult=(NovelsData.filter(novel=>(
+      novel.subcategory.some(r=> checkedCategory.includes(r)))))
+  setNovelData(searchResult)
+},[checkedCategory])
+
+useEffect(()=>{
+  setNovelData(NovelsData)
+},[])
 
     return (
         <section className="sidebar-container">

@@ -6,7 +6,7 @@ import { NovelsData } from "../../data";
 import { useNavigate } from "react-router";
 import { UserAuth } from "../../Context/AuthContext";
 
-import Swal from 'sweetalert2'
+import Swal from "sweetalert2";
 import Select from "react-select";
 
 const initialState = {
@@ -16,6 +16,8 @@ const initialState = {
   category: "",
   condition: "",
   image: "",
+  description: "",
+  shortDescription: "",
   subcategory: [],
   coin: 0,
 };
@@ -33,12 +35,14 @@ function BookRegistrationPage() {
     category: "",
     condition: "",
     image: "",
+    description: "",
   });
 
   const validateInput = (formObject) => {
     const errors = {};
+    console.log(novel);
     Object.keys(formObject).forEach((val) => {
-      if (formObject[val] === "") {
+      if (val!='shortDescription' && formObject[val] === "") {
         errors[val] = "Please fill this field";
       }
     });
@@ -50,6 +54,7 @@ function BookRegistrationPage() {
 
   const uploadNovel = (e) => {
     e.preventDefault();
+    
     setError({});
     let coin = parseInt(novel.price) / 10;
     if (novel.condition == 1) {
@@ -65,15 +70,16 @@ function BookRegistrationPage() {
     const errors = validateInput(novel);
     if (Object.keys(errors).length > 0) {
       setError(errors);
-      Swal.fire({
-        title: "Some fields are empty",
-        text: `Please fill it first`,
-        icon: "error",
-      });
+      // Swal.fire({
+      //   title: "Some fields are empty",
+      //   text: `Please fill it first`,
+      //   icon: "error",
+      // });
     } else {
       NovelsData.unshift({
         ...novel,
         coin: parseInt(coin),
+        subcategory:selectedOptions,
       });
       e.target.reset();
 
@@ -84,6 +90,7 @@ function BookRegistrationPage() {
         text: `You earned ${parseInt(coin)} coins`,
         icon: "success",
       });
+      console.log(novel)
       setNovel(initialState);
     }
 
@@ -91,34 +98,14 @@ function BookRegistrationPage() {
     // let novelsList = JSON.parse(window.localStorage.getItem("novelsList"));
     // novelsList.push(novel);
     // window.localStorage.setItem("novelsList", JSON.stringify(novelsList));
-
-    //console.log(NovelsData);
   };
 
-
-  const FictionSubCategory = [
-    { value: 1, label: "" },
-    { value: 2, label: "" },
-    { value: 3, label: "" },
-    { value: 4, label: "" },
-    { value: 5, label: "" },
-  ];
-  const NonFictionSubCategory = [
-    { value: 1, label: "" },
-    { value: 2, label: "" },
-    { value: 3, label: "" },
-    { value: 4, label: "" },
-    { value: 5, label: "" },
-  ]
+  const [categoryselect, setCategory] = useState(fiction);
   const [selectedOptions, setSelectedOptions] = useState(null);
 
   const setHandle = (e) => {
     setSelectedOptions(Array.isArray(e) ? e.map((item) => item.subcategory) : []);
   };
-
-
-
-
 
   return (
     <>
@@ -207,7 +194,6 @@ function BookRegistrationPage() {
                   )}
                 </div>
                 <div className="grid grid-cols-2 gap-5 mt-5">
-
                   <select
                     onChange={(e) => {
                       setNovel({
@@ -227,15 +213,12 @@ function BookRegistrationPage() {
                     })}
                   </select>
 
-                  {error.category ? (
-                    <p className="text-xs text-red-600">{error.category}</p>
+                  {error.condition ? (
+                    <p className="text-xs text-red-600">{error.condition}</p>
                   ) : (
                     ""
                   )}
-
                 </div>
-
-
 
                 <div className="grid grid-cols-2 gap-5 mt-5">
                   <select
@@ -245,35 +228,67 @@ function BookRegistrationPage() {
                         ...novel,
                         category: e.target.value,
                       });
+                      e.target.value === "Fiction"
+                        ? setCategory(fiction)
+                        : setCategory(nonFiction);
+                      console.log(e.target.value);
                     }}
                   >
                     <option>Select Book Category</option>
-                    {options.map((option, index) => {
+                    {options.map((item, index) => {
                       return (
-                        <option key={index} value={option}>
-                          {option}
+                        <option key={index} value={item}>
+                          {item}
                         </option>
                       );
                     })}
                   </select>
 
-                  {error.condition ? (
-                    <p className="text-xs text-red-600">{error.condition}</p>
+                  {error.category ? (
+                    <p className="text-xs text-red-600">{error.category}</p>
                   ) : (
                     ""
                   )}
 
 
-
-                  <Select options={fiction} onChange={setHandle} isMulti className="block  text-sm text-[#00372e]"></Select>
-
+                  <Select
+                    options={categoryselect}
+                    onChange={setHandle}
+                    isMulti
+                    className="block  text-sm text-[#00372e]"
+                  ></Select>
                 </div>
 
+            
 
-                <textarea rows="2" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Short Description(optional)"></textarea>
+                <textarea
+                  rows="1"
+                  className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                  placeholder="Short Description(optional)"
+                  onChange={(e) =>
+                    setNovel({
+                      ...novel,
+                      shortDescription: e.target.value,
+                    })
+                  }
+                ></textarea>
 
-                <textarea rows="4" className="block p-2.5 mt-5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Description (Minimum 100 words)"></textarea>
-
+                <textarea
+                  rows="2"
+                  className="block p-2.5 mt-5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                  placeholder="Description"
+                  onChange={(e) =>
+                    setNovel({
+                      ...novel,
+                      description: e.target.value,
+                    })
+                  }
+                ></textarea>
+                {error.description ? (
+                  <p className="text-xs text-red-600">{error.description}</p>
+                ) : (
+                  ""
+                )}
 
                 <div className="mt-5">
                   <label

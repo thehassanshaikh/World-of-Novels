@@ -36,13 +36,14 @@ function BookRegistrationPage() {
     condition: "",
     image: "",
     description: "",
+    subcategory: "",
   });
 
   const validateInput = (formObject) => {
     const errors = {};
     console.log(novel);
     Object.keys(formObject).forEach((val) => {
-      if (val!='shortDescription' && formObject[val] === "") {
+      if (val != "shortDescription" && formObject[val] === "") {
         errors[val] = "Please fill this field";
       }
     });
@@ -54,7 +55,7 @@ function BookRegistrationPage() {
 
   const uploadNovel = (e) => {
     e.preventDefault();
-    
+
     setError({});
     let coin = parseInt(novel.price) / 10;
     if (novel.condition == 1) {
@@ -79,7 +80,7 @@ function BookRegistrationPage() {
       NovelsData.unshift({
         ...novel,
         coin: parseInt(coin),
-        subcategory:selectedOptions,
+        subcategory: selectedOptions,
       });
       e.target.reset();
 
@@ -90,7 +91,7 @@ function BookRegistrationPage() {
         text: `You earned ${parseInt(coin)} coins`,
         icon: "success",
       });
-      console.log(novel)
+      console.log(novel);
       setNovel(initialState);
     }
 
@@ -100,11 +101,13 @@ function BookRegistrationPage() {
     // window.localStorage.setItem("novelsList", JSON.stringify(novelsList));
   };
 
-  const [categoryselect, setCategory] = useState(fiction);
+  const [categoryselect, setCategory] = useState("");
   const [selectedOptions, setSelectedOptions] = useState(null);
 
   const setHandle = (e) => {
-    setSelectedOptions(Array.isArray(e) ? e.map((item) => item.subcategory) : []);
+    setSelectedOptions(
+      Array.isArray(e) ? e.map((item) => item.subcategory) : []
+    );
   };
 
   return (
@@ -250,29 +253,34 @@ function BookRegistrationPage() {
                     ""
                   )}
 
-
-                  <Select
-                    options={categoryselect}
-                    onChange={setHandle}
-                    isMulti
-                    className="block  text-sm text-[#00372e]"
-                  ></Select>
+                  {categoryselect && (
+                    <Select
+                      options={categoryselect}
+                      onChange={setHandle}
+                      isMulti
+                      className="block  text-sm text-[#00372e]"
+                    ></Select>
+                  )}
+                  {error.subcategory ? (
+                    <p className="text-xs text-red-600">{error.subcategory}</p>
+                  ) : (
+                    ""
+                  )}
                 </div>
 
-            
-
-                <textarea
-                  rows="1"
-                  className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
-                  placeholder="Short Description(optional)"
-                  onChange={(e) =>
-                    setNovel({
-                      ...novel,
-                      shortDescription: e.target.value,
-                    })
-                  }
-                ></textarea>
-
+                <div>
+                  <textarea
+                    rows="1"
+                    className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                    placeholder="Short Description(optional)"
+                    onChange={(e) =>
+                      setNovel({
+                        ...novel,
+                        shortDescription: e.target.value,
+                      })
+                    }
+                  ></textarea>
+                </div>
                 <textarea
                   rows="2"
                   className="block p-2.5 mt-5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
@@ -295,13 +303,11 @@ function BookRegistrationPage() {
                     className="block mb-2 text-sm font-medium text-[#00372e] dark:text-white"
                     htmlFor="file_input"
                   >
-                    Upload Picture
+                    Upload Novel Picture(url)
                   </label>
                   <input
-                    className="block w-full text-sm text-[#00372e] border border-[#00372e] cursor-pointer bg-gray-50 focus:outline-none py-1 px-2"
-                    id="file_input"
-                    type="file"
-                    accept="image/png, image/jpeg"
+                    className="block w-full text-sm text-[#00372e] border border-[#00372e] cursor-pointer bg-gray-50 focus:outline-none py-1 px-2"      
+                    type="url"
                     onChange={(e) => {
                       setNovel({
                         ...novel,
@@ -316,19 +322,6 @@ function BookRegistrationPage() {
                   )}
                 </div>
 
-                <div className="mt-5">
-                  <input type="checkbox" className="border border-[#0B1354]" />
-                  <span className="text-[#0B1354]">
-                    I accept the{" "}
-                    <a href="#" className="text-[#ffc000] font-semibold">
-                      Terms of Use
-                    </a>{" "}
-                    &{" "}
-                    <a href="#" className="text-[#ffc000] font-semibold">
-                      Privacy Policy
-                    </a>
-                  </span>
-                </div>
                 <div className="mt-5">
                   <button className="w-full bg-[#0B1354] py-3 text-center text-white">
                     Register Now

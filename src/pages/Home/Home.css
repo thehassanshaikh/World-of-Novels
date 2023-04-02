@@ -21,6 +21,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    height: fit-content;
 }
 
 .card {
@@ -28,6 +29,7 @@
     margin: 1%;
     width: 23%;
     border-radius: 5px;
+    height: min-content;
 }
 
 .img-con {

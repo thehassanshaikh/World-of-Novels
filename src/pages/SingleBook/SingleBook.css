@@ -112,4 +112,9 @@ button.single-add-btn {
     .single-details {
         width: 100%;
     }
+
+    h2.single-book-title {
+        font-size: 24px;
+        font-weight: 600;
+    }
 }

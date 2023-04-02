@@ -54,12 +54,18 @@ ul.book-ratings {
 .coins {
     background-color: orange;
     width: 35%;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
     padding: 2px 4px;
     text-align: center;
     border-radius: 5px;
     margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.coins svg {
+    font-size: 24px;
 }
 
 h4.book-title {
@@ -134,12 +140,15 @@ button.coin-btn {
     .card {
         width: 30%;
     }
+
+    p.condition {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
-@media (max-width: 375px) {
-    
-
-}
+@media (max-width: 375px) {}
 
 @media (max-width: 426px) {
     .card {
@@ -153,6 +162,10 @@ button.coin-btn {
     .books-container {
         width: 100%;
     }
+
+    p.condition {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
-
-

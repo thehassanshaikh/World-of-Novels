@@ -1,102 +1,142 @@
 export const fiction = [
   {
     id: 1,
-    subcategory: "Adventure stories",
+    value: 1,
+    label: "Adventure stories",
   },
   {
     id: 2,
-    subcategory: "Classics",
+    value: 2,
+    label: "Classics",
   },
   {
     id: 3,
-    subcategory: "Crime",
+    value: 3,
+    label: "Crime",
   },
   {
     id: 4,
-    subcategory: "Fairy tales",
+    value: 4,
+    label: "Fairy tales",
   },
   {
     id: 5,
-    subcategory: "Fantasy",
+    value: 5,
+    label: "Fantasy",
   },
   {
     id: 6,
-    subcategory: "Historical fiction",
+    value: 6,
+    label: "Historical fiction",
   },
   {
     id: 7,
-    subcategory: "Horror",
+    value: 7,
+    label: "Horror",
   },
   {
     id: 8,
-    subcategory: "Humour and satire",
+    value: 8,
+    label: "Humour and satire",
   },
   {
     id: 9,
-    subcategory: "Literary fiction",
+    value: 9,
+    label: "Literary fiction",
   },
-  {
-    id: 7,
-    subcategory: "Mystery",
-  },
-  {
-    id: 8,
-    subcategory: "Poetry",
-  },
-  {
-    id: 9,
-    subcategory: "Plays",
-  },
+ 
   {
     id: 10,
-    subcategory: "Romance",
+    value: 10,
+    label: "Romance",
   },
   {
     id: 11,
-    subcategory: "Science fiction",
+    value: 11,
+    label: "Science fiction",
   },
   {
     id: 12,
-    subcategory: "Short stories",
+    value: 12,
+    label: "Short stories",
   },
   {
     id: 13,
-    subcategory: "Thrillers",
+    value: 13,
+    label: "Thrillers",
   },
   {
     id: 14,
-    subcategory: "War",
+    value: 14,
+    label: "War",
   },
   {
     id: 15,
-    subcategory: "Women’s fiction",
+    value: 15,
+    label: "Women’s fiction",
   },
   {
     id: 16,
-    subcategory: "Young adult",
+    value: 16,
+    label: "Young adult",
+  },
+  {
+    id: 17,
+    value: 17,
+    label: "Mystery",
+  },
+  {
+    id: 18,
+    value: 18,
+    label: "Poetry",
+  },
+  {
+    id: 19,
+    value: 20,
+    label: "Plays",
   },
 ];
 
 export const nonFiction = [
   {
     id: 1,
-    subcategory: "Autobiography and memoir",
+    value: 1,
+    label: "Autobiography and memoir",
   },
   {
     id: 2,
-    subcategory: "Biography",
+    value: 2,
+    label: "Biography",
   },
   {
     id: 3,
-    subcategory: "Essays",
+    value: 3,
+    label: "Essays",
   },
   {
     id: 4,
-    subcategory: "Non-fiction novel",
+    value: 4,
+    label: "Non-fiction novel",
   },
   {
     id: 5,
-    subcategory: "Self-help",
+    value: 5,
+    label: "Self-help",
+  },
+];
+
+export const bookCondition = [
+  {
+    id: 0,
+    condition: "Good",
+  },
+  {
+    id: 1,
+    condition: "Average",
+  },
+  {
+    id: 2,
+    condition: "Bad",
   },
 ];
 
@@ -164,7 +204,7 @@ export const NovelsData = [
     description:
       "Explore the shocking and disturbing case of Charles Manson and his followers in a book written by the prosecuting attorney of the trial. Discover what motivated Manson's cold-blooded selection of victims and his terrifying hold over his followers, particularly the young women who carried out his orders. This harrowing true crime story is accompanied by 50 pages of black and white photographs.",
     image:
-      "https://img.readthistwice.com/unsafe/240x360/books/50f4a1a2-7c9c-4a3e-af00-80d73bd39ad5.jpg",
+      "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/51-eKrWQPjL.jpg",
     subcategory: ["Crime", "Historical fiction", "Mystery", "Thrillers"],
     coin: 57,
   },
@@ -178,7 +218,7 @@ export const NovelsData = [
       "Discover the devastating consequences of a notorious killing in Northern Ireland during The Troubles. Follow award-winning writer Patrick Radden Keefe's intricate narrative, starting with the abduction of Jean McConville, a mother of ten, and delve into the violent guerrilla war that plagued Northern Ireland. From IRA terrorists and their brutal violence to dirty schemes of the British Army, Say Nothing is a tale of passion, betrayal, and anguish that lingers long after the last page.",
     shortDescription: "A True Story of Murder and Memory in Northern Ireland",
     image:
-      "https://img.readthistwice.com/unsafe/240x360/books/50f4a1a2-7c9c-4a3e-af00-80d73bd39ad5.jpg",
+      "https://img1.od-cdn.com/ImageType-400/0292-1/B78/C09/AF/%7BB78C09AF-AAB5-4503-9F36-677DD1CACDCE%7DImg400.jpg",
     subcategory: ["Crime", "Historical fiction", "Thrillers"],
     coin: 30,
   },
@@ -217,7 +257,7 @@ export const NovelsData = [
     description:
       "A world of magic, mystery, intrigue, romance, and adventure awaits in this modern fantasy masterpiece. The first volume of an epic series, this tale of lords, ladies, soldiers, and sorcerers features the harsh Starks of Winterfell at its center, surrounded by supernatural forces massing beyond the protective Wall. As winter looms and conflict brews, characters traverse a land of extremes and undertake dangerous journeys, all for the ultimate prize: the game of thrones.",
     image:
-      "https://img.readthistwice.com/unsafe/240x360/books/a5c2f26b-d66e-473a-8e4b-b899aa5149b5.jpg",
+      "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/A12tbaSby+L.jpg",
     subcategory: [
       "Fantacy",
       "Literary fiction",
@@ -237,7 +277,7 @@ export const NovelsData = [
     description:
       "This epic fantasy tale transports readers to a world torn apart by war and storms. Once living in Heaven, mankind was forced to take root on Roshar after the Voidbringers captured their previous home. The Almighty gifted humans with powerful Shardblades to defend themselves against the Voidbringers, and led by ten orders of knights known as Radiants, they appear to have won the war. But centuries later, the world is still at war with itself, each king vying for more Shardblades to unite all of mankind under one throne. Join a young spearman in his journey to fight a war against an unknown enemy and uncover the forgotten secrets of this mysterious world.",
     image:
-      "https://img.readthistwice.com/unsafe/240x360/books/a5c2f26b-d66e-473a-8e4b-b899aa5149b5.jpg",
+      "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1659905828i/7235533.jpg",
     subcategory: [
       "Fantacy",
       "Literary fiction",
@@ -270,7 +310,7 @@ export const NovelsData = [
     description:
       "Explore a fascinating and surprising world with this groundbreaking work of science, history, and archaeology. Charles C. Mann challenges the widely-held belief that pre-Columbian Americans lived sparsely in a wilderness. Instead, he reveals that they molded and influenced the land around them in incredible ways, from creating advanced cities to engineering corn in a specialized process. Enrich your understanding of the Americas before 1492 with this transformative read.",
     image:
-      "https://img.readthistwice.com/unsafe/240x360/books/8dc7c453-5af7-433c-ad73-2e7817d26d36.jpg",
+      "https://images.gr-assets.com/books/1428598740l/23952750.jpg",
     subcategory: ["Historical fiction", "War", "Crime"],
     coin: 66,
   },
@@ -309,7 +349,7 @@ export const NovelsData = [
     description:
       "his privately published book from 1981, titled Poesie e Satire includes a mix of previously released and new poetry from the author, Alda Merini. While it was intended for a specific audience, the book is a unique and personal collection put together by the author herself. An additional collection of previously unreleased poetry titled Le Satire is also included in this edition. The publication gives readers an intimate look into Merini's creative process and inner circle, adding to the larger collection of her work. The book also features short prose pieces that depict Merini's hometown and the characters that filled her world.",
     image:
-      "https://img.readthistwice.com/unsafe/240x360/books/51ef1b29-1a16-4f5f-af71-f0a984c5a551.jpg",
+      "https://rukminim1.flixcart.com/image/416/416/kk4c13k0/book/u/x/x/satire-epigrammi-epitaffi-e-poesie-latine-di-angiolo-d-elci-original-imafzgxhqbqchzm6.jpeg?q=70",
     subcategory: ["Humour and satire", "Mystery"],
     coin: 21,
   },
@@ -392,7 +432,7 @@ export const NovelsData = [
       "As World War II rages on, young French resistance fighter Isabelle falls in love with American soldier John. But when John is captured by the enemy, Isabelle must risk everything to save him and help the Allied forces defeat the Nazis.",
     shortDescription:
       "Isabelle falls in love with an American soldier and risks everything to save him during World War II.",
-    image: "https://fakeimageurl.com/image.jpg",
+    image: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1662670558i/62337293.jpg",
     subcategory: ["War", "Historical fiction", "Romance"],
     coin: 65,
   },
@@ -451,7 +491,7 @@ export const NovelsData = [
       "Join the intrepid team of explorers as they search for the legendary Lost Treasure of Atlantis! Along the way, they'll encounter dangerous obstacles, uncover ancient secrets, and ultimately face off against their greatest foe yet in a thrilling climax you won't want to miss!",
     shortDescription:
       "Join the search for the Lost Treasure of Atlantis in this exciting adventure novel!",
-    image: "https://fakeimageurl.com/image.jpg",
+    image: "https://m.media-amazon.com/images/M/MV5BZDQ5OGU0MzUtOWE3Yi00MGEzLWE5NTYtNDcwMDYxYzFlYmU5XkEyXkFqcGdeQXVyNjExODE1MDc@._V1_.jpg",
     subcategory: ["Adventure Stories"],
     coin: 35,
   },
@@ -643,23 +683,183 @@ export const NovelsData = [
     price: 854,
     category: "Fiction",
     condition: "0",
-    description: "'Interpreter of Maladies' is a collection of short stories by Jhumpa Lahiri that explores themes of identity, cultural displacement, and the immigrant experience. The stories are set in both India and the United States, and feature characters who are struggling to find their place in the world.",
-    shortDescription: "A collection of short stories that explores themes of identity, cultural displacement, and the immigrant experience.",
-    image: "https://tse4.mm.bing.net/th?id=OIP.If23xjD64CmT_Vebv88AwgHaLU&pid=Api&P=0",
-    subcategory: ["Literary fiction", "Short Stories"],
+    description:
+      "'Interpreter of Maladies' is a collection of short stories by Jhumpa Lahiri that explores themes of identity, cultural displacement, and the immigrant experience. The stories are set in both India and the United States, and feature characters who are struggling to find their place in the world.",
+    shortDescription:
+      "A collection of short stories that explores themes of identity, cultural displacement, and the immigrant experience.",
+    image:
+      "https://tse4.mm.bing.net/th?id=OIP.If23xjD64CmT_Vebv88AwgHaLU&pid=Api&P=0",
+    subcategory: ["Literary fiction", "Short stories"],
     coin: 85,
-    },
-    
-    {
+  },
+
+  {
     title: "The Things They Carried",
     author: "Tim O'Brien",
     price: 698,
     category: "Fiction",
     condition: "0",
-    description: "'The Things They Carried' is a collection of interconnected short stories by Tim O'Brien that depict the experiences of soldiers during the Vietnam War. The stories explore themes of war, memory, and the power of storytelling to make sense of trauma.",
-    shortDescription: "A collection of interconnected short stories that depict the experiences of soldiers during the Vietnam War.",
-    image: "https://tse2.mm.bing.net/th?id=OIP.YkLX8a4sbJjhgvfgDzNbrQHaLw&pid=Api&P=0",
-    subcategory: ["Literary fiction", "Short Stories"],
+    description:
+      "'The Things They Carried' is a collection of interconnected short stories by Tim O'Brien that depict the experiences of soldiers during the Vietnam War. The stories explore themes of war, memory, and the power of storytelling to make sense of trauma.",
+    shortDescription:
+      "A collection of interconnected short stories that depict the experiences of soldiers during the Vietnam War.",
+    image:
+      "https://tse2.mm.bing.net/th?id=OIP.YkLX8a4sbJjhgvfgDzNbrQHaLw&pid=Api&P=0",
+    subcategory: ["Literary fiction", "Short stories"],
     coin: 46,
-    },
+  },
+  {
+    title: "Educated",
+    author: "Tara Westover",
+    price: 981,
+    category: "Non Fiction",
+    condition: "1",
+    description:
+      "'Educated' is a memoir by Tara Westover that recounts her upbringing in a survivalist family in rural Idaho and her journey to attain an education despite her lack of formal schooling. The book explores themes of family, identity, and the power of education to change one's life.",
+    shortDescription:
+      "A memoir that recounts an upbringing in a survivalist family in rural Idaho and a journey to attain an education.",
+    image:
+      "https://tse1.mm.bing.net/th?id=OIP.hgnz4THaWJNiml-YG0DXFQHaLX&pid=Api&P=0",
+    subcategory: ["Autobiography and Memoir"],
+    coin: 65,
+  },
+
+  {
+    title: "Becoming",
+    author: "Michelle Obama",
+    price: 523,
+    category: "Non Fiction",
+    condition: "0",
+    description:
+      "'Becoming' is a memoir by Michelle Obama that recounts her life from her childhood on the South Side of Chicago to her time as First Lady of the United States. The book explores themes of race, identity, and the challenges and opportunities of public life.",
+    shortDescription:
+      "A memoir that recounts the life of Michelle Obama from childhood to her time as First Lady of the United States.",
+    image:
+      "https://tse1.mm.bing.net/th?id=OIP.m3nmrN1aMJt13GLpBj7ccwHaJ4&pid=Api&P=0",
+    subcategory: ["Autobiography and Memoir"],
+    coin: 52,
+  },
+
+  {
+    title: "Steve Jobs",
+    author: "Walter Isaacson",
+    price: 1099,
+    category: "Non Fiction",
+    condition: "2",
+    description:
+      "'Steve Jobs' is a biography by Walter Isaacson that tells the story of the Apple co-founder and visionary entrepreneur. The book explores Jobs' personal and professional life, including his role in revolutionizing the technology industry.",
+    shortDescription:
+      "A biography that tells the story of the Apple co-founder and visionary entrepreneur Steve Jobs.",
+    image:
+      "https://tse2.mm.bing.net/th?id=OIP.yloygiIPh1uWGd5tElJZLQHaLw&pid=Api&P=0",
+    subcategory: ["Biography"],
+    coin: 36,
+  },
+  {
+    title: "The Immortal Life of Henrietta Lacks",
+    author: "Rebecca Skloot",
+    price: 623,
+    category: "Non Fiction",
+    condition: "0",
+    description:
+      "'The Immortal Life of Henrietta Lacks' is a biography by Rebecca Skloot that tells the story of the African American woman whose cancer cells were used without her knowledge for medical research, leading to countless scientific breakthroughs. The book explores issues of race, ethics, and the intersection of medicine and society.",
+    shortDescription:
+      "A biography that tells the story of the African American woman Henrietta Lacks, whose cancer cells were used for medical research.",
+    image:
+      "https://tse1.mm.bing.net/th?id=OIP.S4lnuZ2nd88rh-mQJ0wNmAAAAA&pid=Api&P=0",
+    subcategory: ["Biography"],
+    coin: 36,
+  },
+  {
+    title: "Bad Feminist",
+    author: "Roxane Gay",
+    price: 852,
+    category: "Non Fiction",
+    condition: "1",
+    description:
+      "'Bad Feminist' is a collection of essays by Roxane Gay that explore the intersection of feminism, race, and popular culture. The book challenges traditional notions of what it means to be a feminist and offers a fresh perspective on contemporary issues facing women today.",
+    shortDescription:
+      "A collection of essays that explore the intersection of feminism, race, and popular culture.",
+    image:
+      "https://tse1.mm.bing.net/th?id=OIP.HG--YFcmKlubL2YJLmakYAHaHa&pid=Api&P=0",
+    subcategory: ["Essays"],
+    coin: 56,
+  },
+
+  {
+    title: "The Soul of an Octopus",
+    author: "Sy Montgomery",
+    price: 412,
+    category: "Non Fiction",
+    condition: "0",
+    description:
+      "'The Soul of an Octopus' is a collection of essays by Sy Montgomery that explores the world of octopuses and their complex emotional lives. The book is a fascinating blend of science and storytelling, and offers a unique perspective on the nature of consciousness and intelligence.",
+    shortDescription:
+      "A collection of essays that explores the world of octopuses and their complex emotional lives.",
+    image:
+      "https://tse4.mm.bing.net/th?id=OIP._pu_S29_telVzWR3rir4lgHaJ3&pid=Api&P=0",
+    subcategory: ["Essays"],
+    coin: 41,
+  },
+  {
+    title: "Sapiens: A Brief History of Humankind",
+    author: "Yuval Noah Harari",
+    price: 542,
+    category: "Non Fiction",
+    condition: "2",
+    description:
+      "'Sapiens: A Brief History of Humankind' is a non-fiction book by Yuval Noah Harari that provides a sweeping history of human evolution from the emergence of Homo sapiens to the present day. The book explores key themes such as the rise of agriculture, the development of religion and capitalism, and the impact of technology on human society.",
+    shortDescription:
+      "A non-fiction book that provides a sweeping history of human evolution from the emergence of Homo sapiens to the present day.",
+    image:
+      "https://tse4.mm.bing.net/th?id=OIP.ePZgFISI6cil9jxJXAXAKAHaJ4&pid=Api&P=0",
+    subcategory: ["Non-fiction novel"],
+    coin: 36,
+  },
+
+  {
+    title: "The New Jim Crow",
+    author: "Michelle Alexander",
+    price: 745,
+    category: "Non Fiction",
+    condition: "1",
+    description:
+      "'The New Jim Crow' is a non-fiction book by Michelle Alexander that explores the mass incarceration of black Americans and its impact on communities of color. The book argues that the criminal justice system has become a new form of racial control, perpetuating a system of discrimination and inequality.",
+    shortDescription:
+      "A non-fiction book that explores the mass incarceration of black Americans and its impact on communities of color.",
+    image:
+      "https://tse3.mm.bing.net/th?id=OIP.NBs9uhNxVVD-bSHZW2S2JQHaLW&pid=Api&P=0",
+    subcategory: ["Non-fiction novel"],
+    coin: 49,
+  },
+  {
+    title: "Atomic Habits",
+    author: "James Clear",
+    price: 321,
+    category: "Non Fiction",
+    condition: "0",
+    description:
+      "'Atomic Habits' is a self-help book by James Clear that provides a practical framework for building good habits and breaking bad ones. The book focuses on small, incremental changes that can lead to big results over time, and offers strategies for creating lasting behavior change.",
+    shortDescription:
+      "A self-help book that provides a practical framework for building good habits and breaking bad ones.",
+    image:
+      "https://tse3.mm.bing.net/th?id=OIP.xKdjRjuOZLsXOIrOMg5zhwHaJl&pid=Api&P=0",
+    subcategory: ["Self-Help"],
+    coin: 32,
+  },
+  {
+    title: "The Power of Now",
+    author: "Eckhart Tolle",
+    price: 621,
+    category: "Non Fiction",
+    condition: "1",
+    description:
+      "'The Power of Now' is a self-help book by Eckhart Tolle that encourages readers to live in the present moment and let go of past and future worries. The book offers a spiritual perspective on life and provides exercises and meditations to help readers cultivate a deeper sense of inner peace and awareness.",
+    shortDescription:
+      "A self-help book that encourages readers to live in the present moment and let go of past and future worries.",
+    image:
+      "https://tse4.mm.bing.net/th?id=OIP.JcB1wXlq7QyuK0y1c4-PmgHaLC&pid=Api&P=0",
+    subcategory: ["Self-Help"],
+    coin: 41,
+  },
 ];

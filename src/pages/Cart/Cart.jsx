@@ -38,7 +38,6 @@ function Cart() {
 			confirmButtonText: 'Buy',
 			denyButtonText: `Cancel`,
 		  }).then((result) => {
-			/* Read more about isConfirmed, isDenied below */
 			if (result.isConfirmed) {
 			  Swal.fire(`Your Novel is booked!`, '', 'success')
 			  setCartItem([])
@@ -64,7 +63,6 @@ function Cart() {
                     <SingleCartComponent
                       item={item}
                       key={index}
-                      coin={item.coin}
                     />
                   ))
                 ) : (

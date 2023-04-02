@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
 import { UserAuth } from "../../Context/AuthContext";
 
-function SingleCartComponent({ item, coin }) {
-  const { setTotalCoin, setCartItem, addCartItem, totalCoin } = UserAuth();
+function SingleCartComponent({ item }) {
+  const { setTotalCoin, setCartItem, addCartItem } = UserAuth();
   useEffect(() => {
-    const newCoin = totalCoin + coin;
+    let newCoin = 0;
+    newCoin = addCartItem.map((item) => newCoin + item.coin);
     setTotalCoin(newCoin);
   }, []);
   const removeItem = () => {

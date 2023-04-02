@@ -17,8 +17,11 @@ const SingleBook = () => {
   );
 
   const addCart = (novel) => {
-    navigate(`/cart`);
-    setCartItem([...addCartItem, novel]);
+    
+    if(!addCartItem.includes(novel)){
+        setCartItem([...addCartItem, novel]);
+    }   
+    navigate(`/cart`); 
   };
 
   return (

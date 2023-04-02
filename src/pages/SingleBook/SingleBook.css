@@ -1,3 +1,119 @@
-.single-book-section{
-    background-color: yellow;
+.single-book-section {
+    background-color: antiquewhite;
+    height: 100vh;
+}
+
+.img-and-details-con {
+    display: flex;
+    background-color: antiquewhite;
+    padding: 2%;
+}
+
+.single-img {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border-radius: 5px;
+    margin: 1%;
+}
+
+.single-img img {
+    width: 250px;
+}
+
+.single-details {
+    width: 75%;
+    background-color: white;
+    margin: 1%;
+    padding: 2%;
+    border-radius: 5px;
+}
+
+h2.single-book-title {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.h4.single-author {
+    padding: 1% 0;
+}
+
+span.single-grey {
+    color: grey;
+    font-weight: 500;
+}
+
+.single-short-decription {
+    /* padding: 2% 0; */
+    color: gray;
+}
+
+button.single-add-btn {
+    background-color: orange;
+    padding: 1%;
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.single-description {
+    padding: 2%;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.desc-con {
+    margin: 0 2% 2% 2%;
+}
+
+.single-description h4 {
+    font-weight: 600;
+}
+
+
+/* util */
+.single-author,
+.single-grey,
+.single-short-decription,
+.single-coin {
+    margin: 5px 0;
+}
+
+.single-coin {
+    display: flex;
+    font-size: 30px;
+}
+
+.single-coin span {
+    font-size: 24px;
+    color: orange;
+    padding: 0 2%;
+    font-weight: 600;
+}
+
+
+/* media query */
+
+@media (max-width:425px) {
+    .img-and-details-con {
+        flex-direction: column;
+    }
+
+    .single-img {
+        width: 100%;
+    }
+
+    .single-img img {
+        width: 150px;
+    }
+
+    .single-details {
+        width: 100%;
+    }
+
+    h2.single-book-title {
+        font-size: 24px;
+        font-weight: 600;
+    }
 }

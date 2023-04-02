@@ -28,6 +28,7 @@
     margin: 1%;
     width: 23%;
     border-radius: 5px;
+    height: min-content;
 }
 
 .img-con {
@@ -54,12 +55,18 @@ ul.book-ratings {
 .coins {
     background-color: orange;
     width: 35%;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
     padding: 2px 4px;
     text-align: center;
     border-radius: 5px;
     margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.coins svg {
+    font-size: 24px;
 }
 
 h4.book-title {
@@ -128,7 +135,27 @@ button.coin-btn {
     border-radius: 5px;
 }
 
-@media screen and (max-width: 768px) {
+
+@media (min-width: 427px) and (max-width: 768px) {
+
+    .card {
+        width: 30%;
+    }
+
+    p.condition {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 375px) {}
+
+@media (max-width: 426px) {
+    .card {
+        width: 45%;
+    }
+
     .sidebar-container {
         display: none;
     }
@@ -137,24 +164,9 @@ button.coin-btn {
         width: 100%;
     }
 
-    .card {
-        width: 45%;
-        margin: 2%;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .sidebar-container {
-        display: block;
-    }
-
-    .books-container {
-        width: 85%;
-    }
-
-    .card {
-        width: 23%;
-        margin: 1%;
-
+    p.condition {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }

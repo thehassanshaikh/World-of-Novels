@@ -5,8 +5,11 @@ import { nonFiction } from "../../data";
 import { NovelsData } from "../../data";
 import { useNavigate } from "react-router";
 import { UserAuth } from "../../Context/AuthContext";
-import Swal from 'sweetalert2'
 
+import Swal from "sweetalert2";
+import Select from "react-select";
+import NavBar from "../../Components/NavBar/NavBar";
+import Footer from "../../Components/Footer/Footer";
 
 const initialState = {
   title: "",
@@ -15,6 +18,8 @@ const initialState = {
   category: "",
   condition: "",
   image: "",
+  description: "",
+  shortDescription: "",
   subcategory: [],
   coin: 0,
 };
@@ -25,8 +30,35 @@ function BookRegistrationPage() {
   const { setCoin } = UserAuth();
   const options = ["Fiction", "NonFiction"];
   const optionsCondition = ["Good", "Average", "Bad/Some Pages missing"];
+  const [error, setError] = useState({
+    title: "",
+    author: "",
+    price: "",
+    category: "",
+    condition: "",
+    image: "",
+    description: "",
+    subcategory: "",
+  });
+
+  const validateInput = (formObject) => {
+    const errors = {};
+    console.log(novel);
+    Object.keys(formObject).forEach((val) => {
+      if (val != "shortDescription" && formObject[val] === "") {
+        errors[val] = "Please fill this field";
+      }
+    });
+    if (formObject.price < 0) {
+      errors.price = "Price cannot be negative";
+    }
+    return errors;
+  };
+
   const uploadNovel = (e) => {
     e.preventDefault();
+
+    setError({});
     let coin = parseInt(novel.price) / 10;
     if (novel.condition == 1) {
       coin = (coin * 2) / 3;
@@ -38,50 +70,54 @@ function BookRegistrationPage() {
       coin: parseInt(coin),
     });
 
-    //Setting the data to Local Storage
-    // let novelsList = JSON.parse(window.localStorage.getItem("novelsList"));
-    // novelsList.push(novel);
-    // window.localStorage.setItem("novelsList", JSON.stringify(novelsList));
-
-    if (
-      novel.author !== "" &&
-      novel.category !== "" &&
-      novel.condition !== "" &&
-      novel.image !== "" &&
-      novel.price !== "" &&
-      novel.title !== ""
-    ) {
+    const errors = validateInput(novel);
+    if (Object.keys(errors).length > 0) {
+      setError(errors);
+      // Swal.fire({
+      //   title: "Some fields are empty",
+      //   text: `Please fill it first`,
+      //   icon: "error",
+      // });
+    } else {
       NovelsData.unshift({
         ...novel,
         coin: parseInt(coin),
+        subcategory: selectedOptions,
       });
       e.target.reset();
-      console.log("data set");
-    
+
       setCoin((prevValue) => prevValue + parseInt(coin));
       navigate("/main");
       Swal.fire({
         title: "Congratulations!!!",
         text: `You earned ${parseInt(coin)} coins`,
-        icon: "success"
-      })
+        icon: "success",
+      });
+      console.log(novel);
       setNovel(initialState);
-     
-    } else {
-      Swal.fire({
-        title: "Some fields are empty",
-        text: `Please fill it first`,
-        icon: "error"
-      })
     }
-    console.log(NovelsData);
+
+    //Setting the data to Local Storage
+    // let novelsList = JSON.parse(window.localStorage.getItem("novelsList"));
+    // novelsList.push(novel);
+    // window.localStorage.setItem("novelsList", JSON.stringify(novelsList));
+  };
+
+  const [categoryselect, setCategory] = useState("");
+  const [selectedOptions, setSelectedOptions] = useState(null);
+
+  const setHandle = (e) => {
+    setSelectedOptions(
+      Array.isArray(e) ? e.map((item) => item.subcategory) : []
+    );
   };
 
   return (
     <>
-      <div className="min-h-screen bg-gradient-to-r from-red-200 via-emerald-200 to-teal-200">
+    <NavBar />
+      <div className="min-h-screen bg-gradient-to-r from-slate-200 via-orange-100 to-red-100">
         <div className="container p-10">
-          <div className="flex flex-col lg:flex-row w-10/12 lg:w-8/12 bg-[#d1fbed] rounded-2xl mx-auto shadow-lg overflow-hidden">
+          <div className="flex flex-col lg:flex-row w-10/12 lg:w-8/12 bg-[#ffdea1] rounded-2xl mx-auto shadow-lg overflow-hidden">
             <div
               className="w-full lg:w-1/2 flex flex-col items-center justify-center p-12 bg-no-repeat bg-cover bg-center"
               style={{
@@ -120,6 +156,11 @@ function BookRegistrationPage() {
                     }}
                     className="border border-[#0B1354] py-1 px-2 w-full"
                   />
+                  {error.title ? (
+                    <p className="text-xs text-red-600">{error.title}</p>
+                  ) : (
+                    ""
+                  )}
                 </div>
                 <div className="mt-5">
                   <input
@@ -133,6 +174,11 @@ function BookRegistrationPage() {
                     }}
                     className="border border-[#0B1354] py-1 px-2 w-full"
                   />
+                  {error.author ? (
+                    <p className="text-xs text-red-600">{error.author}</p>
+                  ) : (
+                    ""
+                  )}
                 </div>
                 <div className="grid grid-cols-2 gap-5 mt-5">
                   <input
@@ -146,27 +192,14 @@ function BookRegistrationPage() {
                     }}
                     className="border border-[#0B1354] py-1 px-2"
                   />
+
+                  {error.price ? (
+                    <p className="text-xs text-red-600">{error.price}</p>
+                  ) : (
+                    ""
+                  )}
                 </div>
                 <div className="grid grid-cols-2 gap-5 mt-5">
-                  <select
-                    className="block w-full py-2 mb-4 text-sm text-[#00372e] border border-[#0B1354]"
-                    onChange={(e) => {
-                      setNovel({
-                        ...novel,
-                        category: e.target.value,
-                      });
-                    }}
-                  >
-                    <option>Select Book Category</option>
-                    {options.map((option, index) => {
-                      return (
-                        <option key={index} value={option}>
-                          {option}
-                        </option>
-                      );
-                    })}
-                  </select>
-
                   <select
                     onChange={(e) => {
                       setNovel({
@@ -174,7 +207,7 @@ function BookRegistrationPage() {
                         condition: e.target.value,
                       });
                     }}
-                    className="block w-full py-2 mb-4 text-sm text-[#0B1354] border border-[#0B1354]"
+                    className="block w-full py-1 px-2 text-sm text-[#0B1354] border border-[#0B1354]"
                   >
                     <option>Select Book Condition</option>
                     {optionsCondition.map((option, index) => {
@@ -185,19 +218,103 @@ function BookRegistrationPage() {
                       );
                     })}
                   </select>
+
+                  {error.condition ? (
+                    <p className="text-xs text-red-600">{error.condition}</p>
+                  ) : (
+                    ""
+                  )}
                 </div>
+
+                <div className="grid grid-cols-2 gap-5 mt-5">
+                  <select
+                    className="block w-full py-2 mb-4 text-sm text-[#00372e] border border-[#0B1354]"
+                    onChange={(e) => {
+                      setNovel({
+                        ...novel,
+                        category: e.target.value,
+                      });
+                      e.target.value === "Fiction"
+                        ? setCategory(fiction)
+                        : setCategory(nonFiction);
+                      console.log(e.target.value);
+                    }}
+                  >
+                    <option>Select Book Category</option>
+                    {options.map((item, index) => {
+                      return (
+                        <option key={index} value={item}>
+                          {item}
+                        </option>
+                      );
+                    })}
+                  </select>
+
+                  {error.category ? (
+                    <p className="text-xs text-red-600">{error.category}</p>
+                  ) : (
+                    ""
+                  )}
+
+                                    {categoryselect && (
+                    <Select
+                      options={categoryselect}
+                      onChange={setHandle}
+                      isMulti
+                      className="block  text-sm text-[#00372e]"
+                    ></Select>
+               
+          
+             
+
+                  )}
+                  {error.subcategory ? (
+                    <p className="text-xs text-red-600">{error.subcategory}</p>
+                  ) : (
+                    ""
+                  )}
+                </div>
+
+                <div>
+                  <textarea
+                    rows="1"
+                    className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                    placeholder="Short Description(optional)"
+                    onChange={(e) =>
+                      setNovel({
+                        ...novel,
+                        shortDescription: e.target.value,
+                      })
+                    }
+                  ></textarea>
+                </div>
+                <textarea
+                  rows="2"
+                  className="block p-2.5 mt-5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                  placeholder="Description"
+                  onChange={(e) =>
+                    setNovel({
+                      ...novel,
+                      description: e.target.value,
+                    })
+                  }
+                ></textarea>
+                {error.description ? (
+                  <p className="text-xs text-red-600">{error.description}</p>
+                ) : (
+                  ""
+                )}
+
                 <div className="mt-5">
                   <label
                     className="block mb-2 text-sm font-medium text-[#00372e] dark:text-white"
                     htmlFor="file_input"
                   >
-                    Upload Picture
+                    Upload Novel Picture(url)
                   </label>
                   <input
-                    className="block w-full text-sm text-[#00372e] border border-[#00372e] cursor-pointer bg-gray-50 focus:outline-none py-1 px-2"
-                    id="file_input"
-                    type="file"
-                    accept="image/png, image/jpeg"
+                    className="block w-full text-sm text-[#00372e] border border-[#00372e] cursor-pointer bg-gray-50 focus:outline-none py-1 px-2"      
+                    type="url"
                     onChange={(e) => {
                       setNovel({
                         ...novel,
@@ -205,21 +322,13 @@ function BookRegistrationPage() {
                       });
                     }}
                   />
+                  {error.image ? (
+                    <p className="text-xs text-red-700">{error.image}</p>
+                  ) : (
+                    ""
+                  )}
                 </div>
 
-                <div className="mt-5">
-                  <input type="checkbox" className="border border-[#0B1354]" />
-                  <span className="text-[#0B1354]">
-                    I accept the{" "}
-                    <a href="#" className="text-[#ffc000] font-semibold">
-                      Terms of Use
-                    </a>{" "}
-                    &{" "}
-                    <a href="#" className="text-[#ffc000] font-semibold">
-                      Privacy Policy
-                    </a>
-                  </span>
-                </div>
                 <div className="mt-5">
                   <button className="w-full bg-[#0B1354] py-3 text-center text-white">
                     Register Now
@@ -230,6 +339,7 @@ function BookRegistrationPage() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

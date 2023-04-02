@@ -80,6 +80,16 @@ button.single-add-btn {
     margin: 5px 0;
 }
 
+.single-coin {
+    display: flex;
+}
+
+.single-coin span {
+    font-size: 24px;
+    color: orange;
+    padding: 0 5%;
+}
+
 
 /* media query */
 

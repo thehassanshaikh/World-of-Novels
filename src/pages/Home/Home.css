@@ -28,6 +28,7 @@
     margin: 1%;
     width: 23%;
     border-radius: 5px;
+    height: min-content;
 }
 
 .img-con {

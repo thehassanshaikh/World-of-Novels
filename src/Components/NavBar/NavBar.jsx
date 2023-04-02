@@ -71,7 +71,7 @@ function NavBar() {
   };
   return (
     <div className="navBar flex justify-between items-center bg-white shadow-2xl px-4">
-      <div className="flex justify-center items-center md:order-2">
+      {/* <div className="flex justify-center items-center md:order-2">
         <div className="hamburger inline-block p-4 cursor-pointer md:hidden">
           <div className="line h-0.5 w-6 my-1 bg-white "></div>
           <div className="line h-0.5 w-6 my-1 bg-white "></div>
@@ -80,7 +80,7 @@ function NavBar() {
         <div className="search md:hidden w-4 mr-4 cursor-pointer">
           <img src={searchicon} alt=""></img>
         </div>
-      </div>
+      </div> */}
 
       <div className="logo text-center flex md:order-1">
         <div className="cursor-pointer">
@@ -90,7 +90,7 @@ function NavBar() {
           <button className="SItem " onClick={uploadBooks}>Upload +</button>
         </div>
       </div>
-      <div className="w-fit mt-4 md:order-2 hidden md:block">
+      <div className="w-fit mt-4 md:order-2 md:block">
         <div className="mb-3 xl:w-96">
           <div className="relative mb-4 flex w-full flex-wrap items-stretch">
             <input

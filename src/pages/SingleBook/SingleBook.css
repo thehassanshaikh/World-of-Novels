@@ -82,12 +82,14 @@ button.single-add-btn {
 
 .single-coin {
     display: flex;
+    font-size: 30px;
 }
 
 .single-coin span {
     font-size: 24px;
     color: orange;
-    padding: 0 5%;
+    padding: 0 2%;
+    font-weight: 600;
 }
 
 

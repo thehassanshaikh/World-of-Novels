@@ -7,7 +7,8 @@ import cart from "./pic/cart.svg";
 import { useNavigate } from "react-router";
 import { UserAuth } from "../../Context/AuthContext";
 import { NovelsData } from "../../data";
-import debounce from "lodash.debounce";
+import { Link } from "react-router-dom";
+
 
 function NavBar() {
   const { logOut, user, coins, setNovelData, setState } = UserAuth();
@@ -82,7 +83,7 @@ function NavBar() {
 
       <div className="logo text-center flex md:order-1">
         <div className="cursor-pointer">
-          <img className="w-48" src={logo1} alt=""></img>
+        <Link to='/main'><img className="w-48" src={logo1} alt=""></img></Link>
         </div>
         <div className="sell w-fit md:w-auto md:px-8 md:m-3 md:p-0.5 text-white md:font-bold md:text-xl md:border absolute md:items-center md:bg-[#ffa500] md:rounded-xl hover:scale-105  md:static bg-[#ffa500] inset-0 md:flex md:mx-4 md:space-x-2 -translate-x-96 md:translate-x-0 cursor-pointer">
           <button className="SItem " onClick={uploadBooks}>Upload +</button>
@@ -119,11 +120,11 @@ function NavBar() {
       <div className="cart text-center md:order-3 flex inset-12">
         
         <img className="w-6 h-6 mr-1 cursor-pointer" src={coin} alt=""></img><p className="text-black">{coins}</p>
-        <img
+        <Link to={'/cart'}><img
           className="w-6 h-6 ml-4 mr-4 cursor-pointer text-white"
           src={cart}
           alt=""
-        ></img>
+        ></img></Link>
         <img
           className="w-7 h-7 mr-4 cursor-pointer text-white  object-cover rounded-full"
           src={url}

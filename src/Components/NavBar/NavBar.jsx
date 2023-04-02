@@ -32,11 +32,12 @@ function NavBar() {
   }, [user]);
 
   useEffect(() => {
-    const timerId = setInterval(serachData, 1000);
-    return () => clearInterval(timerId);
+    //const timerId = setInterval(serachData, 1000);
+    //return () => clearInterval(timerId);
+    searchData();
   }, [q]);
 
-  const serachData = () => {
+  const searchData = () => {
     const searchResult = NovelsData.filter(
       (novel) =>
         novel.title.toLowerCase().includes(q.toLowerCase()) ||

@@ -14,6 +14,8 @@ function Cart() {
 		if(addCartItem.length>0){
 			setIsVisible(false)
 		}
+		else
+		setIsVisible(true)
 	},[addCartItem])
   const checkout = () => {
     if (totalCoin <= coins) {
@@ -30,7 +32,7 @@ function Cart() {
 	else{
 		Swal.fire({
 			title: 'You do not have sufficient Coins',
-			text : ` Use Rs. ${(totalCoin-coins)*20} more to have this Novel at your corner!`,
+			text : `Spend another Rs.${(totalCoin-coins)*20} to get this novel!!`,
 			showDenyButton: true,
 			confirmButtonColor: '#ffa500',
 			confirmButtonText: 'Buy',

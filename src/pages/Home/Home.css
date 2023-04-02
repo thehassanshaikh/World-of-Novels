@@ -21,6 +21,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    height: fit-content;
 }
 
 .card {

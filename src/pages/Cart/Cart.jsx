@@ -1,8 +1,55 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "../../Components/Footer/Footer";
 import NavBar from "../../Components/NavBar/NavBar";
+import SingleCartComponent from "../../Components/SingleCartComponent/SingleCartComponent";
+import { UserAuth } from "../../Context/AuthContext";
+import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 function Cart() {
+  const { addCartItem, totalCoin, coins, setCoin, setTotalCoin, setCartItem } =
+    UserAuth();
+	const [isVisible,setIsVisible] =useState(true)
+	useEffect(()=>{
+		if(addCartItem.length>0){
+			setIsVisible(false)
+		}
+		else
+		setIsVisible(true)
+	},[addCartItem])
+  const checkout = () => {
+    if (totalCoin <= coins) {
+      Swal.fire({
+        icon: "success",
+        title: "Congatulations",
+        text: "Your Novel is booked!",
+		confirmButtonColor: '#ffa500',
+      });
+      setCoin(coins - totalCoin);
+	  setCartItem([])
+      setTotalCoin(0);
+    }
+	else{
+		Swal.fire({
+			title: 'You do not have sufficient Coins',
+			text : `Spend another Rs.${(totalCoin-coins)*20} to get this novel!!`,
+			showDenyButton: true,
+			confirmButtonColor: '#ffa500',
+			confirmButtonText: 'Buy',
+			denyButtonText: `Cancel`,
+		  }).then((result) => {
+			/* Read more about isConfirmed, isDenied below */
+			if (result.isConfirmed) {
+			  Swal.fire(`Your Novel is booked!`, '', 'success')
+			  setCartItem([])
+			  setTotalCoin(0);
+			} else if (result.isDenied) {
+			  Swal.fire('OK!!', '', 'info')
+			}
+		  })
+	}
+  };
+
   return (
     <>
       <NavBar />
@@ -12,71 +59,38 @@ function Cart() {
             <div className="w-full p-4 px-5 py-5">
               <div className="col-span-2 p-5">
                 <h1 className="text-xl font-medium ">Cart</h1>
-
-                <div className="flex justify-between items-center mt-6 pt-6">
-                  <div className="flex  items-center">
-                    <img
-                      src="https://i.imgur.com/EEguU02.jpg"
-                      width="60"
-                      className="rounded-full "
+                {addCartItem.length > 0 ? (
+                  addCartItem.map((item, index) => (
+                    <SingleCartComponent
+                      item={item}
+                      key={index}
+                      coin={item.coin}
                     />
+                  ))
+                ) : (
+                  <h1 className="text-3xl m-7 text-gray-400">
+                    Oops!! Nothing in Cart
+                  </h1>
+                )}
 
-                    <div className="flex flex-col ml-3">
-                      <span className="md:text-md font-medium">
-                        Chicken momo
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="flex justify-center items-center">
-                    <div className="pr-6 cursor-pointer text-red-600">
-                      Remove
-                    </div>
-
-                    <div className="flex justify-center items-center space-x-2">
-                      <span className="text-xl text-green-500">coin:</span>
-                      <span className="text-xl pr-6 text-green-500">10</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="flex justify-between items-center mt-6 pt-6">
-                  <div className="flex  items-center">
-                    <img
-                      src="https://i.imgur.com/EEguU02.jpg"
-                      width="60"
-                      className="rounded-full "
-                    />
-
-                    <div className="flex flex-col ml-3">
-                      <span className="md:text-md font-medium">
-                        Chicken momo
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="flex justify-center items-center">
-                    <div className="pr-6 cursor-pointer text-red-600">
-                      Remove
-                    </div>
-
-                    <div className="flex justify-center items-center space-x-2">
-                      <span className="text-xl text-green-500">coin:</span>
-                      <span className="text-xl pr-6 text-green-500">10</span>
-                    </div>
-                  </div>
-                </div>
                 <div className="flex justify-between items-center mt-6 pt-6 border-t">
-                  <span className="text-md cursor-pointer  font-medium text-blue-500">
-                    Continue Shopping
-                  </span>
+                  <Link to="/main">
+                    <span className="text-md cursor-pointer  font-medium text-blue-500">
+                      Continue Shopping
+                    </span>
+                  </Link>
                   <div className="flex justify-center items-end">
                     <span className="text-sm font-medium text-gray-400 mr-1">
                       Subtotal:
                     </span>
-                    <span className="text-lg font-bold text-gray-800 ">{}</span>
+                    <span className="text-lg font-bold text-gray-800 ">
+                      {totalCoin}
+                    </span>
                   </div>
                 </div>
-                <button className="h-12 w-64 bg-blue-500 rounded focus:outline-none text-white hover:bg-blue-600 mt-6">
+                <button
+                  className="h-12 w-64 bg-orange-400 rounded focus:outline-none text-white hover:bg-orange-500 mt-6"
+                  onClick={checkout} disabled={isVisible}> 
                   Check Out
                 </button>
               </div>

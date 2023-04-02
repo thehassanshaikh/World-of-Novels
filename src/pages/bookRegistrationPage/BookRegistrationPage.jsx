@@ -92,6 +92,7 @@ function BookRegistrationPage() {
         title: "Congratulations!!!",
         text: `You earned ${parseInt(coin)} coins`,
         icon: "success",
+        confirmButtonColor: '#ffa500',
       });
       console.log(novel);
       setNovel(initialState);

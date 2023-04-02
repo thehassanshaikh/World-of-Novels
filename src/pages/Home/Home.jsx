@@ -5,6 +5,7 @@ import "./Home.css"
 import { SideBar } from "../../Components/SideBar/SideBar";
 import { UserAuth } from "../../Context/AuthContext";
 import { BsCoin } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 
 export const Home = () => {
@@ -33,7 +34,7 @@ export const Home = () => {
                                     <p className="condition">Condition: <span className={book.condition === "0" ? 'Good' : book.condition === "1" ? 'Average' : 'Bad'}>{book.condition === "0" ? 'Good' : book.condition === "1" ? 'Average' : 'Bad'}
                                     </span></p>
                                 </div>
-                                <button className="coin-btn">View More</button>
+                                <Link to={`/singleBook/${book.title}`}><button className="coin-btn">View More</button></Link>
                             </div>
                         </div>
                     </div>

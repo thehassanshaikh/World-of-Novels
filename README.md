@@ -10,10 +10,10 @@
 <h2>There are several reasons why someone might choose to use an old novel exchange app:</h2>
 <ul>
   <li>
-  Access to rare or out-of-print novels: Old novel exchange apps can connect users with novels that may no longer be in print or are difficult to find. These apps can be particularly useful for people looking for rare or antique novels, first editions, or other hard-to-find titles.
+  <b>Access to rare or out-of-print novels:</b> Old novel exchange apps can connect users with novels that may no longer be in print or are difficult to find. These apps can be particularly useful for people looking for rare or antique novels, first editions, or other hard-to-find titles.
   </li>
   <li>
-    Environmental concerns: Reusing and recycling old novels is an environmentally-friendly option. By using an old novel exchange app, you can help reduce waste and promote sustainable living by keeping novels in circulation instead of ending up in landfills.
+    <b>Environmental concerns:</b> Reusing and recycling old novels is an environmentally-friendly option. By using an old novel exchange app, you can help reduce waste and promote sustainable living by keeping novels in circulation instead of ending up in landfills.
   </li>
   <li>
   Cost-effective: Old novel exchange apps offer an affordable way to acquire new novels. Many apps allow users to trade their old novels for other novels, which can help save money compared to buying new novels. Additionally, some apps may offer novels for free or at a reduced price.

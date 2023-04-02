@@ -33,11 +33,10 @@ const SingleBook = () => {
                         </div>
                         <div className="single-details">
                             <h2 className="single-book-title">{getNovel[0]?.title}</h2>
+                            <p className="single-grey single-short-decription">{getNovel[0]?.shortDescription}</p>
                             <h4 className="single-author">Author: <span className="single-grey">{getNovel[0]?.author}</span></h4>
                             <h4 >Category: <span className="single-grey">{getNovel[0]?.category}</span></h4>
-                            <p className="single-grey single-short-decription">{getNovel[0]?.shortDescription}</p>
-                            <h4>Sub category: <span>{getNovel[0]?.subcategory.map((sub, index) => {
-                                console.log(sub, index)
+                            <h4>Sub category: <span className="single-grey" >{getNovel[0]?.subcategory.map((sub, index) => {
                                 if (index === getNovel[0].subcategory.length - 1) {
                                     return sub;
                                 } else {

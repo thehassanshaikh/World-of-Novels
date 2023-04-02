@@ -12,7 +12,7 @@ import logo from "./pic/wonlogo-1.png";
 
 
 function NavBar() {
-  const { logOut, user, coins, setNovelData, setState } = UserAuth();
+  const { logOut, user, coins, setNovelData, setState,addCartItem } = UserAuth();
   const [q, setQ] = useState("");
   const navigate = useNavigate();
   const [url, setUrl] = useState(usericon);
@@ -122,12 +122,13 @@ function NavBar() {
 
         <img className="w-6 h-6 mr-1 cursor-pointer" src={coin} alt=""></img><p className="text-black">{coins}</p>
         <Link to={'/cart'}><img
-          className="w-6 h-6 ml-4 mr-4 cursor-pointer text-white"
+          className="w-6 h-6 ml-4 mr-1 cursor-pointer text-white"
           src={cart}
           alt=""
         ></img></Link>
+        {addCartItem.length!==0 && <p className="text-xs bg-slate-300 w-4 h-4 rounded-full">{addCartItem.length}</p>}
         <img
-          className="w-7 h-7 mr-4 cursor-pointer text-white  object-cover rounded-full"
+          className="w-7 h-7 ml-4 mr-4 cursor-pointer text-white  object-cover rounded-full"
           src={url}
           alt=""
         ></img>

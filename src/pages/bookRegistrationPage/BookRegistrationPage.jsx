@@ -253,13 +253,17 @@ function BookRegistrationPage() {
                     ""
                   )}
 
-                  {categoryselect && (
+                                    {categoryselect && (
                     <Select
                       options={categoryselect}
                       onChange={setHandle}
                       isMulti
                       className="block  text-sm text-[#00372e]"
                     ></Select>
+               
+          
+             
+
                   )}
                   {error.subcategory ? (
                     <p className="text-xs text-red-600">{error.subcategory}</p>

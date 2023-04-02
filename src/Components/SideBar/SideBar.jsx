@@ -19,12 +19,13 @@ export const SideBar = () => {
 
   const searchAndFilter = () => {
     const searchResult = NovelsData.filter((novel) =>
-      novel.subcategory.some((r) => checkedCategory.includes(r))
+      novel.subcategory.some((r) => checkedCategory.includes(r)) || checkedCategory.includes(novel.condition)
     );
     setNovelData(searchResult);
   };
 
   useEffect(() => {
+    console.log(checkedCategory)
     searchAndFilter();
   }, [checkedCategory]);
 
@@ -66,7 +67,7 @@ export const SideBar = () => {
         <h2 className="Category-lable">Book Condition</h2>
         <ul className="category-con">
           {bookCondition.map((item, index) => (
-            <li key={index}><input type="checkbox" name={item.condition} className="inpt-box" />{item.condition}</li>
+            <li key={index}><input type="checkbox" name={index} onChange={filterNovels} className="inpt-box" />{item.condition}</li>
           ))}
         </ul>
       </div>

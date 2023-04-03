@@ -15,6 +15,7 @@ export const Home = () => {
       <SideBar />
       <div className="books-container max-h-screen overflow-y-scroll hide-scrollbar">
         {message && <h1 className="text-4xl text-gray-500 mt-20">{message}</h1>}
+   
         {novelsData?.map((book, index) => (
           <div className="card" key={index}>
             <div className="img-con">

@@ -104,7 +104,7 @@ function NavBar() {
         }
       </div>
       {mainpage && (
-        <div className="w-fit mt-4 md:order-2 md:block">
+        <div className="hidden w-fit mt-4 md:order-2 md:block">
           <div className="mb-3 xl:w-96">
             <div className="relative mb-4 flex w-full flex-wrap items-stretch">
               <input

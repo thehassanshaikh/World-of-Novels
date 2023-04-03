@@ -27,7 +27,7 @@ const initialState = {
 function BookRegistrationPage() {
   const [novel, setNovel] = useState(initialState);
   const navigate = useNavigate();
-  const { setCoin } = UserAuth();
+  const { setCoin,setNovelData } = UserAuth();
   const options = ["Fiction", "NonFiction"];
   const optionsCondition = ["Good", "Average", "Bad/Some Pages missing"];
   const [error, setError] = useState({
@@ -83,6 +83,8 @@ function BookRegistrationPage() {
         coin: parseInt(coin),
         subcategory: selectedOptions,
       });
+      setNovelData(NovelsData)
+      console.log(NovelsData)
       e.target.reset();
 
       setCoin((prevValue) => prevValue + parseInt(coin));

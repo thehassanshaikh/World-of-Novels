@@ -38,7 +38,7 @@ input.inpt-box {
     cursor: pointer;
 }
 
-input.inpt-box:checked{
+input.inpt-box:checked {
     background-color: gray;
 }
 
@@ -47,9 +47,11 @@ ul.category-con li {
     background: #ffa5005e;
     margin: 5px;
     border-radius: 5px;
+    white-space: pre;
+    overflow: hidden;
 }
 
-ul.category-con li:hover{
+ul.category-con li:hover {
     background: orange;
     color: white;
 }

@@ -6,7 +6,7 @@ import { UserAuth } from "../../Context/AuthContext";
 export const SideBar = () => {
   const { setNovelData, novelsData } = UserAuth();
   const [checkedCategory, setCheckedCategory] = useState([]);
-  const [newData, setNewdata] = useState(NovelsData);
+  const [newData, setNewdata] = useState(NovelsData)
   const filterNovels = (e) => {
     if (e.target.checked) {
       setCheckedCategory([...checkedCategory, e.target.name]);
@@ -26,12 +26,13 @@ export const SideBar = () => {
   };
 
   useEffect(() => {
-    console.log(checkedCategory);
     if (checkedCategory.length === 0) {
       setNovelData(newData);
-    } else {
+    }
+    else {
       searchAndFilter();
     }
+
   }, [checkedCategory]);
 
   useEffect(() => {
@@ -48,10 +49,10 @@ export const SideBar = () => {
               <label><input
                 type="checkbox"
                 name={item.label}
-                className="inpt-box text-xs"
                 onChange={filterNovels}
+                className="inpt-box"
               />
-              {item.label}</label>
+                {item.label}</label>
             </li>
           ))}
         </ul>

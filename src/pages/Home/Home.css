@@ -12,11 +12,11 @@
 }
 
 .sidebar-container {
-    width: 15%;
+    width: 20%;
 }
 
 .books-container {
-    width: 85%;
+    width: 80%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

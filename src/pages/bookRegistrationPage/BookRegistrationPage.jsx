@@ -27,7 +27,7 @@ const initialState = {
 function BookRegistrationPage() {
   const [novel, setNovel] = useState(initialState);
   const navigate = useNavigate();
-  const { setCoin,setNovelData } = UserAuth();
+  const { setCoin, setNovelData } = UserAuth();
   const options = ["Fiction", "NonFiction"];
   const optionsCondition = ["Good", "Average", "Bad/Some Pages missing"];
   const [error, setError] = useState({
@@ -48,7 +48,6 @@ function BookRegistrationPage() {
         errors[val] = "Please fill this field";
       }
       if (val === "subcategory" && selectedOptions?.length === 0) {
-        console.log(formObject[val]);
         errors["subcategory"] = "Please fill Subcategory field";
       }
     });
@@ -74,7 +73,7 @@ function BookRegistrationPage() {
     });
 
     const errors = validateInput(novel);
-    console.log(selectedOptions);
+
     if (Object.keys(errors).length > 0) {
       setError(errors);
     } else {
@@ -83,8 +82,8 @@ function BookRegistrationPage() {
         coin: parseInt(coin),
         subcategory: selectedOptions,
       });
-      setNovelData(NovelsData)
-      console.log(NovelsData)
+      setNovelData(NovelsData);
+
       e.target.reset();
 
       setCoin((prevValue) => prevValue + parseInt(coin));

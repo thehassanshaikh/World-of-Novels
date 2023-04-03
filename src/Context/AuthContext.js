@@ -25,7 +25,7 @@ export const AuthContextProvider = ({ children }) => {
   const [novelsData, setNovelData] = useState(NovelsData);
   const [addCartItem, setCartItem] = useState([]);
   const [totalCoin, setTotalCoin] = useState(0);
-  const [message,setMessage] =useState()
+  const [message, setMessage] = useState();
 
   useEffect(() => {
     if (novelsData.length === 0) {
@@ -37,7 +37,6 @@ export const AuthContextProvider = ({ children }) => {
     const provider = new GoogleAuthProvider();
     signInWithPopup(auth, provider)
       .then((result) => {
-        console.log(result.user);
         window.localStorage.setItem("novelsList", JSON.stringify(novelsList));
       })
       .catch((error) => {
@@ -46,11 +45,10 @@ export const AuthContextProvider = ({ children }) => {
   };
 
   const emailPasswordSignIn = () => {
-    console.log(state);
     signInWithEmailAndPassword(auth, state.email, state.password)
       .then((userCredential) => {
         const newuser = userCredential.user;
-        console.log(newuser);
+
         window.localStorage.setItem("novelsList", JSON.stringify(novelsList));
         setUser({
           ...user,
@@ -100,7 +98,7 @@ export const AuthContextProvider = ({ children }) => {
         totalCoin,
         setTotalCoin,
         message,
-        setMessage
+        setMessage,
       }}
     >
       {children}

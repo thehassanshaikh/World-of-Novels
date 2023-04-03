@@ -120,7 +120,7 @@ function BookRegistrationPage() {
         <div className="container p-10">
           <div className="flex flex-col lg:flex-row w-10/12 lg:w-8/12 bg-[#ffdea1] rounded-2xl mx-auto shadow-lg overflow-hidden">
             <div
-              className="w-full lg:w-1/2 flex flex-col items-center justify-center p-12 bg-no-repeat bg-cover bg-center"
+              className="w-full hidden md:flex lg:w-1/2  flex-col items-center justify-center p-12 bg-no-repeat bg-cover bg-center"
               style={{
                 backgroundImage: `url(${img3})`,
               }}
@@ -137,7 +137,7 @@ function BookRegistrationPage() {
                 </p>
               </div>
             </div>
-            <div className="w-full lg:w-1/2 py-16 px-12">
+            <div className="w-full lg:w-1/2 md:w-full py-16 px-12">
               <h2 className="text-3xl mb-4 text-[#0B1354]">
                 Register Your Book
               </h2>

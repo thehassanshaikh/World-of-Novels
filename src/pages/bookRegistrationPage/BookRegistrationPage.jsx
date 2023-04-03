@@ -112,7 +112,8 @@ function BookRegistrationPage() {
   return (
     <>
       <NavBar />
-      <div className="min-h-screen bg-gradient-to-r from-slate-200 via-orange-100 to-red-100">
+      <div className="max-h-screen overflow-y-auto hide-scrollbar">
+      <div className="min-h-screen bg-gradient-to-r from-slate-200 via-orange-100 to-red-100 ">
         <div className="container p-10">
           <div className="flex flex-col lg:flex-row w-10/12 lg:w-8/12 bg-[#ffdea1] rounded-2xl mx-auto shadow-lg overflow-hidden">
             <div
@@ -331,6 +332,7 @@ function BookRegistrationPage() {
         </div>
       </div>
       <Footer />
+      </div>
     </>
   );
 }

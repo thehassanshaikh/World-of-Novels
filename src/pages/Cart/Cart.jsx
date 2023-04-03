@@ -52,6 +52,7 @@ function Cart() {
   return (
     <>
       <NavBar />
+      <div className="max-h-screen overflow-y-auto hide-scrollbar">
       <div className="min-h-screen bg-gray-300">
         <div className="py-12">
           <div className="max-w-md mx-auto bg-gray-100 shadow-lg rounded-lg  md:max-w-5xl">
@@ -97,6 +98,7 @@ function Cart() {
         </div>
       </div>
       <Footer />
+      </div>
     </>
   );
 }

@@ -6,7 +6,7 @@ import NavBar from "../NavBar/NavBar";
 
 function Layout() {
   return (
-    <div>
+    <div className='max-h-screen overflow-hidden'>
       <NavBar />
       <Home />
       <Footer />

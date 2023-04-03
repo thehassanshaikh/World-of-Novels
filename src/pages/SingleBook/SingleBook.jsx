@@ -27,6 +27,7 @@ const SingleBook = () => {
   return (
     <>
       <NavBar />
+      <div className="max-h-screen overflow-y-auto hide-scrollbar">
       <section className="single-book-section">
         <div className="singleBook-section">
           <div className="img-and-details-con">
@@ -79,6 +80,7 @@ const SingleBook = () => {
         </div>
       </section>
       <Footer />
+      </div>
     </>
   );
 };

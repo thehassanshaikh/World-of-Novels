@@ -30,18 +30,19 @@ function SingleCartComponent({ item }) {
           </div>
         </div>
 
-        <div className="flex justify-center items-center">
+        <div className="grid md:flex justify-center items-center">
+
+        <div className=" flex justify-center items-center space-x-2">
+            <span className="text-xl text-green-500">Coin:</span>
+            <span className="text-xl pr-6 text-green-500">{item.coin}</span>
+          </div>
           <div
-            className="pr-6 cursor-pointer text-red-600"
+            className="pr-6 md:py-2 py-0 cursor-pointer text-red-600"
             onClick={removeItem}
           >
             Remove
           </div>
-
-          <div className="flex justify-center items-center space-x-2">
-            <span className="text-xl text-green-500">Coin :</span>
-            <span className="text-xl pr-6 text-green-500">{item.coin}</span>
-          </div>
+          
         </div>
       </div>
     </>

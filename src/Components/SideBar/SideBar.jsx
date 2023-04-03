@@ -61,13 +61,13 @@ export const SideBar = () => {
         <ul className="category-con">
           {nonFiction?.map((item, index) => (
             <li key={index}>
-              <input
+              <label><input
                 type="checkbox"
                 name={item.label}
                 onChange={filterNovels}
                 className="inpt-box"
               />
-              {item.label}
+                {item.label}</label>
             </li>
           ))}
         </ul>
@@ -75,13 +75,13 @@ export const SideBar = () => {
         <ul className="category-con">
           {bookCondition.map((item, index) => (
             <li key={index}>
-              <input
+              <label><input
                 type="checkbox"
                 name={index}
                 onChange={filterNovels}
                 className="inpt-box"
               />
-              {item.condition}
+                {item.condition}</label>
             </li>
           ))}
         </ul>

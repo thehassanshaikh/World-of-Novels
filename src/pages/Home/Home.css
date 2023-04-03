@@ -71,9 +71,8 @@ ul.book-ratings {
 }
 
 h4.book-title {
-    font-weight: 600;
     text-overflow: ellipsis;
-    white-space: inherit;
+    white-space: pre;
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -84,7 +83,7 @@ h4.book-title {
     color: rgb(47, 46, 65);
     font-weight: 500;
     margin: 0px;
-
+    white-space: pre;
 }
 
 .author,

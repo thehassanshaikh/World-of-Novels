@@ -16,10 +16,18 @@ function NavBar() {
   const [q, setQ] = useState("");
   const navigate = useNavigate();
   const [url, setUrl] = useState(usericon);
+  const [mainpage,setMainPage] = useState(false)
 
   const uploadBooks = () => {
     navigate("/bookRegistrationPage");
   };
+
+  useEffect(()=>{
+    console.log(window.location.pathname)
+    if(window.location.pathname === '/main'){
+      setMainPage(true)
+    }
+  },[window.location.pathname])
 
   useEffect(() => {
     if (user) {
@@ -90,7 +98,7 @@ function NavBar() {
           <button className="SItem " onClick={uploadBooks}>Upload +</button>
         </div>
       </div>
-      <div className="w-fit mt-4 md:order-2 md:block">
+      {mainpage && <div className="w-fit mt-4 md:order-2 md:block">
         <div className="mb-3 xl:w-96">
           <div className="relative mb-4 flex w-full flex-wrap items-stretch">
             <input
@@ -117,7 +125,7 @@ function NavBar() {
             </svg>
           </div>
         </div>
-      </div>
+      </div>}
       <div className="cart text-center md:order-3 flex inset-12">
 
         <img className="w-6 h-6 mr-1 cursor-pointer" src={coin} alt=""></img><p className="text-black">{coins}</p>

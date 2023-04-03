@@ -61,9 +61,9 @@ function NavBar() {
     <div className="navBar flex justify-between items-center bg-white shadow-2xl px-4">
       {/* <div className="flex justify-center items-center md:order-2">
         <div className="hamburger inline-block p-4 cursor-pointer md:hidden">
-          <div className="line h-0.5 w-6 my-1 bg-white "></div>
-          <div className="line h-0.5 w-6 my-1 bg-white "></div>
-          <div className="line h-0.5 w-6 my-1 bg-white "></div>
+          <div className="line h-0.5 w-6 my-1 bg-orange-500 "></div>
+          <div className="line h-0.5 w-6 my-1 bg-orange-500 "></div>
+          <div className="line h-0.5 w-6 my-1 bg-orange-500 "></div>
         </div>
         <div className="search md:hidden w-4 mr-4 cursor-pointer">
           <img src={searchicon} alt=""></img>
@@ -71,6 +71,7 @@ function NavBar() {
       </div> */}
 
       <div className="logo text-center flex md:order-1">
+
         <div className="cursor-pointer">
           <Link to="/main">
             <img className="w-48" src={logo} alt=""></img>
@@ -80,7 +81,27 @@ function NavBar() {
           <button className="SItem " onClick={uploadBooks}>
             Upload +
           </button>
+
         </div>
+        < div className="sell md:hidden w-auto px-4 m-3 py-0.5 text-white font-bold text-xl border items-center rounded-xl hover:scale-105 bg-[#ffa500] cursor-pointer">
+          <button className="SItem " onClick={uploadBooks}>+</button>
+        </div>
+        {
+          mainpage && <div className="w-fit mt-4 md:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="black"
+              className="h-7 w-6 ml-1"
+            >
+              <path
+                fillRule="evenodd"
+                d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
+                clipRule="evenodd"
+              />
+            </svg>
+          </div>
+        }
       </div>
       {mainpage && (
         <div className="w-fit mt-4 md:order-2 md:block">
@@ -94,6 +115,7 @@ function NavBar() {
                 value={q}
                 onChange={(e) => setQ(e.target.value)}
                 aria-describedby="button-addon2"
+
               />
 
               <svg
@@ -112,6 +134,7 @@ function NavBar() {
           </div>
         </div>
       )}
+
       <div className="cart text-center md:order-3 flex inset-12">
         <img className="w-6 h-6 mr-1 cursor-pointer" src={coin} alt=""></img>
         <p className="text-black">{coins}</p>

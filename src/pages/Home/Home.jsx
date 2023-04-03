@@ -6,6 +6,7 @@ import { SideBar } from "../../Components/SideBar/SideBar";
 import { UserAuth } from "../../Context/AuthContext";
 import { BsCoin } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import Footer from "../../Components/Footer/Footer";
 
 export const Home = () => {
   const { novelsData, message } = UserAuth();

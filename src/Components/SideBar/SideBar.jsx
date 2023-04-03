@@ -26,7 +26,6 @@ export const SideBar = () => {
   };
 
   useEffect(() => {
-    console.log(checkedCategory);
     if (checkedCategory.length === 0) {
       setNovelData(newData);
     }

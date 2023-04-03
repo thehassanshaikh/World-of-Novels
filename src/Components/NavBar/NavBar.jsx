@@ -21,7 +21,6 @@ function NavBar() {
   };
 
   useEffect(() => {
-    console.log(window.location.pathname);
     if (window.location.pathname === "/main") {
       setMainPage(true);
     }

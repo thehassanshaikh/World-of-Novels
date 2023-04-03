@@ -57,3 +57,9 @@ ul.category-con li:hover {
 }
 
 /*============ media Query styling ============= */
+
+@media (max-width: 768px) {
+    ul.category-con li {
+        font-size: small;
+    }
+}

@@ -41,7 +41,7 @@ export const SideBar = () => {
   }, []);
 
   return (
-    <section className="sidebar-container">
+    <section className="sidebar-container max-h-screen overflow-y-scroll hide-scrollbar">
       <div className="sidebar-section">
         <h2 className="Category-lable">Fictions</h2>
         <ul className="category-con">

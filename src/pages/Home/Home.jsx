@@ -6,13 +6,14 @@ import { SideBar } from "../../Components/SideBar/SideBar";
 import { UserAuth } from "../../Context/AuthContext";
 import { BsCoin } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import Footer from "../../Components/Footer/Footer";
 
 export const Home = () => {
-  const { novelsData,message } = UserAuth();
+  const { novelsData, message } = UserAuth();
   return (
-    <section className="home-section">
+    <section className="home-section ">
       <SideBar />
-      <div className="books-container">
+      <div className="books-container max-h-screen overflow-y-scroll hide-scrollbar">
         {message && <h1 className="text-4xl text-gray-500 mt-20">{message}</h1>}
         {novelsData?.map((book, index) => (
           <div className="card" key={index}>

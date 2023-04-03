@@ -4,14 +4,20 @@ import { UserAuth } from "../../Context/AuthContext";
 function SingleCartComponent({ item }) {
   const { setTotalCoin, setCartItem, addCartItem } = UserAuth();
   useEffect(() => {
-    let newCoin = 0;
-    newCoin = addCartItem.map((item) => newCoin + item.coin);
-    setTotalCoin(newCoin);
+    const sum = addCartItem.reduce(
+      (accumulator, currentValue) => accumulator + currentValue.coin,
+      0
+    );
+    setTotalCoin(sum);
   }, []);
   const removeItem = () => {
     addCartItem.splice(addCartItem.indexOf(item), 1);
     setCartItem([...addCartItem]);
-    setTotalCoin((coin) => coin - item.coin);
+    const sum = addCartItem.reduce(
+      (accumulator, currentValue) => accumulator + currentValue.coin,
+      0
+    );
+    setTotalCoin(sum);
   };
   return (
     <>

@@ -38,15 +38,18 @@ function BookRegistrationPage() {
     condition: "",
     image: "",
     description: "",
-    subcategory: "",
+    subcategory: [],
   });
 
   const validateInput = (formObject) => {
     const errors = {};
-    console.log(novel);
     Object.keys(formObject).forEach((val) => {
       if (val != "shortDescription" && formObject[val] === "") {
         errors[val] = "Please fill this field";
+      }
+      if (val === "subcategory" && selectedOptions?.length === 0) {
+        console.log(formObject[val]);
+        errors["subcategory"] = "Please fill Subcategory field";
       }
     });
     if (formObject.price < 0) {
@@ -71,13 +74,9 @@ function BookRegistrationPage() {
     });
 
     const errors = validateInput(novel);
+    console.log(selectedOptions);
     if (Object.keys(errors).length > 0) {
       setError(errors);
-      // Swal.fire({
-      //   title: "Some fields are empty",
-      //   text: `Please fill it first`,
-      //   icon: "error",
-      // });
     } else {
       NovelsData.unshift({
         ...novel,
@@ -92,9 +91,8 @@ function BookRegistrationPage() {
         title: "Congratulations!!!",
         text: `You earned ${parseInt(coin)} coins`,
         icon: "success",
-        confirmButtonColor: '#ffa500',
+        confirmButtonColor: "#ffa500",
       });
-      console.log(novel);
       setNovel(initialState);
     }
 
@@ -105,17 +103,15 @@ function BookRegistrationPage() {
   };
 
   const [categoryselect, setCategory] = useState("");
-  const [selectedOptions, setSelectedOptions] = useState(null);
+  const [selectedOptions, setSelectedOptions] = useState([]);
 
   const setHandle = (e) => {
-    setSelectedOptions(
-      Array.isArray(e) ? e.map((item) => item.subcategory) : []
-    );
+    setSelectedOptions(Array.isArray(e) ? e.map((item) => item.label) : []);
   };
 
   return (
     <>
-    <NavBar />
+      <NavBar />
       <div className="min-h-screen bg-gradient-to-r from-slate-200 via-orange-100 to-red-100">
         <div className="container p-10">
           <div className="flex flex-col lg:flex-row w-10/12 lg:w-8/12 bg-[#ffdea1] rounded-2xl mx-auto shadow-lg overflow-hidden">
@@ -238,7 +234,6 @@ function BookRegistrationPage() {
                       e.target.value === "Fiction"
                         ? setCategory(fiction)
                         : setCategory(nonFiction);
-                      console.log(e.target.value);
                     }}
                   >
                     <option>Select Book Category</option>
@@ -257,22 +252,17 @@ function BookRegistrationPage() {
                     ""
                   )}
 
-                                    {categoryselect && (
+                  {categoryselect && (
                     <Select
                       options={categoryselect}
                       onChange={setHandle}
                       isMulti
                       className="block  text-sm text-[#00372e]"
                     ></Select>
-               
-          
-             
-
                   )}
-                  {error.subcategory ? (
+
+                  {categoryselect && error.subcategory && (
                     <p className="text-xs text-red-600">{error.subcategory}</p>
-                  ) : (
-                    ""
                   )}
                 </div>
 
@@ -314,7 +304,7 @@ function BookRegistrationPage() {
                     Upload Novel Picture(url)
                   </label>
                   <input
-                    className="block w-full text-sm text-[#00372e] border border-[#00372e] cursor-pointer bg-gray-50 focus:outline-none py-1 px-2"      
+                    className="block w-full text-sm text-[#00372e] border border-[#00372e] cursor-pointer bg-gray-50 focus:outline-none py-1 px-2"
                     type="url"
                     onChange={(e) => {
                       setNovel({

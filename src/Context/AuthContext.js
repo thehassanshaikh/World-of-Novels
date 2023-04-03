@@ -24,11 +24,12 @@ export const AuthContextProvider = ({ children }) => {
   });
   const [novelsData, setNovelData] = useState(NovelsData);
   const [addCartItem, setCartItem] = useState([]);
-  const [totalCoin,setTotalCoin] = useState(0)
+  const [totalCoin, setTotalCoin] = useState(0);
+  const [message,setMessage] =useState()
 
   useEffect(() => {
     if (novelsData.length === 0) {
-      setNovelData(NovelsData);
+      setMessage("No results found!!");
     }
   }, [novelsData]);
 
@@ -97,7 +98,9 @@ export const AuthContextProvider = ({ children }) => {
         addCartItem,
         setCartItem,
         totalCoin,
-        setTotalCoin
+        setTotalCoin,
+        message,
+        setMessage
       }}
     >
       {children}

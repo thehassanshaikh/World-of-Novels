@@ -13,7 +13,7 @@ const SingleBook = () => {
   const { setCartItem, addCartItem } = UserAuth();
 
   const [getNovel, setNewNovel] = useState(
-    NovelsData.filter((novel) => novel.title === title)
+    NovelsData?.filter((novel) => novel.title === title)
   );
 
   const addCart = (novel) => {
@@ -49,7 +49,7 @@ const SingleBook = () => {
               <h4>
                 Sub category:{" "}
                 <span>
-                  {getNovel[0]?.subcategory.map((sub, index) => {
+                  {getNovel[0]?.subcategory?.map((sub, index) => {
                     if (index === getNovel[0].subcategory.length - 1) {
                       return sub;
                     } else {

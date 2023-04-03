@@ -19,7 +19,7 @@ export const SideBar = () => {
 
   const searchAndFilter = () => {
     const searchResult = NovelsData.filter((novel) =>
-      novel.subcategory.some((r) => checkedCategory.includes(r)) || checkedCategory.includes(novel.condition)
+      novel.subcategory?.some((r) => checkedCategory.includes(r)) || checkedCategory.includes(novel.condition)
     );
     setNovelData(searchResult);
   };

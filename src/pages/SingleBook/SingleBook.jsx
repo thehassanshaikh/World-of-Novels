@@ -13,7 +13,7 @@ const SingleBook = () => {
   const { setCartItem, addCartItem } = UserAuth();
 
   const [getNovel, setNewNovel] = useState(
-    NovelsData.filter((novel) => novel.title === title)
+    NovelsData?.filter((novel) => novel.title === title)
   );
 
   const addCart = (novel) => {
@@ -27,6 +27,7 @@ const SingleBook = () => {
   return (
     <>
       <NavBar />
+      <div className="max-h-screen overflow-y-auto hide-scrollbar">
       <section className="single-book-section">
         <div className="singleBook-section">
           <div className="img-and-details-con">
@@ -49,7 +50,7 @@ const SingleBook = () => {
               <h4>
                 Sub category:{" "}
                 <span>
-                  {getNovel[0]?.subcategory.map((sub, index) => {
+                  {getNovel[0]?.subcategory?.map((sub, index) => {
                     if (index === getNovel[0].subcategory.length - 1) {
                       return sub;
                     } else {
@@ -79,6 +80,7 @@ const SingleBook = () => {
         </div>
       </section>
       <Footer />
+      </div>
     </>
   );
 };

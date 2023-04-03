@@ -1,4 +1,3 @@
-
 import React from "react";
 import Footer from "../Footer/Footer";
 import { Home } from "../../pages/Home/Home";
@@ -8,8 +7,10 @@ function Layout() {
   return (
     <div>
       <NavBar />
-      <Home />
-      <Footer />
+      <div className="max-h-screen overflow-y-auto hide-scrollbar">
+        <Home />
+        <Footer />
+      </div>
     </div>
   );
 }

@@ -39,8 +39,9 @@ function Login() {
         {/* ------------------------------------------------------login container------------------------------------------------------- */}
         <div className="bg-[#fcc1bd] flex rounded-2xl shadow-2xl  max-w-3xl p-3">
           {/* ----------------------------------------------------image---------------------------------------------------------------------- */}
-          <div className="sm:block hidden w-1/2 p-5 mt-16 pr-16 bg-[#fcc1bd]">
+          <div className="sm:block hidden w-1/2 p-5 mt-16 pr-16 bg-[#fcc1bd] text-center">
             <img src={img2} alt="" className="rounded-2xl w-auto h-auto"></img>
+            <a href="#" className="text-blue-600 underline underline-offset-1">How we work</a>
           </div>
 
           {/* --------------------------------form---------------------------------------------------------------------*/}

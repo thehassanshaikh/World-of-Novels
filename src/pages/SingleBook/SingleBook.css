@@ -1,12 +1,14 @@
 .single-book-section {
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
+    background-color: #ffedbb;
     min-height: 100vh;
 
 }
 
 .img-and-details-con {
     display: flex;
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
+    background-color: #ffedbb;
     padding: 2%;
 }
 

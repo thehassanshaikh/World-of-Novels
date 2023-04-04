@@ -11,11 +11,14 @@ import {
 } from "firebase/auth";
 import { auth } from "../firebase";
 import { NovelsData } from "../data";
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router";
 
 const AuthContext = createContext();
 
 export const AuthContextProvider = ({ children }) => {
   const novelsList = [];
+  const navigate=useNavigate();
   const [coins, setCoin] = useState(5);
   const [user, setUser] = useState({});
   const [state, setState] = useState({
@@ -37,6 +40,7 @@ export const AuthContextProvider = ({ children }) => {
     const provider = new GoogleAuthProvider();
     signInWithPopup(auth, provider)
       .then((result) => {
+        navigate("/main")
         window.localStorage.setItem("novelsList", JSON.stringify(novelsList));
       })
       .catch((error) => {
@@ -48,7 +52,7 @@ export const AuthContextProvider = ({ children }) => {
     signInWithEmailAndPassword(auth, state.email, state.password)
       .then((userCredential) => {
         const newuser = userCredential.user;
-
+        navigate("/main")
         window.localStorage.setItem("novelsList", JSON.stringify(novelsList));
         setUser({
           ...user,
@@ -58,6 +62,12 @@ export const AuthContextProvider = ({ children }) => {
       })
       .catch((error) => {
         console.log(error);
+        Swal.fire({
+          title: "Oops!!!",
+          text: `Wrong Credentials. Please with Google.`,
+          icon: "error",
+          confirmButtonColor: "#ffa500",
+        });
       });
 
     // createUserWithEmailAndPassword(auth,state.email,state.password)

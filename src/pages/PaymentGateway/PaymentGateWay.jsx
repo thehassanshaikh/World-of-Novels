@@ -17,7 +17,7 @@ function PaymentGateWay() {
   } = UserAuth();
 
   const checkOut = () => {
-    Swal.fire(`Your Novel is booked!`, "", "success").then((result) =>
+    Swal.fire(`Your Novel is booked! You will be notified the futher details in your registered email!!`, "", "success").then((result) =>
       navigate("/main")
     );
     addCartItem?.map((item) => {

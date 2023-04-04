@@ -55,10 +55,12 @@ function Cart() {
       //   }
       // })
       // console.log(price-(coins*10))
+
+      // you need more ..coins to complete this transaction, spent Rs... for the same
       Swal.fire({
         title: "You do not have sufficient Coins",
-        text: `To buy ${totalCoin - coins} coins, 
-        spend another Rs. ${parseInt((totalCoin - coins) * 15.5)}!!`,
+        text: `You need ${totalCoin - coins} more coins to complete this transaction, 
+        spend Rs. ${parseInt((totalCoin - coins) * 15.5)} for the same!!`,
         showDenyButton: true,
         confirmButtonColor: "#ffa500",
         confirmButtonText: "Buy",

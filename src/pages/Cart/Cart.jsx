@@ -30,7 +30,7 @@ function Cart() {
       Swal.fire({
         icon: "success",
         title: "Congatulations",
-        text: "Your Novel is booked!",
+        text: "Your Novel is booked! You will be notified the futher details in your registered email.",
         confirmButtonColor: "#ffa500",
       });
       addCartItem?.map((item) => {

@@ -90,7 +90,8 @@ function BookRegistrationPage() {
       navigate("/main");
       Swal.fire({
         title: "Congratulations!!!",
-        text: `You earned ${parseInt(coin)} coins`,
+        text: `You earned ${parseInt(coin)} coins. Our package handler shall come and collect novel. 
+        Additional information will be communicated via email.`,
         icon: "success",
         confirmButtonColor: "#ffa500",
       });

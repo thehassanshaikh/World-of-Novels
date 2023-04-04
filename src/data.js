@@ -44,7 +44,7 @@ export const fiction = [
     value: 9,
     label: "Literary fiction",
   },
- 
+
   {
     id: 10,
     value: 10,
@@ -141,6 +141,144 @@ export const bookCondition = [
 ];
 
 export const NovelsData = [
+  {
+    title: "Becoming",
+    author: "Michelle Obama",
+    price: 523,
+    category: "Non Fiction",
+    condition: "0",
+    description:
+      "'Becoming' is a memoir by Michelle Obama that recounts her life from her childhood on the South Side of Chicago to her time as First Lady of the United States. The book explores themes of race, identity, and the challenges and opportunities of public life.",
+    shortDescription:
+      "A memoir that recounts the life of Michelle Obama from childhood to her time as First Lady of the United States.",
+    image:
+      "https://tse1.mm.bing.net/th?id=OIP.m3nmrN1aMJt13GLpBj7ccwHaJ4&pid=Api&P=0",
+    subcategory: ["Autobiography and Memoir"],
+    coin: 52,
+  },
+
+  {
+    title: "Steve Jobs",
+    author: "Walter Isaacson",
+    price: 1099,
+    category: "Non Fiction",
+    condition: "2",
+    description:
+      "'Steve Jobs' is a biography by Walter Isaacson that tells the story of the Apple co-founder and visionary entrepreneur. The book explores Jobs' personal and professional life, including his role in revolutionizing the technology industry.",
+    shortDescription:
+      "A biography that tells the story of the Apple co-founder and visionary entrepreneur Steve Jobs.",
+    image:
+      "https://tse2.mm.bing.net/th?id=OIP.yloygiIPh1uWGd5tElJZLQHaLw&pid=Api&P=0",
+    subcategory: ["Biography"],
+    coin: 36,
+  },
+  {
+    title: "The Immortal Life of Henrietta Lacks",
+    author: "Rebecca Skloot",
+    price: 623,
+    category: "Non Fiction",
+    condition: "0",
+    description:
+      "'The Immortal Life of Henrietta Lacks' is a biography by Rebecca Skloot that tells the story of the African American woman whose cancer cells were used without her knowledge for medical research, leading to countless scientific breakthroughs. The book explores issues of race, ethics, and the intersection of medicine and society.",
+    shortDescription:
+      "A biography that tells the story of the African American woman Henrietta Lacks, whose cancer cells were used for medical research.",
+    image:
+      "https://tse1.mm.bing.net/th?id=OIP.S4lnuZ2nd88rh-mQJ0wNmAAAAA&pid=Api&P=0",
+    subcategory: ["Biography"],
+    coin: 36,
+  },
+  {
+    title: "Bad Feminist",
+    author: "Roxane Gay",
+    price: 852,
+    category: "Non Fiction",
+    condition: "1",
+    description:
+      "'Bad Feminist' is a collection of essays by Roxane Gay that explore the intersection of feminism, race, and popular culture. The book challenges traditional notions of what it means to be a feminist and offers a fresh perspective on contemporary issues facing women today.",
+    shortDescription:
+      "A collection of essays that explore the intersection of feminism, race, and popular culture.",
+    image:
+      "https://tse1.mm.bing.net/th?id=OIP.HG--YFcmKlubL2YJLmakYAHaHa&pid=Api&P=0",
+    subcategory: ["Essays"],
+    coin: 56,
+  },
+
+  {
+    title: "The Soul of an Octopus",
+    author: "Sy Montgomery",
+    price: 412,
+    category: "Non Fiction",
+    condition: "0",
+    description:
+      "'The Soul of an Octopus' is a collection of essays by Sy Montgomery that explores the world of octopuses and their complex emotional lives. The book is a fascinating blend of science and storytelling, and offers a unique perspective on the nature of consciousness and intelligence.",
+    shortDescription:
+      "A collection of essays that explores the world of octopuses and their complex emotional lives.",
+    image:
+      "https://tse4.mm.bing.net/th?id=OIP._pu_S29_telVzWR3rir4lgHaJ3&pid=Api&P=0",
+    subcategory: ["Essays"],
+    coin: 41,
+  },
+  {
+    title: "Sapiens: A Brief History of Humankind",
+    author: "Yuval Noah Harari",
+    price: 542,
+    category: "Non Fiction",
+    condition: "2",
+    description:
+      "'Sapiens: A Brief History of Humankind' is a non-fiction book by Yuval Noah Harari that provides a sweeping history of human evolution from the emergence of Homo sapiens to the present day. The book explores key themes such as the rise of agriculture, the development of religion and capitalism, and the impact of technology on human society.",
+    shortDescription:
+      "A non-fiction book that provides a sweeping history of human evolution from the emergence of Homo sapiens to the present day.",
+    image:
+      "https://tse4.mm.bing.net/th?id=OIP.ePZgFISI6cil9jxJXAXAKAHaJ4&pid=Api&P=0",
+    subcategory: ["Non-fiction novel"],
+    coin: 36,
+  },
+
+  {
+    title: "The New Jim Crow",
+    author: "Michelle Alexander",
+    price: 745,
+    category: "Non Fiction",
+    condition: "1",
+    description:
+      "'The New Jim Crow' is a non-fiction book by Michelle Alexander that explores the mass incarceration of black Americans and its impact on communities of color. The book argues that the criminal justice system has become a new form of racial control, perpetuating a system of discrimination and inequality.",
+    shortDescription:
+      "A non-fiction book that explores the mass incarceration of black Americans and its impact on communities of color.",
+    image:
+      "https://tse3.mm.bing.net/th?id=OIP.NBs9uhNxVVD-bSHZW2S2JQHaLW&pid=Api&P=0",
+    subcategory: ["Non-fiction novel"],
+    coin: 49,
+  },
+  {
+    title: "Atomic Habits",
+    author: "James Clear",
+    price: 321,
+    category: "Non Fiction",
+    condition: "0",
+    description:
+      "'Atomic Habits' is a self-help book by James Clear that provides a practical framework for building good habits and breaking bad ones. The book focuses on small, incremental changes that can lead to big results over time, and offers strategies for creating lasting behavior change.",
+    shortDescription:
+      "A self-help book that provides a practical framework for building good habits and breaking bad ones.",
+    image:
+      "https://tse3.mm.bing.net/th?id=OIP.xKdjRjuOZLsXOIrOMg5zhwHaJl&pid=Api&P=0",
+    subcategory: ["Self-Help"],
+    coin: 32,
+  },
+  {
+    title: "The Power of Now",
+    author: "Eckhart Tolle",
+    price: 621,
+    category: "Non Fiction",
+    condition: "1",
+    description:
+      "'The Power of Now' is a self-help book by Eckhart Tolle that encourages readers to live in the present moment and let go of past and future worries. The book offers a spiritual perspective on life and provides exercises and meditations to help readers cultivate a deeper sense of inner peace and awareness.",
+    shortDescription:
+      "A self-help book that encourages readers to live in the present moment and let go of past and future worries.",
+    image:
+      "https://tse4.mm.bing.net/th?id=OIP.JcB1wXlq7QyuK0y1c4-PmgHaLC&pid=Api&P=0",
+    subcategory: ["Self-Help"],
+    coin: 41,
+  },
   {
     title: "Touching the Void",
     author: "Joe Simpson",
@@ -722,144 +860,5 @@ export const NovelsData = [
       "https://tse1.mm.bing.net/th?id=OIP.hgnz4THaWJNiml-YG0DXFQHaLX&pid=Api&P=0",
     subcategory: ["Autobiography and Memoir"],
     coin: 65,
-  },
-
-  {
-    title: "Becoming",
-    author: "Michelle Obama",
-    price: 523,
-    category: "Non Fiction",
-    condition: "0",
-    description:
-      "'Becoming' is a memoir by Michelle Obama that recounts her life from her childhood on the South Side of Chicago to her time as First Lady of the United States. The book explores themes of race, identity, and the challenges and opportunities of public life.",
-    shortDescription:
-      "A memoir that recounts the life of Michelle Obama from childhood to her time as First Lady of the United States.",
-    image:
-      "https://tse1.mm.bing.net/th?id=OIP.m3nmrN1aMJt13GLpBj7ccwHaJ4&pid=Api&P=0",
-    subcategory: ["Autobiography and Memoir"],
-    coin: 52,
-  },
-
-  {
-    title: "Steve Jobs",
-    author: "Walter Isaacson",
-    price: 1099,
-    category: "Non Fiction",
-    condition: "2",
-    description:
-      "'Steve Jobs' is a biography by Walter Isaacson that tells the story of the Apple co-founder and visionary entrepreneur. The book explores Jobs' personal and professional life, including his role in revolutionizing the technology industry.",
-    shortDescription:
-      "A biography that tells the story of the Apple co-founder and visionary entrepreneur Steve Jobs.",
-    image:
-      "https://tse2.mm.bing.net/th?id=OIP.yloygiIPh1uWGd5tElJZLQHaLw&pid=Api&P=0",
-    subcategory: ["Biography"],
-    coin: 36,
-  },
-  {
-    title: "The Immortal Life of Henrietta Lacks",
-    author: "Rebecca Skloot",
-    price: 623,
-    category: "Non Fiction",
-    condition: "0",
-    description:
-      "'The Immortal Life of Henrietta Lacks' is a biography by Rebecca Skloot that tells the story of the African American woman whose cancer cells were used without her knowledge for medical research, leading to countless scientific breakthroughs. The book explores issues of race, ethics, and the intersection of medicine and society.",
-    shortDescription:
-      "A biography that tells the story of the African American woman Henrietta Lacks, whose cancer cells were used for medical research.",
-    image:
-      "https://tse1.mm.bing.net/th?id=OIP.S4lnuZ2nd88rh-mQJ0wNmAAAAA&pid=Api&P=0",
-    subcategory: ["Biography"],
-    coin: 36,
-  },
-  {
-    title: "Bad Feminist",
-    author: "Roxane Gay",
-    price: 852,
-    category: "Non Fiction",
-    condition: "1",
-    description:
-      "'Bad Feminist' is a collection of essays by Roxane Gay that explore the intersection of feminism, race, and popular culture. The book challenges traditional notions of what it means to be a feminist and offers a fresh perspective on contemporary issues facing women today.",
-    shortDescription:
-      "A collection of essays that explore the intersection of feminism, race, and popular culture.",
-    image:
-      "https://tse1.mm.bing.net/th?id=OIP.HG--YFcmKlubL2YJLmakYAHaHa&pid=Api&P=0",
-    subcategory: ["Essays"],
-    coin: 56,
-  },
-
-  {
-    title: "The Soul of an Octopus",
-    author: "Sy Montgomery",
-    price: 412,
-    category: "Non Fiction",
-    condition: "0",
-    description:
-      "'The Soul of an Octopus' is a collection of essays by Sy Montgomery that explores the world of octopuses and their complex emotional lives. The book is a fascinating blend of science and storytelling, and offers a unique perspective on the nature of consciousness and intelligence.",
-    shortDescription:
-      "A collection of essays that explores the world of octopuses and their complex emotional lives.",
-    image:
-      "https://tse4.mm.bing.net/th?id=OIP._pu_S29_telVzWR3rir4lgHaJ3&pid=Api&P=0",
-    subcategory: ["Essays"],
-    coin: 41,
-  },
-  {
-    title: "Sapiens: A Brief History of Humankind",
-    author: "Yuval Noah Harari",
-    price: 542,
-    category: "Non Fiction",
-    condition: "2",
-    description:
-      "'Sapiens: A Brief History of Humankind' is a non-fiction book by Yuval Noah Harari that provides a sweeping history of human evolution from the emergence of Homo sapiens to the present day. The book explores key themes such as the rise of agriculture, the development of religion and capitalism, and the impact of technology on human society.",
-    shortDescription:
-      "A non-fiction book that provides a sweeping history of human evolution from the emergence of Homo sapiens to the present day.",
-    image:
-      "https://tse4.mm.bing.net/th?id=OIP.ePZgFISI6cil9jxJXAXAKAHaJ4&pid=Api&P=0",
-    subcategory: ["Non-fiction novel"],
-    coin: 36,
-  },
-
-  {
-    title: "The New Jim Crow",
-    author: "Michelle Alexander",
-    price: 745,
-    category: "Non Fiction",
-    condition: "1",
-    description:
-      "'The New Jim Crow' is a non-fiction book by Michelle Alexander that explores the mass incarceration of black Americans and its impact on communities of color. The book argues that the criminal justice system has become a new form of racial control, perpetuating a system of discrimination and inequality.",
-    shortDescription:
-      "A non-fiction book that explores the mass incarceration of black Americans and its impact on communities of color.",
-    image:
-      "https://tse3.mm.bing.net/th?id=OIP.NBs9uhNxVVD-bSHZW2S2JQHaLW&pid=Api&P=0",
-    subcategory: ["Non-fiction novel"],
-    coin: 49,
-  },
-  {
-    title: "Atomic Habits",
-    author: "James Clear",
-    price: 321,
-    category: "Non Fiction",
-    condition: "0",
-    description:
-      "'Atomic Habits' is a self-help book by James Clear that provides a practical framework for building good habits and breaking bad ones. The book focuses on small, incremental changes that can lead to big results over time, and offers strategies for creating lasting behavior change.",
-    shortDescription:
-      "A self-help book that provides a practical framework for building good habits and breaking bad ones.",
-    image:
-      "https://tse3.mm.bing.net/th?id=OIP.xKdjRjuOZLsXOIrOMg5zhwHaJl&pid=Api&P=0",
-    subcategory: ["Self-Help"],
-    coin: 32,
-  },
-  {
-    title: "The Power of Now",
-    author: "Eckhart Tolle",
-    price: 621,
-    category: "Non Fiction",
-    condition: "1",
-    description:
-      "'The Power of Now' is a self-help book by Eckhart Tolle that encourages readers to live in the present moment and let go of past and future worries. The book offers a spiritual perspective on life and provides exercises and meditations to help readers cultivate a deeper sense of inner peace and awareness.",
-    shortDescription:
-      "A self-help book that encourages readers to live in the present moment and let go of past and future worries.",
-    image:
-      "https://tse4.mm.bing.net/th?id=OIP.JcB1wXlq7QyuK0y1c4-PmgHaLC&pid=Api&P=0",
-    subcategory: ["Self-Help"],
-    coin: 41,
   },
 ];

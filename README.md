@@ -1,5 +1,30 @@
 # World-of-Novels
 
+<br />
+
+Welcome to our online bookstore where you can buy and sell your favorite novels and earn coins in the process! Here's how it works:
+
+
+<b>Step 1: Log In</b><br />
+To start using our platform, login with your Google account. Once you've logged in, you can start exploring our collection of novels and sell your old ones.
+
+
+<b>Step 2: Sell Your Novels</b><br />
+If you have novels that you no longer need, you can sell them on our platform and earn coins. To sell a novel, simply upload a photo of the cover and enter its title, author, condition (Good, Average, Bad) and description.
+
+
+<b>Step 3: Earn Coins</b><br />
+When someone buys your novel, you'll earn coins that you can use to buy other novels on our platform. The number of coins you earn depends on the price of the novel you sold.
+
+
+
+<b>Step 4: Buy Novels</b><br />
+Once you've earned enough coins, you can use them to buy novels on our platform. Simply browse our collection of novels, add the ones you want to your cart, and proceed to checkout. You can use your coins to pay for your purchase, and any remaining balance can be paid with your credit card or other payment methods.
+
+
+
+
+
 # Demo video
 
 

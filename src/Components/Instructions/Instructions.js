@@ -19,7 +19,7 @@ function Instructions() {
 const showStepOne = () => {
   Swal.fire({
     title: "Step 1: Login",
-    text: `To start using our platform, login for an account by providing your email, and password. 
+    text: `To start using our platform, login with your Google account. 
     Once you've logged in, you can start exploring our collection of novels and sell your old ones.`,
     confirmButtonText: "Next",
     confirmButtonColor: "#ffa500",
@@ -93,8 +93,8 @@ const showStepFive = () => {
   }).then((result) => {
     if (result.isConfirmed) {
       Swal.fire(
-        "All done!",
-        "Congratulations, you completed the steps!",
+        "Lets Start!!!",
+        "You are all set for this World of Novels Journey!",
         "success"
       );
     }

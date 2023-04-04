@@ -18,6 +18,7 @@ function Cart() {
     setNovelData,
   } = UserAuth();
   const [isVisible, setIsVisible] = useState(true);
+  const [extraprice, setExtraPrice] = useState();
   const navigate = useNavigate();
   useEffect(() => {
     if (addCartItem.length > 0) {
@@ -41,11 +42,23 @@ function Cart() {
       setCartItem([]);
       setTotalCoin(0);
     } else {
+      // let price=0;
+      // addCartItem.map((item)=>{
+      //   if(item.condition==0){
+      //     price+=item.price*10
+      //   }
+      //   else if(item.condition==1){
+      //     price+=item.price*(3/2)*10
+      //   }
+      //   else{
+      //     price+=item.price*3*10
+      //   }
+      // })
+      // console.log(price-(coins*10))
       Swal.fire({
         title: "You do not have sufficient Coins",
-        text: `Spend another Rs.${
-          (totalCoin - coins) * 20
-        } to get this novel!!`,
+        text: `To buy ${totalCoin - coins} coins, 
+        spend another Rs. ${parseInt((totalCoin - coins) * 15.5)}!!`,
         showDenyButton: true,
         confirmButtonColor: "#ffa500",
         confirmButtonText: "Buy",
@@ -59,12 +72,13 @@ function Cart() {
       });
     }
   };
+  //#ffdea1
 
   return (
     <>
       <NavBar />
       <div className="max-h-screen overflow-y-auto hide-scrollbar">
-        <div className="min-h-screen bg-gray-300">
+        <div className="min-h-screen bg-creams">
           <div className="py-12">
             <div className="max-w-md mx-auto bg-gray-100 shadow-lg rounded-lg  md:max-w-5xl">
               <div className="w-full p-4 px-5 py-5">

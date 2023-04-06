@@ -6,8 +6,7 @@ const firebaseConfig = {
   apiKey: "AIzaSyAjQ3xovwnlqwmqLLH5fntGCOZCpusGQ5Y",
   authDomain: "worldofnovels-41c7e.firebaseapp.com",
   projectId: "worldofnovels-41c7e",
-  //storageBucket: "worldofnovels-41c7e.appspot.com",
-  storageBucket:"gs://worldofnovels-41c7e.appspot.com",
+  storageBucket: "worldofnovels-41c7e.appspot.com",
   messagingSenderId: "491591629497",
   appId: "1:491591629497:web:cb5d9fc8edbd6960947968",
   measurementId: "G-SSCVJNRBTG"

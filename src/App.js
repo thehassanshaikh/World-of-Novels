@@ -11,12 +11,10 @@ import Layout from "./Components/Layout/Layout";
 import SingleBook from "./pages/SingleBook/SingleBook";
 import Cart from "./pages/Cart/Cart";
 
-
 function App() {
   return (
     <BrowserRouter>
       <AuthContextProvider>
-    
         <div className=" max-h-screen overflow-hidden">
           <Routes>
             <Route path="/" exact element={<Login />}></Route>

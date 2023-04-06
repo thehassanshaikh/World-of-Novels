@@ -29,6 +29,7 @@ function BookRegistrationPage() {
   const navigate = useNavigate();
   const { setCoin, setNovelData } = UserAuth();
   const options = ["Fiction", "NonFiction"];
+  const [img,setImage]=useState(null)
   const optionsCondition = ["Good", "Average", "Bad/Some Pages missing"];
   const [error, setError] = useState({
     title: "",
@@ -40,6 +41,16 @@ function BookRegistrationPage() {
     description: "",
     subcategory: [],
   });
+
+  const onImageChange = (event) => {
+    if (event.target.files && event.target.files[0]) {
+      setNovel({
+        ...novel,
+        image:URL.createObjectURL(event.target.files[0]),
+      })
+      setImage(URL.createObjectURL(event.target.files[0]));
+    }
+   }
 
   const validateInput = (formObject) => {
     const errors = {};
@@ -306,9 +317,9 @@ function BookRegistrationPage() {
                       className="block mb-2 text-sm font-medium text-[#00372e] dark:text-white"
                       htmlFor="file_input"
                     >
-                      Upload Novel Picture(url)
+                      Upload Novel Picture
                     </label>
-                    <input
+                    {/* <input
                       className="block w-full text-sm text-[#00372e] border border-[#00372e] cursor-pointer bg-gray-50 focus:outline-none py-1 px-2"
                       type="url"
                       onChange={(e) => {
@@ -317,7 +328,8 @@ function BookRegistrationPage() {
                           image: e.target.value,
                         });
                       }}
-                    />
+                    /> */}
+                     <input type="file" onChange={onImageChange} className="filetype" accept="image/png, image/jpeg"/>
                     {error.image ? (
                       <p className="text-xs text-red-700">{error.image}</p>
                     ) : (
